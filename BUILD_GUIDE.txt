@@ -1,0 +1,106 @@
+# 传统中医日历 - Android APK 构建说明
+
+## 项目已准备就绪
+
+Android 项目已通过 **Capacitor** 配置完成，以下是两种构建 APK 的方式：
+
+---
+
+## 方式一：GitHub Actions 云端构建（推荐，无需配置本地环境）
+
+1. 将本项目上传到 GitHub 仓库
+2. 进入仓库的 **Actions** 页面
+3. 选择 **Build Android APK** 工作流
+4. 点击 **Run workflow** 运行
+5. 构建完成后，在 Artifacts 中下载 `中医日历-APK.zip`
+
+---
+
+## 方式二：本地构建
+
+### 步骤 1：安装必要工具
+
+**安装 JDK 17+：**
+```powershell
+winget install EclipseAdoptium.Temurin.17.JDK
+```
+或从 https://adoptium.net/ 手动下载安装
+
+**安装 Android Studio（推荐）：**
+从 https://developer.android.com/studio 下载安装
+
+安装 Android Studio 后，它会自动配置 Android SDK。
+
+### 步骤 2：设置环境变量
+
+打开 Android Studio → **More Actions** → **SDK Manager**
+- 安装 Android SDK Platform 34
+- 安装 Android SDK Build-Tools 34.0.0
+
+然后设置环境变量：
+- `ANDROID_HOME=C:\Users\你的用户名\AppData\Local\Android\Sdk`
+- 将 `%ANDROID_HOME%\platform-tools` 加入 PATH
+
+### 步骤 3：构建 APK
+
+**方法 A - 脚本一键构建：**
+双击运行 `build-apk.bat`
+
+**方法 B - Android Studio 构建：**
+```powershell
+# 同步资源
+npx cap sync
+
+# 打开 Android Studio
+npx cap open android
+```
+在 Android Studio 中点击 **Build → Build Bundle(s) / APK(s) → Build APK(s)**
+
+**方法 C - 命令行：**
+```powershell
+npm install
+npx cap sync
+cd android
+.\gradlew assembleDebug
+```
+
+### 步骤 4：获取 APK
+
+构建成功后，APK 位于：
+```
+android\app\build\outputs\apk\debug\app-debug.apk
+```
+
+将此 APK 文件传输到 Android 手机，直接安装即可。
+
+---
+
+## 项目结构
+
+```
+├── index.html          # 主页面
+├── css/style.css       # 样式
+├── js/                 # JavaScript 逻辑
+│   ├── data.js         # 核心数据（干支、五行、穴位等）
+│   ├── calendar.js     # 干支/节气/五运六气计算
+│   ├── acupoint.js     # 穴位开穴计算（灵龟八法/纳甲/纳子）
+│   └── app.js          # UI 渲染与交互
+├── android/            # Android 原生项目（Capacitor 自动生成）
+├── capacitor.config.json  # Capacitor 配置
+├── package.json        # npm 配置
+└── build-apk.bat       # 一键构建脚本
+```
+
+---
+
+## 命令行快速参考
+
+| 命令 | 说明 |
+|------|------|
+| `npm install` | 安装依赖 |
+| `npm run dev` | 启动本地开发服务器 (http://127.0.0.1:8765) |
+| `npm run icons` | 重新生成图标 |
+| `npx cap sync` | 同步 Web 资源到 Android |
+| `npx cap open android` | 在 Android Studio 中打开项目 |
+| `check-env.bat` | 检查构建环境 |
+| `build-apk.bat` | 一键构建 APK |

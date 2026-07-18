@@ -1,0 +1,11 @@
+{
+  "appId": "com.tcm.calendar",
+  "appName": "中医日历",
+  "webDir": ".",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}

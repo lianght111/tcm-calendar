@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#8b4513">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="中医日历">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <title>传统中医日历 - 干支 · 节气 · 五运六气 · 灵龟八法 · 子午流注</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 侧边栏 -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>中医日历</h2>
+                <div class="subtitle">干支 · 节气 · 五运六气</div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>今日摘要</h3>
+                <div id="today-summary">
+                    <div class="info-item">加载中...</div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>五运六气</h3>
+                <div id="wuyun-summary">
+                    <div class="info-item">加载中...</div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <button class="btn-sidebar" onclick="goToToday()">回到今天</button>
+                <button class="btn-sidebar" onclick="toggleTheme()">切换主题</button>
+            </div>
+        </aside>
+
+        <!-- 主内容 -->
+        <main class="main-content">
+            <!-- 移动端菜单按钮 -->
+            <button class="nav-btn" id="menu-toggle" onclick="toggleSidebar()" title="打开侧边栏">☰</button>
+
+            <!-- 月份导航 -->
+            <div class="calendar-header">
+                <button class="nav-btn" onclick="navigateMonth(-1)" title="上个月">◀</button>
+                <h1 id="current-month-title">2026年 7月</h1>
+                <button class="nav-btn" onclick="navigateMonth(1)" title="下个月">▶</button>
+            </div>
+
+            <!-- 图例 -->
+            <div class="legend">
+                <span class="legend-item"><span class="dot solar-term-dot"></span> 节气</span>
+                <span class="legend-item"><span class="dot jieqi-dot"></span> 节（月界）</span>
+                <span class="legend-item"><span class="dot wuxing-dot wood"></span> 木</span>
+                <span class="legend-item"><span class="dot wuxing-dot fire"></span> 火</span>
+                <span class="legend-item"><span class="dot wuxing-dot earth"></span> 土</span>
+                <span class="legend-item"><span class="dot wuxing-dot metal"></span> 金</span>
+                <span class="legend-item"><span class="dot wuxing-dot water"></span> 水</span>
+                <span class="legend-item" style="font-size:0.75em; opacity:0.7;">← → 翻月 | Ctrl+T 今天 | Esc 关闭</span>
+            </div>
+
+            <!-- 星期标题 -->
+            <div class="weekday-row">
+                <div class="weekday">日</div>
+                <div class="weekday">一</div>
+                <div class="weekday">二</div>
+                <div class="weekday">三</div>
+                <div class="weekday">四</div>
+                <div class="weekday">五</div>
+                <div class="weekday">六</div>
+            </div>
+
+            <!-- 日历网格 -->
+            <div class="calendar-grid" id="calendar-grid"></div>
+        </main>
+    </div>
+
+    <!-- 日期详情弹窗 -->
+    <div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this)closeModal()">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modal-title">日期详情</h2>
+                <button class="close-btn" onclick="closeModal()">✕</button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- JS 脚本 -->
+    <script src="js/data.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/acupoint.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Service Worker - PWA 离线支持 -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('sw.js').catch(function() {});
+        });
+      }
+    </script>
+</body>
+</html>

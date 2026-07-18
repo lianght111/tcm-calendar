@@ -1,0 +1,23 @@
+{
+  "name": "传统中医日历",
+  "short_name": "中医日历",
+  "description": "传统中医日历 - 干支·节气·五运六气·灵龟八法·子午流注",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f5f0e8",
+  "theme_color": "#8b4513",
+  "orientation": "portrait-primary",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

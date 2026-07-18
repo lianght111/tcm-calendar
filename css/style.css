@@ -1,0 +1,1034 @@
+/* ===== 基础样式与变量 ===== */
+:root {
+    --bg-primary: #f8f5f0;
+    --bg-secondary: #fffef9;
+    --bg-card: #ffffff;
+    --bg-sidebar: #2c2416;
+    --text-primary: #3d3226;
+    --text-secondary: #6b5e4a;
+    --text-sidebar: #e8dcc8;
+    --text-light: #9b8c7a;
+    --border-color: #e0d5c1;
+    --accent: #c4953a;
+    --accent-light: #e8c97a;
+    --wood: #5a9e4b;
+    --fire: #c0392b;
+    --earth: #d49532;
+    --metal: #b8a05e;
+    --water: #2c5f8a;
+    --yin-bg: #e8f0fe;
+    --yang-bg: #fff3e0;
+    --solar-term: #27ae60;
+    --today-bg: #fff8e1;
+    --today-border: #c4953a;
+    --shadow: 0 2px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.15);
+    --radius: 10px;
+    --radius-sm: 6px;
+    --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #1a1814;
+    --bg-secondary: #221f18;
+    --bg-card: #2a261e;
+    --bg-sidebar: #14120e;
+    --text-primary: #e8dcc8;
+    --text-secondary: #b8a88a;
+    --text-sidebar: #c8b898;
+    --text-light: #8a7a60;
+    --border-color: #3a3226;
+    --accent: #d4a84b;
+    --accent-light: #c89838;
+    --shadow: 0 2px 12px rgba(0,0,0,0.3);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.5);
+    --yin-bg: #1a2740;
+    --yang-bg: #3a2010;
+    --today-bg: #2a2418;
+    --today-border: #d4a84b;
+}
+
+/* ===== 全局样式 ===== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Hiragino Sans GB", sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    transition: var(--transition);
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== 侧边栏 ===== */
+.sidebar {
+    width: 280px;
+    min-width: 280px;
+    background: var(--bg-sidebar);
+    color: var(--text-sidebar);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: var(--transition);
+    z-index: 100;
+}
+
+.sidebar-header h2 {
+    font-size: 1.4em;
+    margin-bottom: 4px;
+    color: var(--accent-light);
+}
+
+.sidebar-header .subtitle {
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+.sidebar-section h3 {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: var(--accent-light);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    padding-bottom: 6px;
+}
+
+.sidebar-section .info-item {
+    font-size: 0.82em;
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+.sidebar-section .info-item .label {
+    color: var(--accent-light);
+    margin-right: 4px;
+}
+
+.btn-sidebar {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--text-sidebar);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: var(--transition);
+    text-align: left;
+}
+
+.btn-sidebar:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: var(--accent-light);
+}
+
+/* ===== 主内容 ===== */
+.main-content {
+    flex: 1;
+    padding: 16px 24px;
+    overflow-y: auto;
+    transition: var(--transition);
+}
+
+/* ===== 顶部导航 ===== */
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.calendar-header h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    min-width: 200px;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.nav-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    cursor: pointer;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.nav-btn:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+#menu-toggle {
+    position: absolute;
+    left: 16px;
+}
+
+/* ===== 图例 ===== */
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 10px 16px;
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    font-size: 0.78em;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-secondary);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.solar-term-dot { background: var(--solar-term); }
+.jieqi-dot { background: var(--accent); }
+.wuxing-dot.wood { background: var(--wood); }
+.wuxing-dot.fire { background: var(--fire); }
+.wuxing-dot.earth { background: var(--earth); }
+.wuxing-dot.metal { background: var(--metal); }
+.wuxing-dot.water { background: var(--water); }
+
+/* ===== 星期标题 ===== */
+.weekday-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-bottom: 2px;
+}
+
+.weekday {
+    text-align: center;
+    padding: 10px 4px;
+    font-weight: 600;
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+}
+
+.weekday:first-child {
+    color: #c0392b;
+}
+
+.weekday:last-child {
+    color: #c0392b;
+}
+
+/* ===== 日历网格 ===== */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.day-cell {
+    aspect-ratio: 1;
+    min-height: 90px;
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+    padding: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+}
+
+.day-cell:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    z-index: 10;
+    border-color: var(--accent-light);
+}
+
+.day-cell.other-month {
+    opacity: 0.35;
+    background: var(--bg-secondary);
+}
+
+.day-cell.today {
+    border-color: var(--today-border) !important;
+    background: var(--today-bg);
+    box-shadow: 0 0 0 2px var(--today-border);
+    z-index: 5;
+}
+
+.day-cell.weekend {
+    background: #fef5f5;
+}
+
+[data-theme="dark"] .day-cell.weekend {
+    background: #2a1a1a;
+}
+
+.day-cell .solar-date {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.day-cell.today .solar-date {
+    color: var(--accent);
+}
+
+.day-cell .ganzhi {
+    font-size: 0.7em;
+    color: var(--text-secondary);
+    margin-top: 2px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.day-cell .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: auto;
+}
+
+.day-cell .tag {
+    font-size: 0.58em;
+    padding: 1px 4px;
+    border-radius: 3px;
+    white-space: nowrap;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.tag.solar-term {
+    background: #d5f5e3;
+    color: #1a7a3a;
+}
+
+.tag.jieqi {
+    background: #fdebd0;
+    color: #b7770b;
+}
+
+.tag.wood { background: #d5f5e3; color: #1a7a3a; }
+.tag.fire { background: #fadbd8; color: #922b21; }
+.tag.earth { background: #fdebd0; color: #b7770b; }
+.tag.metal { background: #fef9e7; color: #7d6608; }
+.tag.water { background: #d4e6f1; color: #1b4f72; }
+
+[data-theme="dark"] .tag.solar-term { background: #1a3a1a; color: #5ab07a; }
+[data-theme="dark"] .tag.jieqi { background: #3a2a10; color: #d4a048; }
+[data-theme="dark"] .tag.wood { background: #1a3a1a; color: #5ab07a; }
+[data-theme="dark"] .tag.fire { background: #3a1a1a; color: #e07060; }
+[data-theme="dark"] .tag.earth { background: #3a2a10; color: #d4a048; }
+[data-theme="dark"] .tag.metal { background: #3a3a10; color: #c8b040; }
+[data-theme="dark"] .tag.water { background: #1a2a3a; color: #5a90c0; }
+
+.day-cell .wuxing-indicator {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+/* ===== 弹窗 ===== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 700px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+    animation: modalIn 0.3s ease;
+}
+
+@keyframes modalIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background: var(--bg-card);
+    z-index: 10;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.modal-header h2 {
+    font-size: 1.2em;
+    color: var(--text-primary);
+}
+
+.close-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: var(--bg-secondary);
+    cursor: pointer;
+    font-size: 1.1em;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.close-btn:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+.modal-body {
+    padding: 20px 24px;
+}
+
+/* ===== 详情面板 ===== */
+.detail-section {
+    margin-bottom: 20px;
+}
+
+.detail-section h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--accent-light);
+    color: var(--accent);
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.detail-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    padding: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.detail-card .card-label {
+    font-size: 0.7em;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.detail-card .card-value {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.yin-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--yin-bg);
+    color: #2c5f8a;
+    font-size: 0.75em;
+    font-weight: 600;
+}
+
+.yang-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--yang-bg);
+    color: #c0392b;
+    font-size: 0.75em;
+    font-weight: 600;
+}
+
+/* ===== 时辰表 ===== */
+.hour-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+.hour-table th {
+    background: var(--bg-sidebar);
+    color: var(--text-sidebar);
+    padding: 8px 6px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.hour-table th:first-child {
+    border-radius: var(--radius-sm) 0 0 0;
+}
+
+.hour-table th:last-child {
+    border-radius: 0 var(--radius-sm) 0 0;
+}
+
+.hour-table td {
+    padding: 8px 6px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.hour-table tr:hover td {
+    background: var(--bg-secondary);
+}
+
+.hour-table .acupoint-highlight {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.hour-table .meridian-name {
+    color: var(--water);
+}
+
+.hour-current {
+    background: rgba(76, 175, 80, 0.25) !important;
+    border-left: 4px solid #4caf50 !important;
+    box-shadow: inset 0 0 20px rgba(76, 175, 80, 0.1);
+}
+
+.hour-current td {
+    font-weight: 600;
+}
+
+/* 时辰表格展示 */
+.hour-table-wrapper {
+    overflow-x: auto;
+    max-height: 600px;
+    overflow-y: auto;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.hour-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+.hour-table thead th {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 10px 6px;
+    text-align: center;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.hour-table tbody td {
+    padding: 8px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: middle;
+}
+
+.shichen-name {
+    font-size: 1.05em;
+}
+
+.ganzhi-cell {
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.ganzhi-detail {
+    color: #666;
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+.acupoint-code {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 0.85em;
+    margin: 1px;
+}
+
+.acupoint-name {
+    color: #333;
+    font-size: 0.9em;
+}
+
+.trigram-sym {
+    font-size: 1.3em;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+.couple-note {
+    color: #999;
+    font-size: 0.8em;
+}
+
+.no-point {
+    color: #bbb;
+    font-style: italic;
+}
+
+.lg-cell, .najia-cell, .nazi-cell {
+    line-height: 1.5;
+}
+
+.nazi-main, .nazi-acc {
+    font-size: 0.82em;
+    line-height: 1.4;
+}
+
+/* 详情头部 */
+.detail-header {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 16px;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.08), rgba(155, 89, 182, 0.08));
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.dh-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dh-label {
+    font-size: 0.75em;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dh-value {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.dh-sub {
+    font-size: 0.8em;
+    color: #999;
+}
+
+/* 详情分段 */
+.detail-section {
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.section-title {
+    background: #f5f7fa;
+    padding: 12px 16px;
+    font-weight: 700;
+    font-size: 0.95em;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.section-content {
+    padding: 14px 16px;
+    font-size: 0.9em;
+    line-height: 1.7;
+}
+
+.current-badge {
+    background: #4caf50;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.82em;
+    font-weight: 600;
+    animation: pulse-current 2s ease-in-out infinite;
+}
+
+@keyframes pulse-current {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* 五门十变 */
+.wumen-section .section-content {
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.05), rgba(46, 204, 113, 0.05));
+}
+
+.wumen-card {
+    text-align: center;
+    padding: 12px;
+}
+
+.wumen-formula {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.wumen-wuxing {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+}
+
+.wx-highlight {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 14px;
+    color: #fff;
+    font-weight: 700;
+    margin: 0 4px;
+}
+
+.wx-木 { background: #27ae60; color: #fff; }
+.wx-火 { background: #e74c3c; color: #fff; }
+.wx-土 { background: #f39c12; color: #fff; }
+.wx-金 { background: #b8860b; color: #fff; }
+.wx-水 { background: #2980b9; color: #fff; }
+
+.wumen-desc {
+    color: #666;
+    font-size: 0.85em;
+}
+
+/* 合日互用 */
+.he-gan-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.he-gan-item {
+    background: #f0f4f8;
+    border: 1px solid #dce4ec;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* 灵龟八法配穴卡片 */
+.trigram-pairs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+    padding: 14px;
+}
+
+.trigram-pair-card {
+    background: linear-gradient(135deg, #fafafa, #f0f0f0);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.trigram-pair-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.pair-names {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.pair-point {
+    font-weight: 700;
+    font-size: 0.95em;
+}
+
+.pair-point small {
+    color: #888;
+    font-weight: normal;
+}
+
+.pair-connector {
+    font-size: 1.4em;
+    color: #bbb;
+}
+
+.pair-vessels {
+    font-size: 0.85em;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.pair-relation {
+    font-size: 0.8em;
+    color: #999;
+}
+
+/* 补泻表 */
+.supplement-drain-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82em;
+}
+
+.supplement-drain-table thead th {
+    background: #e8e8e8;
+    padding: 8px 6px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.supplement-drain-table tbody td {
+    padding: 7px 6px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* 五输穴五行表 */
+.wushu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wushu-item {
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.wushu-meridian {
+    font-weight: 700;
+    font-size: 0.9em;
+    color: #2c3e50;
+    margin-bottom: 6px;
+}
+
+.wushu-sequence {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.82em;
+}
+
+.wushu-sequence span {
+    background: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+}
+
+.wushu-sequence em {
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 8px;
+    margin-left: 2px;
+    font-size: 0.85em;
+}
+
+/* 菜单按钮默认隐藏 */
+#menu-toggle {
+    display: none;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 900px) {
+    #menu-toggle {
+        display: flex !important;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        height: 100%;
+        width: 280px;
+        box-shadow: var(--shadow-lg);
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .main-content {
+        padding: 12px;
+    }
+
+    .calendar-header {
+        gap: 6px;
+    }
+
+    .calendar-header h1 {
+        font-size: 1.15em;
+        min-width: 150px;
+    }
+
+    .nav-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95em;
+    }
+
+    .day-cell {
+        min-height: 68px;
+        padding: 4px;
+    }
+
+    .day-cell .solar-date {
+        font-size: 0.95em;
+    }
+
+    .day-cell .ganzhi {
+        font-size: 0.62em;
+    }
+
+    .day-cell .tag {
+        font-size: 0.52em;
+    }
+
+    .modal {
+        width: 95%;
+        max-height: 90vh;
+    }
+
+    .detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hour-table {
+        font-size: 0.7em;
+    }
+
+    .hour-table th,
+    .hour-table td {
+        padding: 5px 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .day-cell {
+        min-height: 55px;
+        padding: 3px;
+    }
+
+    .day-cell .solar-date {
+        font-size: 0.85em;
+    }
+
+    .day-cell .ganzhi {
+        font-size: 0.55em;
+    }
+
+    .day-cell .tag {
+        font-size: 0.48em;
+        padding: 1px 2px;
+    }
+
+    .legend {
+        font-size: 0.7em;
+        gap: 6px;
+        padding: 8px 10px;
+    }
+}
+
+/* 移动端遮罩 */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 99;
+}
+
+.sidebar-overlay.show {
+    display: block;
+}

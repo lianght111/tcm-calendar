@@ -1,0 +1,23 @@
+{
+  "name": "tcm-calendar",
+  "version": "1.0.0",
+  "description": "传统中医日历 - 干支·节气·五运六气·灵龟八法·子午流注",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "icons": "node generate-icons.js",
+    "cap:init": "npx cap init tcm-calendar com.tcm.calendar --web-dir=.",
+    "cap:add": "npx cap add android",
+    "cap:sync": "npx cap sync",
+    "cap:open": "npx cap open android",
+    "build:android": "npm run icons && npx cap sync && npx cap open android"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0",
+    "pngjs": "^7.0.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/core": "^6.0.0"
+  }
+}
