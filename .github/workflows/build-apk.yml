@@ -38,7 +38,7 @@ jobs:
           cp -r css js icons index.html manifest.json sw.js www/
 
       - name: Sync Capacitor
-        run: npx cap sync android
+        run: npx @capacitor/cli sync android
 
       - name: Build APK
         run: |
