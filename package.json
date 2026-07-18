@@ -1,0 +1,16 @@
+{
+  "name": "tcm-calendar",
+  "version": "1.0.0",
+  "description": "传统中医日历 - 干支节气灵龟八法",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build-single": "node _build_single.js"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/cli": "^6.0.0"
+  },
+  "devDependencies": {}
+}

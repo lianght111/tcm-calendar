@@ -1,0 +1,6 @@
+{
+  "appId": "com.tcm.calendar",
+  "appName": "中医日历",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2c2416">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="中医日历">
+    <link rel="manifest" href="manifest.json">
+    <title>传统中医日历</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 侧边栏 -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>🌿 中医日历</h2>
+                <div class="subtitle">干支 · 节气 · 灵龟八法</div>
+            </div>
+            <div class="sidebar-section">
+                <h3>📅 今日概要</h3>
+                <div id="today-summary"></div>
+            </div>
+            <div class="sidebar-section">
+                <h3>☯ 五运六气</h3>
+                <div id="wuyun-summary"></div>
+            </div>
+            <div class="sidebar-section">
+                <button class="btn-sidebar" onclick="goToToday()">📅 回到今天</button>
+                <button class="btn-sidebar" onclick="toggleTheme()" id="theme-btn">🌙 切换主题</button>
+            </div>
+        </aside>
+
+        <!-- 主内容 -->
+        <main class="main-content">
+            <div class="calendar-header">
+                <button class="nav-btn" id="menu-toggle" onclick="toggleSidebar()">☰</button>
+                <button class="nav-btn" onclick="navigateMonth(-1)">◀</button>
+                <h1 id="current-month-title"></h1>
+                <button class="nav-btn" onclick="navigateMonth(1)">▶</button>
+            </div>
+
+            <!-- 图例 -->
+            <div class="legend">
+                <span class="legend-item"><span class="dot solar-term-dot"></span> 节气</span>
+                <span class="legend-item"><span class="dot jieqi-dot"></span> 节</span>
+                <span class="legend-item"><span class="dot wuxing-dot wood"></span> 木</span>
+                <span class="legend-item"><span class="dot wuxing-dot fire"></span> 火</span>
+                <span class="legend-item"><span class="dot wuxing-dot earth"></span> 土</span>
+                <span class="legend-item"><span class="dot wuxing-dot metal"></span> 金</span>
+                <span class="legend-item"><span class="dot wuxing-dot water"></span> 水</span>
+            </div>
+
+            <!-- 星期标题 -->
+            <div class="weekday-row">
+                <div class="weekday">日</div><div class="weekday">一</div>
+                <div class="weekday">二</div><div class="weekday">三</div>
+                <div class="weekday">四</div><div class="weekday">五</div>
+                <div class="weekday">六</div>
+            </div>
+
+            <!-- 日历网格 -->
+            <div class="calendar-grid" id="calendar-grid"></div>
+        </main>
+    </div>
+
+    <!-- 弹窗 -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <button class="close-btn" onclick="closeModal()">✕</button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- 逻辑脚本 -->
+    <script src="js/data.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/acupoint.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- PWA Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
