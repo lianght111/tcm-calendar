@@ -25,7 +25,7 @@ jobs:
           node-version: '22'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Prepare web assets
         run: |
@@ -33,7 +33,7 @@ jobs:
           cp -r css js icons index.html manifest.json www/
 
       - name: Sync Capacitor
-        run: npx cap sync android
+        run: npx --package @capacitor/cli@latest cap sync android
 
       - name: Setup Android SDK
         run: |

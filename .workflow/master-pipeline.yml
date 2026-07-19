@@ -16,10 +16,10 @@ stages:
         displayName: 安装依赖 & 同步 Capacitor
         nodeVersion: 20
         commands:
-          - npm install
+          - npm ci
           - mkdir -p www
           - cp -r css js icons index.html manifest.json www/
-          - npx cap sync android
+          - npx --package @capacitor/cli@latest cap sync android
       - step: build@gradle
         name: build_apk
         displayName: 编译 APK
