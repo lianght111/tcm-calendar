@@ -4,6 +4,16 @@
 
 let currentYear, currentMonth;
 
+// 二十八宿名，按日序循环。以2000-01-01为“角”宿（序号0）作简易推算
+const XIU_28 = ['角','亢','氐','房','心','尾','箕','斗','牛','女','虚','危','室','壁','奎','娄','胃','昴','毕','觜','参','井','鬼','柳','星','张','翼','轸'];
+function getDayXiu(date) {
+    const base = new Date(2000, 0, 1);
+    const utcDate = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
+    const baseUtc = Date.UTC(2000, 0, 1);
+    const diffDays = Math.round((utcDate - baseUtc) / 86400000);
+    return XIU_28[((diffDays % 28) + 28) % 28] + '宿';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const now = new Date();
     currentYear = now.getFullYear();
@@ -173,6 +183,16 @@ function buildDayCell(date, isOther) {
     const dOnly = new Date(date); dOnly.setHours(0,0,0,0);
     const isToday = dOnly.getTime() === now.getTime();
 
+    // 当前时辰（仅今天）
+    let currentShiChenHtml = '';
+    let xiuHtml = '';
+    if (isToday) {
+        const curHour = new Date().getHours();
+        const curHg = getHourGanZhi(new Date(), curHour);
+        currentShiChenHtml = `<span class="tag current-shichen">当前：${curHg.shiChen.name} ${curHg.ganzhi}</span>`;
+    }
+    xiuHtml = `<span class="tag xiu-tag">${getDayXiu(date)}</span>`;
+
     // 节气
     const term = getSolarTermOnDate(date);
     let termHtml = '';
@@ -200,6 +220,8 @@ function buildDayCell(date, isOther) {
         <div class="tag-row">
             <span class="tag ${wxc}">${dWx.wuXing}${dWx.yinYang}</span>
             ${naYinDay ? `<span class="tag" style="background:#f0f0f0;color:#666;">${naYinDay}</span>` : ''}
+            ${xiuHtml}
+            ${currentShiChenHtml}
             ${termHtml}
         </div>
     </div>`;
@@ -239,7 +261,7 @@ function openDayDetail(dateKey) {
     const lunarDateInfo = getLunarDate(date);
 
     document.getElementById('modal-title').textContent =
-        `${y}年${m+1}月${d}日 星期${weekDays[date.getDay()]} ${dayGZ.ganzhi}日` +
+        `${y}年${m+1}月${d}日 星期${weekDays[date.getDay()]} ${dayGZ.ganzhi}日 · ${naYinDay}` +
         (lunarDateInfo ? ` · ${lunarDateInfo.yearAnimal}年${lunarDateInfo.monthName}${lunarDateInfo.dayName}` : '');
 
     let html = '';
@@ -275,6 +297,17 @@ function openDayDetail(dateKey) {
                     日支: <span class="${zWx.yinYang==='阳'?'yang-badge':'yin-badge'}">${zWx.yinYang}${zWx.wuXing}</span>
                 </div>
             </div>
+        </div>
+    </div>`;
+
+    // ---- 万年历信息 ----
+    const dayXiu = getDayXiu(date);
+    html += `<div class="detail-section">
+        <h3>📜 万年历信息</h3>
+        <div class="detail-grid">
+            <div class="detail-card"><div class="card-label">二十八宿</div><div class="card-value">${dayXiu}</div></div>
+            <div class="detail-card"><div class="card-label">日干支纳音</div><div class="card-value">${naYinDay}</div></div>
+            ${lunarDateInfo ? `<div class="detail-card"><div class="card-label">农历</div><div class="card-value">${lunarDateInfo.yearGanZhi}年 ${lunarDateInfo.yearAnimal} ${lunarDateInfo.monthName}${lunarDateInfo.dayName}</div></div>` : ''}
         </div>
     </div>`;
 
@@ -324,7 +357,7 @@ function openDayDetail(dateKey) {
         <h3>⏰ 时辰开穴 · 灵龟八法 & 子午流注
             ${isTodayCheck ? `<span class="current-badge">当前：${SHI_CHEN[curShiChenIdx].name} (${SHI_CHEN[curShiChenIdx].start}:00-${SHI_CHEN[curShiChenIdx].end}:00)</span>` : ''}
         </h3>
-        <div style="font-size:0.7em;color:var(--text-light);margin-bottom:8px;">灵龟八法含配穴及卦性，纳子法含主配穴与补泻，纳甲法含合日互用穴</div>
+        <div style="font-size:0.7em;color:var(--text-light);margin-bottom:8px;">灵龟八法含主穴、配穴及卦性；纳子法含主配穴、补母穴与泻子穴；纳甲法按徐凤《针灸大全》逐日按时定穴，阳日阳时/阴日阴时开穴，阴阳不遇时按天干五合取夫妻互用穴</div>
         <div class="hour-table-wrapper">
         <table class="hour-table">
             <thead><tr>
@@ -339,37 +372,45 @@ function openDayDetail(dateKey) {
         const fi = lg.fullInfo;
 
         // 灵龟八法格
-        let lgHtml = '-';
+        let lgHtml = '<span class="na-closed">-</span>';
         if (lg.acupoint) {
-            lgHtml = `<b>${lg.acupoint.code}</b> ${lg.acupoint.name}
+            lgHtml = `<div class="lg-main"><b>${lg.acupoint.code}</b> ${lg.acupoint.name}
                 <span title="${fi ? fi.trigramName : ''}" style="font-size:1.2em;margin-left:2px;">${fi ? fi.trigramSymbol : ''}</span>
-                <br><small style="color:#888;">通${lg.acupoint.vessel}</small>`;
+                <br><small>${lg.acupoint.meridian} · 通${lg.acupoint.vessel}<em class="wx-mini wx-${lg.acupoint.wuXing}">${lg.acupoint.wuXing}</em></small></div>`;
             if (lg.couple) {
-                lgHtml += `<br><small style="color:#c4953a;">配: ${lg.couple.name}(${lg.couple.code}) ${lg.couple.trigramSymbol}</small>`;
+                lgHtml += `<div class="lg-couple"><small>配 ${lg.couple.code} ${lg.couple.name}<em class="wx-mini wx-${LINGGUI_ACUPOINTS[lg.couple.num].wuXing}">${LINGGUI_ACUPOINTS[lg.couple.num].wuXing}</em></small></div>`;
             }
         }
 
         // 纳甲法格
-        let njHtml = '-';
+        let njHtml = '<span class="na-closed">-</span>';
         if (h.najia.mainPoint) {
             const pt = h.najia.mainPoint;
-            const wuXing = pt.wuXing || '';
-            njHtml = `<b>${pt.code}</b> ${pt.name}
-                <br><small>${pt.pointType}${wuXing ? '(' + wuXing + ')' : ''}</small>`;
+            njHtml = `<div class="na-main"><b>${pt.code}</b> ${pt.name}
+                <br><small>${pt.meridian} · ${pt.pointType}<em class="wx-mini wx-${pt.wuXing}">${pt.wuXing}</em></small>
+                ${pt.yuan ? `<br><small class="na-yuan">返本还原：${pt.yuan.name}(${pt.yuan.code}) 原穴<em class="wx-mini wx-${pt.yuan.wuXing}">${pt.yuan.wuXing}</em></small>` : ''}
+                ${pt.note ? `<br><small class="na-note">${pt.note}</small>` : ''}
+            </div>`;
         }
         if (h.najia.huyongPoint) {
-            const color = h.najia.hasHuyong ? '#e67e22' : '#888';
-            const label = h.najia.hasHuyong ? '<span class="huyong-mark">夫妻互用</span>' : '合用:';
             const pt = h.najia.huyongPoint;
-            const wuXing = pt.wuXing || '';
-            njHtml += `<br><small style="color:${color};">${label} ${pt.code} ${pt.name}${wuXing ? '(' + wuXing + ')' : ''}</small>`;
+            const isHuyong = h.najia.hasHuyong;
+            const huyongClass = isHuyong ? 'huyong-real' : 'huyong-common';
+            const huyongLabel = isHuyong ? '夫妻互用' : '合日参考';
+            njHtml += `<div class="na-huyong ${huyongClass}">
+                <span class="huyong-mark">${huyongLabel}</span> ${pt.meridian.replace(/^(手|足)/,'')}
+                <br><b>${pt.code}</b> ${pt.name} · ${pt.pointType}<em class="wx-mini wx-${pt.wuXing}">${pt.wuXing}</em>
+                ${pt.yuan ? `<br><small class="na-yuan">返本：${pt.yuan.name}(${pt.yuan.code})<em class="wx-mini wx-${pt.yuan.wuXing}">${pt.yuan.wuXing}</em></small>` : ''}
+            </div>`;
         }
 
         // 纳子法格
-        let nzHtml = '-';
+        let nzHtml = '<span class="na-closed">-</span>';
         if (h.nazi) {
-            nzHtml = `<b>主:</b>${h.nazi.mainPoint.code} ${h.nazi.mainPoint.name}
-                <br><small style="color:#666;">配:</small>${h.nazi.accompanyPoint.code} ${h.nazi.accompanyPoint.name}`;
+            const main = h.nazi.mainPoint;
+            const acc = h.nazi.accompanyPoint;
+            nzHtml = `<div class="nz-main"><b>主</b> ${main.code} ${main.name} <small>${main.pointType}<em class="wx-mini wx-${main.wuXing}">${main.wuXing}</em></small></div>
+                <div class="nz-accompany"><small>配</small> ${acc.code} ${acc.name} <small>${acc.pointType}<em class="wx-mini wx-${acc.wuXing}">${acc.wuXing}</em></small></div>`;
         }
 
         html += `<tr class="${trCls}">
@@ -413,18 +454,19 @@ function openDayDetail(dateKey) {
         <div style="overflow-x:auto;">
         <table class="hour-table">
             <thead><tr>
-                <th>时辰</th><th>经络</th><th>主穴(输穴)</th><th>配穴(表里)</th><th>补法(母穴)</th><th>泻法(子穴)</th>
+                <th>时辰</th><th>经络</th><th>主穴(子穴)</th><th>配穴(表里)</th><th>补法(母穴)</th><th>泻法(子穴)</th>
             </tr></thead><tbody>`;
     allHours.forEach(h => {
         const nz = h.nazi;
         if (!nz) return;
         const isCur = isTodayCheck && h.shiChenIdx === curShiChenIdx;
+        const wxTag = (pt) => `<em class="wx-mini wx-${pt.wuXing}">${pt.wuXing}</em>`;
         html += `<tr class="${isCur ? 'hour-current' : ''}">
             <td>${h.shiChenName}</td><td>${nz.meridian}</td>
-            <td class="acupoint-highlight">${nz.mainPoint.name}(${nz.mainPoint.code})</td>
-            <td>${nz.accompanyPoint.name}(${nz.accompanyPoint.code})<br><small style="color:#888;">${nz.accompanyPoint.reason.replace(/([（(]).*?([)）])/g,'')}</small></td>
-            <td style="color:#27ae60;">${nz.supplementPoint.name}(${nz.supplementPoint.code})<br><small>${nz.supplementPoint.reason}</small></td>
-            <td style="color:#e74c3c;">${nz.drainPoint.name}(${nz.drainPoint.code})<br><small>${nz.drainPoint.reason}</small></td>
+            <td class="acupoint-highlight">${nz.mainPoint.name}(${nz.mainPoint.code}) ${wxTag(nz.mainPoint)}<br><small>${nz.mainPoint.pointType}</small></td>
+            <td>${nz.accompanyPoint.name}(${nz.accompanyPoint.code}) ${wxTag(nz.accompanyPoint)}<br><small>${nz.accompanyPoint.pointType}</small></td>
+            <td style="color:#27ae60;">${nz.supplementPoint.name}(${nz.supplementPoint.code}) ${wxTag(nz.supplementPoint)}<br><small>${nz.supplementPoint.pointType}</small></td>
+            <td style="color:#e74c3c;">${nz.drainPoint.name}(${nz.drainPoint.code}) ${wxTag(nz.drainPoint)}<br><small>${nz.drainPoint.pointType}</small></td>
         </tr>`;
     });
     html += `</tbody></table></div></div>`;
@@ -462,7 +504,7 @@ function openDayDetail(dateKey) {
                 <span class="he-gan-item">丁⇌壬(木)</span>
                 <span class="he-gan-item">戊⇌癸(火)</span>
             </div>
-            <p style="margin-top:8px;font-size:0.8em;color:#888;">当本日日干不开某时辰穴位时，可取合日对应时辰的穴位（互用穴表中以<span style="color:#e67e22;">橙色</span>标注）</p>
+            <p style="margin-top:8px;font-size:0.8em;color:#888;">徐凤《针灸大全》：阳日阳时、阴日阴时开穴；阳日阴时或阴日阳时主穴不开，可取天干五合之夫妻日对应时辰穴位（表中<span style="color:#e67e22;">橙色</span>标记为夫妻互用）</p>
         </div>
     </div>`;
 

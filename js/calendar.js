@@ -165,8 +165,9 @@ function getHourGanZhi(date, hour) {
 
     // 五鼠遁：日干对应的子时天干
     // 甲己→甲子, 乙庚→丙子, 丙辛→戊子, 丁壬→庚子, 戊癸→壬子
-    const ratDunStart = [0, 2, 4, 6, 8]; // 甲/己→0(甲), 乙/庚→2(丙), ...
-    const groupIdx = Math.floor(dayGanIdx / 2);
+    // 天干五合分组：甲己idx%5=0，乙庚=1，丙辛=2，丁壬=3，戊癸=4
+    const ratDunStart = [0, 2, 4, 6, 8]; // 甲己→甲，乙庚→丙，丙辛→戊，丁壬→庚，戊癸→壬
+    const groupIdx = dayGanIdx % 5;
     const hourGanIdx = (ratDunStart[groupIdx] + shiChenIdx) % 10;
 
     return {
