@@ -1,0 +1,53 @@
+version: '1.0'
+name: Build Android APK
+
+stages:
+  - stage: build
+    display_name: 构建 APK
+    steps:
+      - step: setup@java
+        name: java-setup
+        display_name: 安装 Java 17
+        with:
+          version: '17'
+          distribution: 'temurin'
+
+      - step: setup@node
+        name: node-setup
+        display_name: 安装 Node.js 20
+        with:
+          version: '20'
+
+      - step: shell
+        name: install-deps
+        display_name: 安装依赖
+        script:
+          - npm install
+
+      - step: shell
+        name: prepare-web
+        display_name: 准备 Web 资源
+        script:
+          - mkdir -p www
+          - cp -r css js icons index.html manifest.json www/
+
+      - step: shell
+        name: cap-sync
+        display_name: 同步 Capacitor
+        script:
+          - npx @capacitor/cli sync android
+
+      - step: shell
+        name: build-apk
+        display_name: 构建 Debug APK
+        script:
+          - cd android
+          - chmod +x gradlew
+          - ./gradlew assembleDebug
+
+      - step: publish@artifact
+        name: upload-apk
+        display_name: 上传 APK 产物
+        with:
+          name: tcm-calendar-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
