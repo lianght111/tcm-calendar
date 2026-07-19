@@ -121,21 +121,15 @@ function getMonthGanZhi(date) {
 
 /**
  * 计算日干支
- * 基准: 1900年1月1日 = 甲戌日 (60甲子序号: 10)
+ * 基准: 2000年1月1日 = 戊午日 (60甲子序号: 54)
  */
 function getDayGanZhi(date) {
-    // 计算从1900-01-01到目标日期的天数
-    const baseDate = new Date(1900, 0, 1);
-    const targetDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-    const diffTime = targetDate.getTime() - baseDate.getTime();
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-    // 1900-01-01是甲戌日，60甲子序号为10
-    const cycleDay = ((diffDays % 60) + 10 + 60) % 60;
-
+    const base = new Date(Date.UTC(2000, 0, 1)); // 2000-01-01 = 戊午日(54)
+    const utc = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    const diffDays = Math.floor((utc - base) / 86400000);
+    const cycleDay = (54 + ((diffDays % 60) + 60) % 60) % 60;
     const ganIdx = cycleDay % 10;
     const zhiIdx = cycleDay % 12;
-
     return {
         gan: TIAN_GAN[ganIdx],
         zhi: DI_ZHI[zhiIdx],
@@ -628,42 +622,141 @@ function getSexagenaryNum(ganIdx, zhiIdx) {
     return ((ganIdx * 6 - zhiIdx * 5) % 60 + 60) % 60;
 }
 
-/**
- * 纳音五行（六十甲子纳音）
- */
-function getNaYin(sexagenaryNum) {
-    const naYin = [
-        '海中金', '海中金',   // 0:甲子, 1:乙丑
-        '炉中火', '炉中火',   // 2:丙寅, 3:丁卯
-        '大林木', '大林木',   // 4:戊辰, 5:己巳
-        '路旁土', '路旁土',   // 6:庚午, 7:辛未
-        '剑锋金', '剑锋金',   // 8:壬申, 9:癸酉
-        '山头火', '山头火',   // 10:甲戌, 11:乙亥
-        '涧下水', '涧下水',   // 12:丙子, 13:丁丑
-        '城头土', '城头土',   // 14:戊寅, 15:己卯
-        '白蜡金', '白蜡金',   // 16:庚辰, 17:辛巳
-        '杨柳木', '杨柳木',   // 18:壬午, 19:癸未
-        '泉中水', '泉中水',   // 20:甲申, 21:乙酉
-        '屋上土', '屋上土',   // 22:丙戌, 23:丁亥
-        '霹雳火', '霹雳火',   // 24:戊子, 25:己丑
-        '松柏木', '松柏木',   // 26:庚寅, 27:辛卯
-        '长流水', '长流水',   // 28:壬辰, 29:癸巳
-        '砂中金', '砂中金',   // 30:甲午, 31:乙未
-        '山下火', '山下火',   // 32:丙申, 33:丁酉
-        '平地木', '平地木',   // 34:戊戌, 35:己亥
-        '壁上土', '壁上土',   // 36:庚子, 37:辛丑
-        '金箔金', '金箔金',   // 38:壬寅, 39:癸卯
-        '覆灯火', '覆灯火',   // 40:甲辰, 41:乙巳
-        '天河水', '天河水',   // 42:丙午, 43:丁未
-        '大驿土', '大驿土',   // 44:戊申, 45:己酉
-        '钗钏金', '钗钏金',   // 46:庚戌, 47:辛亥
-        '桑柘木', '桑柘木',   // 48:壬子, 49:癸丑
-        '大溪水', '大溪水',   // 50:甲寅, 51:乙卯
-        '沙中土', '沙中土',   // 52:丙辰, 53:丁巳
-        '天上火', '天上火',   // 54:戊午, 55:己未
-        '石榴木', '石榴木',   // 56:庚申, 57:辛酉
-        '大海水', '大海水'    // 58:壬戌, 59:癸亥
-    ];
+// =================== 农历（万年历） ===================
+// 农历数据 1900-2050，编码方式：
+// 低4位：闰月月份（0=无闰月）
+// 高12位：12个月的大小月（1=30天, 0=29天），正月在最高位
+// 接下来4位（bits 16-19）：闰月天数（1=30天, 0=29天）
+const LUNAR_INFO = [
+    0x04bd8,0x04ae0,0x0a570,0x054d5,0x0d260,0x0d950,0x16554,0x056a0,0x09ad0,0x055d2,
+    0x04ae0,0x0a5b6,0x0a4d0,0x0d250,0x1d255,0x0b540,0x0d6a0,0x0ada2,0x095b0,0x14977,
+    0x04970,0x0a4b0,0x0b4b5,0x06a50,0x06d40,0x1ab54,0x02b60,0x09570,0x052f2,0x04970,
+    0x06566,0x0d4a0,0x0ea50,0x06e95,0x05ad0,0x02b60,0x186e3,0x092e0,0x1c8d7,0x0c950,
+    0x0d4a0,0x1d8a6,0x0b550,0x056a0,0x1a5b4,0x025d0,0x092d0,0x0d2b2,0x0a950,0x0b557,
+    0x06ca0,0x0b550,0x15355,0x04da0,0x0a5b0,0x14573,0x052b0,0x0a9a8,0x0e950,0x06aa0,
+    0x0aea6,0x0ab50,0x04b60,0x0aae4,0x0a570,0x05260,0x0f263,0x0d950,0x05b57,0x056a0,
+    0x096d0,0x04dd5,0x04ad0,0x0a4d0,0x0d4d4,0x0d250,0x0d558,0x0b540,0x0b6a0,0x195a6,
+    0x095b0,0x049b0,0x0a974,0x0a4b0,0x0b27a,0x06a50,0x06d40,0x0af46,0x0ab60,0x09570,
+    0x04af5,0x04970,0x064b0,0x074a3,0x0ea50,0x06b58,0x05ac0,0x0ab60,0x096d5,0x092e0,
+    0x0c960,0x0d954,0x0d4a0,0x0da50,0x07552,0x056a0,0x0abb7,0x025d0,0x092d0,0x0cab5,
+    0x0a950,0x0b4a0,0x0baa4,0x0ad50,0x055d9,0x04ba0,0x0a5b0,0x15176,0x052b0,0x0a930,
+    0x07954,0x06aa0,0x0ad50,0x05b52,0x04b60,0x0a6e6,0x0a4e0,0x0d260,0x0ea65,0x0d530,
+    0x05aa0,0x076a3,0x096d0,0x04afb,0x04ad0,0x0a4d0,0x1d0b6,0x0d250,0x0d520,0x0dd45,
+    0x0b5a0,0x056d0,0x055b2,0x049b0,0x0a577,0x0a4b0,0x0aa50,0x1b255,0x06d20,0x0ada0,
+    0x14b63
+];
 
-    return naYin[sexagenaryNum] || '';
+const LUNAR_MONTH_NAMES = ['正月','二月','三月','四月','五月','六月','七月','八月','九月','十月','冬月','腊月'];
+const LUNAR_DAY_NAMES = [
+    '', '初一','初二','初三','初四','初五','初六','初七','初八','初九','初十',
+    '十一','十二','十三','十四','十五','十六','十七','十八','十九','二十',
+    '廿一','廿二','廿三','廿四','廿五','廿六','廿七','廿八','廿九','三十'
+];
+
+// 农历年的总天数
+function lunarYearDays(y) {
+    let sum = 348; // 12 * 29
+    for (let i = 0x8000; i > 0x8; i >>= 1) {
+        sum += (LUNAR_INFO[y] & i) ? 1 : 0;
+    }
+    return sum + leapMonthDays(y);
+}
+
+// 农历闰月的天数
+function leapMonthDays(y) {
+    if (leapMonth(y)) {
+        return (LUNAR_INFO[y] & 0x10000) ? 30 : 29;
+    }
+    return 0;
+}
+
+// 农历闰月月份（0=无闰月）
+function leapMonth(y) {
+    return LUNAR_INFO[y] & 0xf;
+}
+
+// 农历指定月的天数
+function lunarMonthDays(y, m) {
+    return (LUNAR_INFO[y] & (0x10000 >> m)) ? 30 : 29;
+}
+
+/**
+ * 公历转农历
+ * 返回: { year, month, day, isLeap, monthName, dayName, yearGanZhi, yearAnimal }
+ */
+function getLunarDate(date) {
+    const baseYear = 1900;
+    const baseDate = new Date(1900, 0, 31); // 1900-01-31 = 正月初一
+    
+    let offset = Math.floor((date - baseDate) / 86400000);
+    
+    let year = 0;
+    let daysInYear;
+    
+    // 找到农历年份
+    for (year = baseYear; year < 2101 && offset > 0; year++) {
+        daysInYear = lunarYearDays(year - baseYear);
+        offset -= daysInYear;
+    }
+    if (offset < 0) {
+        offset += daysInYear;
+        year--;
+    }
+    
+    const lunarY = year;
+    const yearIdx = year - baseYear;
+    
+    // 获取闰月
+    const leap = leapMonth(yearIdx);
+    let isLeap = false;
+    
+    // 找到月份和日期
+    let month = 0;
+    for (month = 1; month <= 12 && offset > 0; month++) {
+        // 闰月
+        if (leap > 0 && month === (leap + 1) && !isLeap) {
+            month--;
+            isLeap = true;
+            const leapDays = leapMonthDays(yearIdx);
+            if (offset >= leapDays) {
+                offset -= leapDays;
+                isLeap = false;
+                month++;
+            }
+        } else {
+            const mDays = lunarMonthDays(yearIdx, month);
+            if (offset >= mDays) {
+                offset -= mDays;
+            } else {
+                break;
+            }
+        }
+    }
+    
+    // offset 现在是从月初算起的天数（0-based），加1得到日
+    const day = Math.floor(offset) + 1;
+    
+    if (month > 12) month = 12;
+    if (day < 1) day = 1;
+    
+    // 农历年干支
+    const yearGZ = getYearGanZhi(date);
+    const animals = ['鼠','牛','虎','兔','龙','蛇','马','羊','猴','鸡','狗','猪'];
+    const animal = animals[yearGZ.zhiIdx];
+    
+    // 月日名称
+    let monthName = LUNAR_MONTH_NAMES[month - 1] || '';
+    if (isLeap) monthName = '闰' + monthName;
+    let dayName = LUNAR_DAY_NAMES[day] || '';
+    
+    return {
+        year: lunarY,
+        month: month,
+        day: day,
+        isLeap: isLeap,
+        monthName: monthName,
+        dayName: dayName,
+        yearGanZhi: yearGZ.ganzhi,
+        yearAnimal: animal
+    };
 }

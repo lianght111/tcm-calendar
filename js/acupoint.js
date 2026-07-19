@@ -78,10 +78,13 @@ function getZiWuLiuZhuNaJia(date, shiChenGanZhi) {
     const dayPoints = ZIWU_NAJIA_POINTS[dayGan];
     const point = dayPoints ? (dayPoints[hourZhiIdx] || null) : null;
 
-    // 互用穴：取合日日干对应时辰穴位
+    // 互用穴：阳日阴时或阴日阳时无穴，取合日对应时辰穴位
+    const dayGanIdx = TIAN_GAN.indexOf(dayGan);
+    const isYangDay = [0, 2, 4, 6, 8].includes(dayGanIdx);
+    const isYangHour = [0, 2, 4, 6, 8, 10].includes(hourZhiIdx);
     const partnerGan = NAJIA_HE_PAIRS[dayGan];
     let huyongPoint = null;
-    if (partnerGan) {
+    if (partnerGan && point === null && ((isYangDay && !isYangHour) || (!isYangDay && isYangHour))) {
         const partnerPoints = ZIWU_NAJIA_POINTS[partnerGan];
         huyongPoint = partnerPoints ? (partnerPoints[hourZhiIdx] || null) : null;
     }
@@ -197,6 +200,7 @@ function getAllHourAcupointInfo(date) {
 
         // 时干属性
         const shiGanWX = getGanWuXing(hgz.ganIdx);
+        const shiZhiWX = getZhiWuXing(hgz.zhiIdx);
 
         result.push({
             shiChenIdx: shiChenIdx,
@@ -207,14 +211,15 @@ function getAllHourAcupointInfo(date) {
             shiZhi: hgz.zhi,
             shiGanYinYang: shiGanWX.yinYang,
             shiGanWuXing: shiGanWX.wuXing,
-            shiZhiWuXing: getZhiWuXing(hgz.zhiIdx).wuXing,
+            shiZhiWuXing: shiZhiWX.wuXing,
+            shiZhiYinYang: shiZhiWX.yinYang,
             meridian: SHI_CHEN[shiChenIdx].meridian,
             meridianCN: SHI_CHEN[shiChenIdx].meridianCN,
             linggui: linggui,
             najia: najia,
             nazi: nazi,
-            wuXingGan: getGanWuXing(hgz.ganIdx),
-            wuXingZhi: getZhiWuXing(hgz.zhiIdx)
+            wuXingGan: shiGanWX,
+            wuXingZhi: shiZhiWX
         });
     }
 

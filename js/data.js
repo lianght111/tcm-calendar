@@ -149,104 +149,79 @@ const LINGGUI_HOUR_ZHI_NUM = {
 // 格式: {日干: {时辰地支索引: 穴位信息}}
 const ZIWU_NAJIA_POINTS = {
     '甲': {
-        10: { name: '窍阴', code: 'GB44', meridian: '胆经', pointType: '井穴' },
-        11: { name: '中渚', code: 'TE3', meridian: '三焦经', pointType: '输穴' },
-        0:  { name: '足临泣', code: 'GB41', meridian: '胆经', pointType: '输穴' },
-        1:  { name: '太冲', code: 'LR3', meridian: '肝经', pointType: '输穴' },
-        2:  { name: '太渊', code: 'LU9', meridian: '肺经', pointType: '输穴' },
-        3:  { name: '陷谷', code: 'ST43', meridian: '胃经', pointType: '输穴' },
-        4:  { name: '阳溪', code: 'LI5', meridian: '大肠经', pointType: '经穴' },
-        5:  { name: '商丘', code: 'SP5', meridian: '脾经', pointType: '经穴' }
+        1: { name: '行间', code: 'LR2', meridian: '肝经', pointType: '荥穴', wuXing: '火' },
+        2: { name: '神门、太溪、大陵', code: 'HT7、KI3、PC7', meridian: '心经/肾经/心包经', pointType: '输穴', wuXing: '土' },
+        3: { name: '商丘', code: 'SP5', meridian: '脾经', pointType: '经穴', wuXing: '金' },
+        4: { name: '尺泽', code: 'LU5', meridian: '肺经', pointType: '合穴', wuXing: '水' },
+        5: { name: '中冲', code: 'PC9', meridian: '心包经', pointType: '井穴', wuXing: '木' },
+        6: { name: '劳宫', code: 'PC8', meridian: '心包经', pointType: '荥穴', wuXing: '火' }
     },
     '乙': {
-        9:  { name: '大敦', code: 'LR1', meridian: '肝经', pointType: '井穴' },
-        10: { name: '足临泣', code: 'GB41', meridian: '胆经', pointType: '输穴' },
-        11: { name: '中渚', code: 'TE3', meridian: '三焦经', pointType: '输穴' },
-        0:  { name: '侠溪', code: 'GB43', meridian: '胆经', pointType: '荥穴' },
-        1:  { name: '行间', code: 'LR2', meridian: '肝经', pointType: '荥穴' },
-        2:  { name: '少府', code: 'HT8', meridian: '心经', pointType: '荥穴' },
-        3:  { name: '二间', code: 'LI2', meridian: '大肠经', pointType: '荥穴' },
-        4:  { name: '解溪', code: 'ST41', meridian: '胃经', pointType: '经穴' }
+        6: { name: '前谷', code: 'SI2', meridian: '小肠经', pointType: '荥穴', wuXing: '水' },
+        7: { name: '陷谷、丘墟', code: 'ST43、GB40', meridian: '胃经/胆经', pointType: '输穴/原穴', wuXing: '木' },
+        8: { name: '阳溪', code: 'LI5', meridian: '大肠经', pointType: '经穴', wuXing: '火' },
+        9: { name: '委中', code: 'BL40', meridian: '膀胱经', pointType: '合穴', wuXing: '土' }
     },
     '丙': {
-        7:  { name: '少泽', code: 'SI1', meridian: '小肠经', pointType: '井穴' },
-        8:  { name: '后溪', code: 'SI3', meridian: '小肠经', pointType: '输穴' },
-        9:  { name: '太溪', code: 'KI3', meridian: '肾经', pointType: '输穴' },
-        10: { name: '阳辅', code: 'GB38', meridian: '胆经', pointType: '经穴' },
-        11: { name: '支沟', code: 'TE6', meridian: '三焦经', pointType: '经穴' },
-        0:  { name: '足窍阴', code: 'GB44', meridian: '胆经', pointType: '井穴' },
-        1:  { name: '曲泉', code: 'LR8', meridian: '肝经', pointType: '合穴' },
-        2:  { name: '尺泽', code: 'LU5', meridian: '肺经', pointType: '合穴' }
+        0: { name: '少泽', code: 'SI1', meridian: '小肠经', pointType: '井穴', wuXing: '金' },
+        1: { name: '内庭', code: 'ST44', meridian: '胃经', pointType: '荥穴', wuXing: '水' },
+        8: { name: '太白、太冲', code: 'SP3、LR3', meridian: '脾经/肝经', pointType: '输穴/原穴', wuXing: '土' },
+        9: { name: '经渠', code: 'LU8', meridian: '肺经', pointType: '经穴', wuXing: '金' },
+        10: { name: '阴谷', code: 'KI10', meridian: '肾经', pointType: '合穴', wuXing: '水' },
+        11: { name: '劳宫', code: 'PC8', meridian: '心包经', pointType: '荥穴', wuXing: '火' }
     },
     '丁': {
-        6:  { name: '少冲', code: 'HT9', meridian: '心经', pointType: '井穴' },
-        7:  { name: '后溪', code: 'SI3', meridian: '小肠经', pointType: '输穴' },
-        8:  { name: '束骨', code: 'BL65', meridian: '膀胱经', pointType: '输穴' },
-        9:  { name: '复溜', code: 'KI7', meridian: '肾经', pointType: '经穴' },
-        10: { name: '阳陵泉', code: 'GB34', meridian: '胆经', pointType: '合穴' },
-        11: { name: '天井', code: 'TE10', meridian: '三焦经', pointType: '合穴' },
-        0:  { name: '足临泣', code: 'GB41', meridian: '胆经', pointType: '输穴' },
-        1:  { name: '行间', code: 'LR2', meridian: '肝经', pointType: '荥穴' }
+        0: { name: '三间、腕骨', code: 'LI3、SI4', meridian: '大肠经/小肠经', pointType: '输穴/原穴', wuXing: '木' },
+        1: { name: '昆仑', code: 'BL60', meridian: '膀胱经', pointType: '经穴', wuXing: '火' },
+        2: { name: '阳陵泉', code: 'GB34', meridian: '胆经', pointType: '合穴', wuXing: '土' },
+        3: { name: '中渚', code: 'TE3', meridian: '三焦经', pointType: '输穴', wuXing: '木' },
+        4: { name: '少冲', code: 'HT9', meridian: '心经', pointType: '井穴', wuXing: '木' },
+        5: { name: '大都', code: 'SP2', meridian: '脾经', pointType: '荥穴', wuXing: '火' }
     },
     '戊': {
-        5:  { name: '厉兑', code: 'ST45', meridian: '胃经', pointType: '井穴' },
-        6:  { name: '神门', code: 'HT7', meridian: '心经', pointType: '输穴' },
-        7:  { name: '腕骨', code: 'SI4', meridian: '小肠经', pointType: '原穴' },
-        8:  { name: '京骨', code: 'BL64', meridian: '膀胱经', pointType: '原穴' },
-        9:  { name: '太溪', code: 'KI3', meridian: '肾经', pointType: '输穴' },
-        10: { name: '丘墟', code: 'GB40', meridian: '胆经', pointType: '原穴' },
-        11: { name: '阳池', code: 'TE4', meridian: '三焦经', pointType: '原穴' },
-        0:  { name: '足窍阴', code: 'GB44', meridian: '胆经', pointType: '井穴' }
+        0: { name: '复溜', code: 'KI7', meridian: '肾经', pointType: '经穴', wuXing: '金' },
+        1: { name: '曲泉', code: 'LR8', meridian: '肝经', pointType: '合穴', wuXing: '水' },
+        2: { name: '大陵', code: 'PC7', meridian: '心包经', pointType: '输穴', wuXing: '土' },
+        3: { name: '厉兑', code: 'ST45', meridian: '胃经', pointType: '井穴', wuXing: '金' },
+        4: { name: '二间', code: 'LI2', meridian: '大肠经', pointType: '荥穴', wuXing: '水' },
+        5: { name: '束骨、冲阳', code: 'BL65、ST42', meridian: '膀胱经/胃经', pointType: '输穴/原穴', wuXing: '木' }
     },
     '己': {
-        4:  { name: '隐白', code: 'SP1', meridian: '脾经', pointType: '井穴' },
-        5:  { name: '解溪', code: 'ST41', meridian: '胃经', pointType: '经穴' },
-        6:  { name: '神门', code: 'HT7', meridian: '心经', pointType: '输穴' },
-        7:  { name: '小海', code: 'SI8', meridian: '小肠经', pointType: '合穴' },
-        8:  { name: '委中', code: 'BL40', meridian: '膀胱经', pointType: '合穴' },
-        9:  { name: '阴谷', code: 'KI10', meridian: '肾经', pointType: '合穴' },
-        10: { name: '阳陵泉', code: 'GB34', meridian: '胆经', pointType: '合穴' },
-        11: { name: '天井', code: 'TE10', meridian: '三焦经', pointType: '合穴' }
+        0: { name: '阳辅', code: 'GB38', meridian: '胆经', pointType: '经穴', wuXing: '火' },
+        1: { name: '小海', code: 'SI8', meridian: '小肠经', pointType: '合穴', wuXing: '土' },
+        2: { name: '支沟', code: 'TE6', meridian: '三焦经', pointType: '经穴', wuXing: '火' },
+        3: { name: '隐白', code: 'SP1', meridian: '脾经', pointType: '井穴', wuXing: '木' },
+        4: { name: '鱼际', code: 'LU10', meridian: '肺经', pointType: '荥穴', wuXing: '火' },
+        5: { name: '太溪、太白', code: 'KI3、SP3', meridian: '肾经/脾经', pointType: '输穴', wuXing: '土' },
+        6: { name: '中冲', code: 'PC9', meridian: '心包经', pointType: '井穴', wuXing: '木' }
     },
     '庚': {
-        3:  { name: '商阳', code: 'LI1', meridian: '大肠经', pointType: '井穴' },
-        4:  { name: '陷谷', code: 'ST43', meridian: '胃经', pointType: '输穴' },
-        5:  { name: '阳溪', code: 'LI5', meridian: '大肠经', pointType: '经穴' },
-        6:  { name: '少海', code: 'HT3', meridian: '心经', pointType: '合穴' },
-        7:  { name: '阳谷', code: 'SI5', meridian: '小肠经', pointType: '经穴' },
-        8:  { name: '昆仑', code: 'BL60', meridian: '膀胱经', pointType: '经穴' },
-        9:  { name: '复溜', code: 'KI7', meridian: '肾经', pointType: '经穴' },
-        10: { name: '阳辅', code: 'GB38', meridian: '胆经', pointType: '经穴' }
+        6: { name: '少海', code: 'HT3', meridian: '心经', pointType: '合穴', wuXing: '水' },
+        7: { name: '间使', code: 'PC5', meridian: '心包经', pointType: '经穴', wuXing: '金' },
+        8: { name: '商阳', code: 'LI1', meridian: '大肠经', pointType: '井穴', wuXing: '金' },
+        9: { name: '通谷', code: 'BL66', meridian: '膀胱经', pointType: '荥穴', wuXing: '水' },
+        10: { name: '临泣、合谷', code: 'GB41、LI4', meridian: '胆经/大肠经', pointType: '输穴/原穴', wuXing: '木' },
+        11: { name: '阳谷', code: 'SI5', meridian: '小肠经', pointType: '经穴', wuXing: '火' }
     },
     '辛': {
-        2:  { name: '少商', code: 'LU11', meridian: '肺经', pointType: '井穴' },
-        3:  { name: '二间', code: 'LI2', meridian: '大肠经', pointType: '荥穴' },
-        4:  { name: '足三里', code: 'ST36', meridian: '胃经', pointType: '合穴' },
-        5:  { name: '商丘', code: 'SP5', meridian: '脾经', pointType: '经穴' },
-        6:  { name: '少冲', code: 'HT9', meridian: '心经', pointType: '井穴' },
-        7:  { name: '前谷', code: 'SI2', meridian: '小肠经', pointType: '荥穴' },
-        8:  { name: '通谷', code: 'BL66', meridian: '膀胱经', pointType: '荥穴' },
-        9:  { name: '然谷', code: 'KI2', meridian: '肾经', pointType: '荥穴' }
+        0: { name: '足三里', code: 'ST36', meridian: '胃经', pointType: '合穴', wuXing: '土' },
+        1: { name: '天井', code: 'TE10', meridian: '三焦经', pointType: '合穴', wuXing: '土' },
+        2: { name: '少商', code: 'LU11', meridian: '肺经', pointType: '井穴', wuXing: '木' },
+        3: { name: '然谷', code: 'KI2', meridian: '肾经', pointType: '荥穴', wuXing: '火' },
+        4: { name: '太冲、太渊', code: 'LR3、LU9', meridian: '肝经/肺经', pointType: '输穴/原穴', wuXing: '木' },
+        5: { name: '灵道', code: 'HT4', meridian: '心经', pointType: '经穴', wuXing: '金' },
+        11: { name: '阴陵泉', code: 'SP9', meridian: '脾经', pointType: '合穴', wuXing: '水' }
     },
     '壬': {
-        1:  { name: '至阴', code: 'BL67', meridian: '膀胱经', pointType: '井穴' },
-        2:  { name: '侠白', code: 'LU4', meridian: '肺经', pointType: '-', note: '肺经原穴太渊也在此时' },
-        3:  { name: '合谷', code: 'LI4', meridian: '大肠经', pointType: '原穴' },
-        4:  { name: '冲阳', code: 'ST42', meridian: '胃经', pointType: '原穴' },
-        5:  { name: '太白', code: 'SP3', meridian: '脾经', pointType: '输穴/原穴' },
-        6:  { name: '神门', code: 'HT7', meridian: '心经', pointType: '输穴/原穴' },
-        7:  { name: '腕骨', code: 'SI4', meridian: '小肠经', pointType: '原穴' },
-        8:  { name: '京骨', code: 'BL64', meridian: '膀胱经', pointType: '原穴' }
+        0: { name: '曲泽', code: 'PC3', meridian: '心包经', pointType: '合穴', wuXing: '水' },
+        1: { name: '至阴', code: 'BL67', meridian: '膀胱经', pointType: '井穴', wuXing: '金' },
+        2: { name: '侠溪', code: 'GB43', meridian: '胆经', pointType: '荥穴', wuXing: '水' },
+        3: { name: '后溪、京骨、阳池', code: 'SI3、BL64、TE4', meridian: '小肠经/膀胱经/三焦经', pointType: '输穴/原穴/原穴', wuXing: '木' },
+        4: { name: '解溪', code: 'ST41', meridian: '胃经', pointType: '经穴', wuXing: '火' },
+        5: { name: '曲池', code: 'LI11', meridian: '大肠经', pointType: '合穴', wuXing: '土' }
     },
     '癸': {
-        0:  { name: '涌泉', code: 'KI1', meridian: '肾经', pointType: '井穴' },
-        1:  { name: '太冲', code: 'LR3', meridian: '肝经', pointType: '输穴/原穴' },
-        2:  { name: '太渊', code: 'LU9', meridian: '肺经', pointType: '输穴/原穴' },
-        3:  { name: '合谷', code: 'LI4', meridian: '大肠经', pointType: '原穴' },
-        4:  { name: '足三里', code: 'ST36', meridian: '胃经', pointType: '合穴' },
-        5:  { name: '太白', code: 'SP3', meridian: '脾经', pointType: '输穴/原穴' },
-        6:  { name: '少海', code: 'HT3', meridian: '心经', pointType: '合穴' },
-        7:  { name: '阳谷', code: 'SI5', meridian: '小肠经', pointType: '经穴' }
+        0: { name: '关冲', code: 'TE1', meridian: '三焦经', pointType: '井穴', wuXing: '金' }
     }
 };
 
@@ -381,37 +356,37 @@ function getShuPointWuxing(shiChenIdx, pointCategory) {
 // 每个时辰当令经络的输穴为主穴，表里经原穴为配穴
 const NAZI_PAIR_POINTS = [
     { // 子时 胆经(阳) ↔ 肝经(阴)
-        main: { name: '足临泣', code: 'GB41', reason: '胆经输穴，木' },
+        main: { name: '阳辅', code: 'GB38', reason: '胆经经穴，火' },
         accompany: { name: '太冲', code: 'LR3', reason: '肝经原穴（表里配穴）' },
         supplement: { name: '侠溪', code: 'GB43', reason: '胆经荥穴（水，母穴补法）' },
         drain: { name: '阳辅', code: 'GB38', reason: '胆经经穴（火，子穴泻法）' }
     },
     { // 丑时 肝经(阴) ↔ 胆经(阳)
-        main: { name: '太冲', code: 'LR3', reason: '肝经输穴，土（同原穴）' },
+        main: { name: '行间', code: 'LR2', reason: '肝经荥穴，火' },
         accompany: { name: '足临泣', code: 'GB41', reason: '胆经输穴（表里配穴）' },
         supplement: { name: '曲泉', code: 'LR8', reason: '肝经合穴（水，母穴补法）' },
         drain: { name: '行间', code: 'LR2', reason: '肝经荥穴（火，子穴泻法）' }
     },
     { // 寅时 肺经(阴) ↔ 大肠经(阳)
-        main: { name: '太渊', code: 'LU9', reason: '肺经输穴，土（同原穴）' },
+        main: { name: '尺泽', code: 'LU5', reason: '肺经合穴，水' },
         accompany: { name: '合谷', code: 'LI4', reason: '大肠经原穴（表里配穴）' },
         supplement: { name: '太渊', code: 'LU9', reason: '肺经输穴（土，母穴补法）' },
         drain: { name: '尺泽', code: 'LU5', reason: '肺经合穴（水，子穴泻法）' }
     },
     { // 卯时 大肠经(阳) ↔ 肺经(阴)
-        main: { name: '三间', code: 'LI3', reason: '大肠经输穴，木' },
+        main: { name: '二间', code: 'LI2', reason: '大肠经荥穴，水' },
         accompany: { name: '太渊', code: 'LU9', reason: '肺经原穴（表里配穴）' },
         supplement: { name: '曲池', code: 'LI11', reason: '大肠经合穴（土，母穴补法）' },
         drain: { name: '二间', code: 'LI2', reason: '大肠经荥穴（水，子穴泻法）' }
     },
     { // 辰时 胃经(阳) ↔ 脾经(阴)
-        main: { name: '陷谷', code: 'ST43', reason: '胃经输穴，木' },
+        main: { name: '厉兑', code: 'ST45', reason: '胃经井穴，金' },
         accompany: { name: '太白', code: 'SP3', reason: '脾经原穴（表里配穴）' },
         supplement: { name: '解溪', code: 'ST41', reason: '胃经经穴（火，母穴补法）' },
         drain: { name: '厉兑', code: 'ST45', reason: '胃经井穴（金，子穴泻法）' }
     },
     { // 巳时 脾经(阴) ↔ 胃经(阳)
-        main: { name: '太白', code: 'SP3', reason: '脾经输穴，土（同原穴）' },
+        main: { name: '商丘', code: 'SP5', reason: '脾经经穴，金' },
         accompany: { name: '冲阳', code: 'ST42', reason: '胃经原穴（表里配穴）' },
         supplement: { name: '大都', code: 'SP2', reason: '脾经荥穴（火，母穴补法）' },
         drain: { name: '商丘', code: 'SP5', reason: '脾经经穴（金，子穴泻法）' }
@@ -435,7 +410,7 @@ const NAZI_PAIR_POINTS = [
         drain: { name: '束骨', code: 'BL65', reason: '膀胱经输穴（木，子穴泻法）' }
     },
     { // 酉时 肾经(阴) ↔ 膀胱经(阳)
-        main: { name: '太溪', code: 'KI3', reason: '肾经输穴，土（同原穴）' },
+        main: { name: '涌泉', code: 'KI1', reason: '肾经井穴，木' },
         accompany: { name: '京骨', code: 'BL64', reason: '膀胱经原穴（表里配穴）' },
         supplement: { name: '复溜', code: 'KI7', reason: '肾经经穴（金，母穴补法）' },
         drain: { name: '涌泉', code: 'KI1', reason: '肾经井穴（木，子穴泻法）' }
@@ -447,7 +422,7 @@ const NAZI_PAIR_POINTS = [
         drain: { name: '大陵', code: 'PC7', reason: '心包经输穴（土，子穴泻法）' }
     },
     { // 亥时 三焦经(阳) ↔ 心包经(阴)
-        main: { name: '中渚', code: 'TE3', reason: '三焦经输穴，木' },
+        main: { name: '天井', code: 'TE10', reason: '三焦经合穴，土' },
         accompany: { name: '大陵', code: 'PC7', reason: '心包经原穴（表里配穴）' },
         supplement: { name: '中渚', code: 'TE3', reason: '三焦经输穴（木，母穴补法）' },
         drain: { name: '天井', code: 'TE10', reason: '三焦经合穴（土，子穴泻法）' }
@@ -490,15 +465,15 @@ const LINGGUI_COUPLES = [
 
 // 八脉交会穴详细数据（卦性）
 const LINGGUI_FULL_INFO = {
-    1: { name: '申脉', code: 'BL62', trigram: '坎', trigramName: '坎为水', trigramSymbol: '☵', couple: 2, coupleName: '照海', direction: '西北' },
-    2: { name: '照海', code: 'KI6', trigram: '坤', trigramName: '坤为地', trigramSymbol: '☷', couple: 1, coupleName: '申脉', direction: '西南' },
-    3: { name: '外关', code: 'TE5', trigram: '震', trigramName: '震为雷', trigramSymbol: '☳', couple: 8, coupleName: '内关', direction: '东' },
-    4: { name: '足临泣', code: 'GB41', trigram: '巽', trigramName: '巽为风', trigramSymbol: '☴', couple: 6, coupleName: '公孙', direction: '东南' },
-    5: { name: '照海', code: 'KI6', trigram: '坤', trigramName: '坤为地', trigramSymbol: '☷', couple: 1, coupleName: '申脉', direction: '西南' },
-    6: { name: '公孙', code: 'SP4', trigram: '乾', trigramName: '乾为天', trigramSymbol: '☰', couple: 4, coupleName: '足临泣', direction: '西北' },
-    7: { name: '后溪', code: 'SI3', trigram: '兑', trigramName: '兑为泽', trigramSymbol: '☱', couple: 9, coupleName: '列缺', direction: '西' },
-    8: { name: '内关', code: 'PC6', trigram: '艮', trigramName: '艮为山', trigramSymbol: '☶', couple: 3, coupleName: '外关', direction: '东北' },
-    9: { name: '列缺', code: 'LU7', trigram: '离', trigramName: '离为火', trigramSymbol: '☲', couple: 7, coupleName: '后溪', direction: '南' }
+    1: { name: '申脉', code: 'BL62', trigram: '坎', trigramName: '坎为水', trigramSymbol: '☵', couple: 7, coupleName: '后溪', direction: '西北' },
+    2: { name: '照海', code: 'KI6', trigram: '坤', trigramName: '坤为地', trigramSymbol: '☷', couple: 9, coupleName: '列缺', direction: '西南' },
+    3: { name: '外关', code: 'TE5', trigram: '震', trigramName: '震为雷', trigramSymbol: '☳', couple: 4, coupleName: '足临泣', direction: '东' },
+    4: { name: '足临泣', code: 'GB41', trigram: '巽', trigramName: '巽为风', trigramSymbol: '☴', couple: 3, coupleName: '外关', direction: '东南' },
+    5: { name: '照海', code: 'KI6', trigram: '坤', trigramName: '坤为地', trigramSymbol: '☷', couple: 9, coupleName: '列缺', direction: '西南' },
+    6: { name: '公孙', code: 'SP4', trigram: '乾', trigramName: '乾为天', trigramSymbol: '☰', couple: 8, coupleName: '内关', direction: '西北' },
+    7: { name: '后溪', code: 'SI3', trigram: '兑', trigramName: '兑为泽', trigramSymbol: '☱', couple: 1, coupleName: '申脉', direction: '西' },
+    8: { name: '内关', code: 'PC6', trigram: '艮', trigramName: '艮为山', trigramSymbol: '☶', couple: 6, coupleName: '公孙', direction: '东北' },
+    9: { name: '列缺', code: 'LU7', trigram: '离', trigramName: '离为火', trigramSymbol: '☲', couple: 2, coupleName: '照海', direction: '南' }
 };
 
 // =================== 五门十变 ===================
@@ -536,4 +511,24 @@ function getGanYinYang(ganIdx) {
 
 function getZhiYinYang(zhiIdx) {
     return ZHI_YIN_YANG[zhiIdx] === 1 ? '阳' : '阴';
+}
+
+// =================== 纳音五行（60甲子纳音） ===================
+const NAYIN_WUXING = [
+    '海中金','海中金','炉中火','炉中火','大林木','大林木',
+    '路旁土','路旁土','剑锋金','剑锋金','山头火','山头火',
+    '涧下水','涧下水','城头土','城头土','白蜡金','白蜡金',
+    '杨柳木','杨柳木','泉中水','泉中水','屋上土','屋上土',
+    '霹雳火','霹雳火','松柏木','松柏木','长流水','长流水',
+    '砂中金','砂中金','山下火','山下火','平地木','平地木',
+    '壁上土','壁上土','金箔金','金箔金','覆灯火','覆灯火',
+    '天河水','天河水','大驿土','大驿土','钗钏金','钗钏金',
+    '桑柘木','桑柘木','大溪水','大溪水','沙中土','沙中土',
+    '天上火','天上火','石榴木','石榴木','大海水','大海水'
+];
+
+function getNaYin(sexagenaryNum) {
+    if (typeof sexagenaryNum === 'undefined' || sexagenaryNum === null) return '';
+    const idx = ((sexagenaryNum % 60) + 60) % 60;
+    return NAYIN_WUXING[idx] || '';
 }

@@ -393,8 +393,8 @@ body {
 .modal {
     background: var(--bg-card);
     border-radius: var(--radius);
-    width: 90%;
-    max-width: 700px;
+  width: 90%;
+  max-width: 900px;
     max-height: 85vh;
     overflow-y: auto;
     box-shadow: var(--shadow-lg);
@@ -1032,3 +1032,16 @@ body {
 .sidebar-overlay.show {
     display: block;
 }
+
+/* 时辰阴阳着色 */
+.shi-yang { color: #d35400 !important; font-weight: 700; }
+.shi-yin { color: #2980b9 !important; font-weight: 700; }
+/* 互用穴特殊标记 */
+.huyong-mark { background: #e67e22; color: #fff; padding: 1px 4px; border-radius: 3px; font-size: 0.75em; margin-left: 4px; }
+/* 五输穴位标记 */
+.wushu-tag { font-size: 0.7em; padding: 1px 4px; border-radius: 3px; margin-left: 2px; background: #f0f0f0; color: #666; }
+/* 农历显示 */
+.lunar-tag { font-size: 0.65em; color: #888; display: block; margin-top: 2px; }
+.lunar-date { display: block; font-size: 10px; color: #999; line-height: 1.2; margin-bottom: 2px; }
+.lunar-first { color: #E65100; font-weight: 600; }
+.lunar-fifteen { color: #1565C0; font-weight: 600; }

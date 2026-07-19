@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name="theme-color" content="#2c2416">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="中医日历">
-<meta name="mobile-web-app-capable" content="yes">
-<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22%E4%B8%AD%E5%8C%BB%E6%97%A5%E5%8E%86%22%2C%22short_name%22%3A%22%E4%B8%AD%E5%8C%BB%E6%97%A5%E5%8E%86%22%2C%22description%22%3A%22%E5%B9%B2%E6%94%AF%E8%8A%82%E6%B0%94%E7%81%B5%E9%BE%9F%E5%85%AB%E6%B3%95%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%232c2416%22%2C%22theme_color%22%3A%22%232c2416%22%2C%22orientation%22%3A%22portrait%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAIIUlEQVR4Ae3BPXKkyBqG0Se%2FKE%2BmIm0cbQALNiCfxRDBGjLEYlgGWGxADnbasrmhuaHp6ZlWd%2F1AFZDvOe7t9XlGJFGGSMIMkYQZIgkzRBJmiCTMEEmYIZIwQyRhhkjCDJGEGSIJM0QSZogkzBBJmCGSsBOyijA6vsSp5zs%2BK%2FmdOPV8aasCWdYJuUkYHf8Wp56aZfis5AdHnHr%2Bra0K5Dru7fV5Rs4WRsevxKnnGj4ruVacen6lrQrkPO7t9XlGfiuMju%2FEqecWPiu5VZx6vtNWBfI99%2Fb6PCP%2FEUbH78SpZwk%2BK1lKnHp%2Bp60K5Gfu7fV5Rv4SRsefxKlnST4rWVqcev6krQoE3Nvr80zCwug4R5x61uCzkrXEqeccbVWQKiNRYXSE0XGOOPXskc9KzlF3A3U3kCIjMWF0hNFxrjj17JnPSs5VdwN1N5AS9%2Fb6PJOAMDouEaeee%2FBZyb3EqecSbVVwdMbBhdERRscl4tRzRD4ruUTdDdTdwJEZBxZGx6Xi1HNkPiu5VN0NHJVxQGF0hNFxqTj1pMBnJZequ4G6Gzga42DC6LhGnHpS4rOSa9TdwJEYBxFGRxgd14hTT4p8VnKNuhuou4EjMA4gjA65v7ob2Dtjx8LoCKPjFnHqSZnPSm5RdwN1N7BXxk6F0XGrOPUI%2BKzkVnU3sEfGDoXRIdtTdwN7Y%2BxMGB1LiFOP%2FOCzkiXU3cCeGDsSRscS4tQj%2F%2BWzkiXU3cBeGDsRRofsR90N7IGxcWF0hNGxlDj1yPd8VrKUuhuou4EtMzYsjA7Zv7ob2Cpjo8LoWFqceuTPfFaytLob2CJDJGHGBoXRIcdTdwNbY2xMGB1riFOPnM9nJWuou4EtMTYkjA45vrob2ApjI8LokHTU3cAWGBsQRsea4tQjl%2FNZyZrqbuDRjAcLo0PSVXcDj2SIJMx4oDA6ROpu4FGMBwmjQ%2BRL3Q08gnFwceqR6%2Fms5MiMBwijQ%2BTf6m7g3ow7C6ND5Dt1N3BPhkjCjDsKo0PkT%2Bpu4F6MOwmjQ%2BRcdTdwD4ZIwow7CKND5FJ1N7A2QyRhxsrC6BC5Vt0NrMk4OJ%2BVyPXi1HNkxorC6BC5Vd0NrMUQSZixkjA6RJZSdwNrMEQSZiTAZyVyuTj1HJ2xgjA6RJZWdwNLM0QSZogkzFhYGB1b5LMSOV%2Bcerao7gaWZIgkzEiIz0rkz%2BLUkwpjQWF0iKyt7gaWYiTGZyXyvTj1pMQQSZixkDA69sJnJfJfcerZi7obWIIhkjAjUT4rkR%2Fi1JMiI2E%2BKxGIU0%2BqjAWE0SFyb3U3cCsjcT4rSVmcelJmCD4rSVGcelJnyF98VpKSOPUIGPI3n5WkIE498n%2BG%2FMRnJUcWpx75wbhRGB1H47OSI4pTz9HU3cAtThxQjJHveO85h89K4tRzFHHqOZd7euE788c7R%2BLeXp9nbhBGx1bEGDmX955zxKlnTT4rWVuces7hnl441%2Fzxzla0VcG13Nvr88wNwuh4tBgj1%2FDec6449azBZyVriVPPudzTC9eYP955tLYquJaRsBgj5%2FJZyZ7Eqedc7umFVBk7F2PkXnxW4rOSLYtTT5x67sU9vbBnxo7FGLlVjJFL%2BazEZyVbEqeeOPVcyj29cCv39MJenZCr%2BazkU5x6HiVOPXK9E0KMEe891%2FJZyZc49awtTj1LcE8vpO6ELMpnJf8Up55bxalH1nFCVuWzkt%2BJU488jiGSMEMkYYbgvSdF88c7qTNEEmbsmPeeW3nvSdn88c6t5o939srYOe898jjzxzt7ZiTMe4%2FA%2FPFOqowD8N7jvecS3nvkh%2FnjnUvMH%2B%2FMH%2B%2Fs3YkD8d7zKcbId7z3yK%2FNH%2B98ck8vfGf%2BeOdIThyQ9x653vzxTiqMGzX5jMijtFXBLQyRhBkiCTNEEmaIJMwQSZixgCafEbm3tiq4lSGSMEMkYYZIwoyFNPmMyL20VcESDJGEGSIJMxbU5DMia2urgqUYIgkzRBJmLKzJZ0TW0lYFSzJEEmaIJMxYQZPPiCytrQqWZogkzBBJmLGSJp8RWUpbFazBEEmYsaImnxG5VVsVrMUQSZixsiafEblWWxWsyRBJmHEHTT4jcqm2KlibIZIw406afEbkXG1VcA%2FGHTX5jMiftFXBvRgiCTPurMlnRL7TVgX3ZDxAk8%2BI%2FFtbFdybIZIw40GafEbkS1sVPILxQE0%2BI9JWBY9iiCTMeLAmn5F0tVXBIxkb0OQzkp62Kng0YyOafEbS0VYFW2BsSJPPyPG1VcFWGBvT5DNyXG1VsCXGBjX5jBxPWxVsjSGSMGOjmnxGjqOtCrbI2LAmn5H9a6uCrTqxcU0%2B8ymMDtmXtirYOmMnmnxG9qOtCvbA2JEmn5Hta6uCvTB2pslnZLvaqmBPjB1q8hnZnrYq2Btjp5p8RrajrQr26MSONfnMpzA65DHaqmDPjANo8hm5v7Yq2LsTB9HkM5%2FC6JB1tVXBURgH0%2BQzsp62KjiSEwfU5DOfwuiQZbRVwREZB9bkM3K7tio4qhMH1%2BQzn8LokMu0VcHRnUhEk898CqNDfq%2BtClJxIjFNPvMpjA75WVsVpOZEopp85lMYHalrq4JUnUhck898CaMjFW1VIHBC%2FtbkM1%2FC6DiatiqQn52QX2rymS9hdOxVWxXI907IHzX5zJcwOraurQrkPCfkIk0%2B809hdDxaWxXIdU7ITZp85lfC6FhaWxXIstzb6%2FOMSKIMkYQZIgkzRBJmiCTMEEmYIZIwQyRhhkjCDJGEGSIJM0QSZogkzBBJmCGSsP8BA%2BNTxLjZAdgAAAAASUVORK5CYII%3D%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fpng%22%7D%2C%7B%22src%22%3A%22data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAZnklEQVR4Ae3BO3LkOJiF0Ys%2F0pNZAZuONkCL3IB8LoYRXANCXAyXQVrYgBzasGVjRtNR09Xd9dAjM%2FnAd457fvqWBQAAimICAADFMQEAgOKYAABAcUwAAKA4JgAAUBwTAAAojgkAABTHBAAAimMCAADFMQEAgOKYAABAcUwAAKA4JgAAUBwTAAAojgkAABTHBAAAimMCAADFMQEAgOKYAABAcUwAAKA4JgAAUBwTAAAojgkAABTHBAAAimMCAADFMQEAgOKYAABAcUwAAKA4JgAAUBwTAAAojgkAABTHBAAAimMCAADFMQEAgOKYAABAcUwAAKA4JgAAUBwTAAAojgkAABTHBAAAinMRgGKE6PQmrbPe%2BKrVd2md9WbsGgE4v4sAHEKITr%2BS1lnv0evXfNXqL07vkdZZvzJ2jQDsm3t%2B%2BpYFYHMhOv1JWmddk69aXVtaZ%2F3J2DUCsC33%2FPQtC8BdhOj0XmmddWu%2BanUPaZ31XmPXCMDtueenb1kAri5Ep49I66x781WrLaR11keMXSMA1%2BWen75lAfiSEJ0%2BI62ztuSrVltL66zPGLtGAD7PPT99ywLwISE6fVZaZ%2B2Fr1rtSVpnfdbYNQLwfu756VsWgN8K0ekr0jprj3zVaq%2FSOusrxq4RgF9zz0%2FfsgD8Q4hO15DWWXvmq1Z7l9ZZ1zB2jQD8zT0%2FfcsCoBCdriGts47CV62OJK2zrmHsGgGlc89P37KAQoXodC1pnXU0vmp1RGmddS1j1wgokXt%2B%2BpYFFCJEp2tL66yj8lWrI0vrrGsbu0ZACdzz07cs4ORCdLq2tM46Ol%2B1OoO0zrq2sWsEnJl7fvqWBZxQiE63kNZZZ%2BGrVmeS1lm3MHaNgLNxz0%2FfsoCTCNHpVtI662x81eqM0jrrVsauEXAG7vnpWxZwYCE63VpaZ52Rr1qdVVpn3drYNQKOyj0%2FfcsCDihEp1tL66wz81Wrs0vrrFsbu0bA0bjnp29ZwIGE6HRraZ1VAl%2B1KkVaZ93a2DUCjsI9P33LAnYuRKd7SeusUviqVUnSOutexq4RsGfu%2BelbFrBTITrdS1pnlcZXrUqU1ln3MnaNgD0yATsUolOITveS1lkoh69a3Us%2FLeqnRcDemIAdCdEpRKd7SusslMdXre6pnxb10yJgL9zz07csYGMhOt1bWmeVzletIKV11r2NXSNgSyZgQyE6heh0b2mdBXznq1b31k%2BL%2BmkRsBUTsIEQnUJ02kJaZwH%2F5qtWW%2BinRf20CLg3E3BHITqF6LSVtM4CfsVXrbbST4v6aRFwL%2B756VsWcGMhOm0prbPwX75qhZ9L66wtjV0j4JZMwA2F6BSi05bSOgv4KF%2B12lI%2FLeqnRcCtmIAbCNEpRKetpXUW8Fm%2BarW1flrUT4uAazMBVxai0x6kdRbwVb5qtQf9tAi4JhNwJSE6hei0B2mdBVyLr1rtQT8t6qdFwDWYgC8K0SlEp71I6yzg2nzVai%2F6aVE%2FLQK%2BwgR8QYhOe5LWWcCt%2BKrVnvTTIuCzTMAnhOgUotOepHUWcGu%2BarUn%2FbSonxYBH2UCPiBEpxCd9iats4B78VWrvemnRf20CHgvE%2FBOITrtUVpnAffmq1Z71E%2BLgPcwAX8QolOITnuU1lnAVnzVao%2F6aVE%2FLQJ%2BxwT8RohOe5XWWcDWfNVqr%2FppEfArJuAnQnQK0Wmv0joL2AtftdqrflrUT4uAfzMB%2FxKiE4Bz6adFwI9MwA9CdNq7tM4C9sZXrfaunxYB35mA%2FxWiU4hOe5fWWcBe%2BarV3vXTon5aBJhQvBCdjiCts4C981WrI%2BinRSibCcUK0SlEpyNI6yzgKHzV6gj6aVE%2FLUKZTChSiE4A8KafFqE8JhQnRKcjSess4Gh81epI%2BmkRymJCUUJ0OpK0zgKOyletjqSfFqEcF6EIIToBwJ%2F006I3Y9cI52bC6YXodERpnQUcna9aHVE%2FLcK5mXBqITodUVpnAWfhq1ZH1E%2BLcF4mnFaITgDwFf20COdkwumE6BSi01GldRZwNr5qdVT9tKifFuFcTDiVEJ2OLK2zgLPyVasj66dFOA8TTiNEJwC4pX5ahHMw4RRCdDq6tM4Czs5XrY6unxbh%2BEw4vBCdAOCe%2BmkRjs2EQwvR6QzSOgsoha9anUE%2FLcJxmXBYIToBwJb6aRGOyYRDCtHpLNI6CyiNr1qdRT8twvFchEMJ0QkA9qafFr0Zu0Y4BhMOI0Sns0nrLKBUvmp1Nv20CMdgwiGE6AQAR9BPi7B%2FJuxeiE5nlNZZQOl81eqM%2BmkR9s2EXQvRCQCOqJ8WYb9M2K0Qnc4qrbMA%2FMVXrc6qnxZhn0zYpRCdAOAM%2BmkR9seE3QnR6czSOgvAP%2Fmq1Zn10yLsiwm7EqITAJxRPy3CfpiAO0rrLAA%2F56tWwL2YsBshOgHAmfXTIuyDCbsQohMAlKCfFmF7JmwuRKcSpHUWgN%2FzVasS9NMibMuETYXoBAAl6qdF2I4JmwnRCQBK1k%2BLsA0TNhGiU0nSOgvA%2B%2FiqVUn6aRHuz4S7C9EJAPC3flqE%2BzLhrkJ0AgD8Vz8twv2YgBtL6ywAH%2BOrVsAtmXA3IToBAH6tnxbhPky4ixCdAAB%2F1k%2BLcHsm3FyITgCA9%2BunRbgtE24qRKeSpXUWgM%2FxVauS9dMi3I4JAAAUx4SbCdEJAPB5%2FbQIt2HCTYToBAD4un5ahOsz4epCdIKU1lkAvsZXrSD10yJclwlXFaITAOD6%2BmkRrscEAACKY8LVhOgEALidflqE6zDhKkJ0AgDcXj8twteZgBtI6ywA1%2BGrVsC1mfBlIToBAO6nnxbha0z4khCdAAD310%2BL8HkmfFqITgCA7fTTInyOCQAAFMeETwnRCQCwvX5ahI8z4cNCdAIA7Ec%2FLcLHmIArS%2BssANflq1bANZnwISE6AQD2p58W4f1MeLcQnQAA%2B9VPi%2FA%2BJgAAUBwT3iVEJwDA%2FvXTIvyZCQAAFMeEPwrRCQBwHP20CL9nwm%2BF6AQAOJ5%2BWoRfMwEAgOKY8EshOgEAjqufFuHnTAAAoDgm%2FFSITgCA4%2BunRfgvE%2F4jRCcAwHn00yL8kwkAABTHhH8I0QkAcD79tAh%2FMwEAgOKY8P9CdAIAnFc%2FLcJfTAAAoDgm%2FJ8QnQAA59dPiyCZAABAcUxQiE4AgHL006LSmQAAQHFMhQvRCdflq1YAriuts3Bd%2FbSoZCYAAFAcU8FCdAIAlKufFpXKBAAAimMqVIhOAAD006ISmQAAQHFMBQrRCQCA7%2FppUWlMwA34qhWA60jrLODaTIUJ0QkAgH%2Frp0UlMQEAgOKYChKiEwAAv9JPi0phAgAAxTEBN%2BKrVgC%2BJq2zgFswFSJEJwAA%2FqSfFpXABAAAimMqQIhOAAC8Vz8tOjsTcEO%2BagXgc9I6C7gV08mF6AQAwEf106IzMwEAgOKYAABAcUwnFqITtuerVgA%2BJq2zsL1%2BWnRWJgAAUBwTAAAojumkQnTCfviqFYD3Sess7Ec%2FLTojEwAAKI4JAAAUx3RCITphf3zVCsDvpXUW9qefFp2NCQAAFMd0MiE6Yb981QrAz6V1FvarnxadiQkAABTHBAAAimMC7sxXrQD8U1pnAfdkOpEQnQAAuJV%2BWnQWJmADvmoF4C9pnQXcmwkAABTHdBIhOuFYfNUKKF1aZ%2BFY%2BmnRGZgAAEBxTMCGfNUKKFVaZwFbMZ1AiE4AANxLPy06OhOwMV%2B1AkqT1lnAlkwAAKA4JmAHfNUKKEVaZwFbMx1ciE4AANxbPy06MhOwE75qBZxdWmcBe2ACAADFMQE74qtWwFmldRawF6YDC9EJ5%2BOrVsDZpHUWzqefFh2VCQAAFMcE7JCvWgFnkdZZwN6YgJ3yVSvg6NI6C9gj00GF6AQAwNb6adERmYAd81Ur4KjSOgvYKxOwc75qBRxNWmcBe2YCAADFMQEH4KtWwFGkdRawd6YDCtEJ5fFVK2Dv0joL5emnRUdjAg7EV62AvUrrLOAoTMDB%2BKoVsDdpnQUciQkAABTHBByQr1oBe5HWWcDRmA4mRCfgja9aAVtL6yzgTT8tOhITcGC%2BagVsJa2zgKMyAQfnq1bAvaV1FnBkJuAEfNUKuJe0zgKOzgSchK9aAbeW1lnAGZiAE%2FFVK%2BBW0joLOAsTcDK%2BagVcW1pnAWdiOpAQnYD38FUr4FrSOgt4j35adBQm4KR81Qr4qrTOAs7IBJyYr1oBn5XWWcBZmYCT81Ur4KPSOgs4s4uAT0op6SO899qKr1q9Sess4HfSOmtr7uFRH5FfXwR8lHt%2B%2BpZ1ECE6YTspJV2L915bSess%2FMVXrfC3tM7aint41LXk1xdhO2PX6Ajc89O3rIMI0Qn3l1LSLXnvdW9pnQXJV63wl7TOujf38Khbyq8vwv2NXaMjMAG%2FkFJSSkm3llLSvfmqFfBdWmfdm3t41K25h0e5h0cBP%2BOen75lHUCITriflJK24L3XvaV1Vql81apkaZ11b%2B7hUVvIry%2FC%2FYxdo70zAf%2BSUtJWUkq6N1%2B1QnnSOuve3MOjtuIeHgX8yAT8IKWkraWUdG%2B%2BaoVypHXWvbmHR23NPTwK%2BM49P33LOoAQnXA7KSXtjfdeW0jrrFL4qlVJ0jprC%2B7hUXuTX1%2BE2xm7RntnAnYqpaQt%2BKoVziets7bgHh4F7JEJxUspaa9SStqCr1r5qhWOL62z0jprC%2B7hUXvlHh6FsplQtJSS9i6lpK34qpWvWuF40jorrbO24h4etXfu4VEolwnFSinpKFJK2pKvWuE40jprS%2B7hUUfhHh6FMl0E4F181epNWmdhn9I6C8D7mFCklJKOJqWkPfBVK1%2B1wn6kdVZaZ%2B2Be3jU0biHR6E8FwH4FF%2B1epPWWdhGWmcB%2BBwTipNS0lGllLQ3vmrlq1a4n7TOSuusvXEPjzoq9%2FAolOUiAFfhq1Zv0joLt5HWWQCuwz0%2Ffcs6gBCd8HUpJZ2B915HkNZZe%2BarVnuX1llH4B4edQb59UX4urFrtHcXAbgZX7V6k9ZZ%2BJi0zgJwOxcBuDlftfourbPwc2mdBeA%2BLgJwV75q9V1aZ5UurbMA3N9FBxCiE74upSTsi69afZfWWaVI6yzsk3t4VH59Eb6mnxaNXaM9uwg4oJSSvPc6E1%2B1%2BlFaZ51FWmedmXt4FHA0FwHYJV%2B1%2Bre0ztq7tM4CsH8XATgMX7X6mbTOure0zgJwXBcBODxftfqMtM4CUCYTAAAojgkAABTHBAAAimMCDsh7L2Av8uuLgKMxHcBQZ%2BHrvPcCgN%2FJry%2FC141do70zAQCA4pgAAEBxTAAAoDgmFMV7r6Pz3gvYm%2Fz6oqPLry9COUwAAKA4JhTHe6%2Bj8t4L2Kv8%2BqKjyq8vQllMAACgOCYUyXuvo%2FHeC9i7%2FPqio8mvL0J5TAAAoDgmFMt7r6Pw3gs4ivz6oqPIry9CmUwomvdee%2Be9F3A0%2BfVFe5dfX4RymVA87732ynsv4Kjy64v2Kr%2B%2BCGUzATvlvRdwdPn1RcAemYD%2F5b2X91574b0XcBb59UV7kV9flF9fBJiAH3jvtTXvvYCzya8v2lp%2BfRHwnQn4F%2B%2B9tuK9F3BW%2BfVFW8mvLwJ%2B5J6fvmUdRIhOuJ%2BUku7Fey%2FcX1pnYRvu4VH3kl9fhPsZu0ZHYAJ%2BwXsv771uzXsvoDT59UW3ll9flF9fBPzMRcAfeO%2F1JqWka%2FHeCyhdfn3Rd%2B7hUdeSX18E%2FMlFwDt57%2FWjlJI%2BwnsvAD%2BXX1%2F0nXt41Efk1xcBH3UR8EneewG4vvz6IuDWTAAAoDgmAABQHBMAACiO6UCGOgsAgL0au0ZHYQIAAMUxAQCA4pgAAEBxTAAAoDgmAABQHBMAACiO6WCGOgsAgL0Zu0ZHYgIAAMUxAQCA4pgAAEBxTAAAoDimAxrqLAAA9mLsGh2NCQAAFMcEAACKYwIAAMUxAQCA4pgOaqizAADY2tg1OiITAAAojgkAABTHBAAAimM6sKHOAgBgK2PX6KhMAACgOCYAAFAcEwAAKI7p4IY6CwCAexu7RkdmAgAAxTEBAIDimAAAQHFMJzDUWQAA3MvYNTo6EwAAKI4JAAAUx3QSQ50FAMCtjV2jMzABAIDimAAAQHFMJzLUWQAA3MrYNToLEwAAKI4JAAAUxwQAAIpjOpmhzgIA4NrGrtGZmAAAQHFMJzTUWQAAXMvYNTobEwAAKI4JAAAUx3RSQ50FAMBXjV2jMzIBAIDimAAAQHFMJzbUWQAAfNbYNTorEwAAKI4JAAAUx3RyQ50FAMBHjV2jMzMBAIDimAow1FkAALzX2DU6OxMAACiOqRBDnQUAwJ%2BMXaMSmAAAQHFMAACgOKaCDHUWAAC%2FMnaNSmECAADFMRVmqLMAAPi3sWtUEhMAACiOqUBDnQUAwHdj16g0JgAAUBxToYY6CwCAsWtUIhMAACiOqWBDnQUAKNfYNSqVCQAAFMdUuKHOAgCUZ%2BwalcwEAACKY4KGOgsAUI6xa1Q6EwAAKI4J%2F2eoswAA5zd2jSCZAABAcUz4f0OdBQA4r7FrhL%2BYAABAcUz4h6HOAgCcz9g1wt9MAACgOCb8x1BnAQDOY%2Bwa4Z9M%2BKmhzgIAHN%2FYNcJ%2FmQAAQHFM%2BKWhzgIAHNfYNcLPmQAAQHFM%2BK2hzgIAHM%2FYNcKvmfBHQ50FADiOsWuE3zMBAIDimPAuQ50FANi%2FsWuEPzMBAIDimPBuQ50FANivsWuE9zHhQ4Y6CwCwP2PXCO9nAgAAxTHhw4Y6CwCwH2PXCB9jwqcMdRYAYHtj1wgfZwIAAMUx4dOGOgsAsJ2xa4TPMeFLhjoLAHB%2FY9cIn2fClw11FgDgfsauEb7GBAAAimPCVQx1FgDg9sauEb7OhKsZ6iwAwO2MXSNchwkAABTHhKsa6iwAwPWNXSNcjwlXN9RZAIDrGbtGuC4TbmKoswAAXzd2jXB9JtzMUGcBAD5v7BrhNkwAAKA4JtzUUGcBAD5u7Brhdky4uaHOAgC839g1wm2ZcBdDnQUA%2BLOxa4TbM%2BFuhjoLAPBrY9cI92ECAADFMeGuhjoLAPBfY9cI92PC3Q11FgDgb2PXCPdlwiaGOgsAII1dI9yfCZsZ6iwAKNnYNcI2TNjUUGcBQInGrhG2Y8LmhjoLAEoydo2wLRN2YaizAKAEY9cI2zNhN4Y6CwDObOwaYR9MAACgOCbsylBnAcAZjV0j7IcJuzPUWQBwJmPXCPtiwi4NdRYAnMHYNcL%2BmLBbQ50FAEc2do2wTybs2lBnAcARjV0j7JcJuzfUWQBwJGPXCPtmwiEMdRYAHMHYNcL%2BmXAYQ50FAHs2do1wDBfhUIY6602ITgCwF2PXCMdiwiENdRYA7MHYNcLxmHBYQ50FAFsau0Y4JhMObaizAGALY9cIx2XC4Q11FgDc09g1wrGZcApDnQUA9zB2jXB8JpzGUGcBwC2NXSOcgwmnMtRZAHALY9cI53ERTmeos96E6AQAXzV2jXA%2BJpzWUGcBwFeMXSOckwmnNtRZAPAZY9cI52XC6Q11FgB8xNg1wrldhCIMddabEJ0A4FfGrhHKYEJRhjoLAH5m7BqhHCYUZ6izAOBHY9cIZTGhSEOdBQBvxq4RynMRijXUWW9CdAJQnrFrhHKZULyhzgJQlrFrhLJdBPyvoc56E6ITgPMau0bAGxPwg6HOAnBOY9cI%2BM4E%2FMtQZwE4l7FrBPzoIuAnhjrrTYhOAI5r7BoBP2MCfmOoswAc09g1An7lIuAPhjrrTYhOAPZv7BoBf2IC3mmoswDs29g1At7jIuADhjrrTYhOAPZj7BoBH3ER8AlDnfUmRCcA2xm7RsBnmIAvGOosANsYu0bAZ10EfNFQZ70J0QnA7Y1dI%2BCrLgKuZKiz3oToBOD6xq4RcC0m4MqGOgvAdY1dI%2BCaLgJuYKiz3oToBODzxq4RcAsXATc01FlvQnQC8H5j1wi4pYuAOxjqrDchOgH4tbFrBNzDRcAdDXXWmxCdAPxt7BoB93QRsIGhznoTohNQsrFrBGzhImBDQ531JkQnoCRj1wjY0kXADgx11psQnYAzG7tGwB5cBOzIUGe9CdEJOJOxawTsyUXADg111psQnYAjG7tGwB5dBOzYUGe9CdEJOJKxawTs2UXAAQx11nchOgF7NHaNgKO4CDiYoc56E6ITsAdj1wg4mouAgxrqrDchOgFbGLtGwFFdBBzcUGd9F6ITcEtj1wg4g4uAExnqrO9CdAKuYewaAWdzEXBSQ531XYhOwEeMXSPgzC4CCjDUWW9CdAJ%2BZ%2BwaASW4CCjIUGf9KEQnlG3sGgEluggo2FBnfReiE8owdo2A0l0E4P8MddZ3ITrhXMauEYC%2FXQTgP4Y660chOuFYxq4RgF%2B7CMAfDXXWj0J0wr6MXSMA73cRgA8b6qwfheiE%2Bxq7RgA%2B7yIAXzbUWf8WohOuY%2BwaAbiuiwDcxFBn%2FVuITvi9sWsE4PYuAnA3Q531KyE6lWLsGgHY1kUAdmGos34nRKejGLtGAPbtIgCHMNRZXxWi05%2BMXSMA5%2Been75lAQCAopgAAEBxTAAAoDgmAABQHBMAACiOCQAAFMcEAACKYwIAAMUxAQCA4pgAAEBxTAAAoDgmAABQHBMAACiOCQAAFMcEAACKYwIAAMUxAQCA4pgAAEBxTAAAoDgmAABQHBMAACiOCQAAFMcEAACKYwIAAMUxAQCA4pgAAEBxTAAAoDgmAABQHBMAACiOCQAAFMcEAACKYwIAAMUxAQCA4pgAAEBxTAAAoDgmAABQHBMAACiOCQAAFMcEAACKYwIAAMX5H0yBSi1AF8w8AAAAAElFTkSuQmCC%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%7D%5D%7D">
-<title>中医日历</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2c2416">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="中医日历">
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoi5Lit5Yy75pel5Y6GIiwic2hvcnRfbmFtZSI6IuS4reWMu+aXpeWOhuaehCIsInN0YXJ0X3VybCI6Ii4iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsImJhY2tncm91bmRfY29sb3IiOiIjMmMyNDE2IiwidGhlbWVfY29sb3IiOiIjMmMyNDE2IiwiaWNvbnMiOlt7InNyYyI6Imljb25zL2ljb24tMTkyLnBuZyIsInNpemVzIjoiMTkyeDE5MiIsInR5cGUiOiJpbWFnZS9wbmcifSx7InNyYyI6Imljb25zL2ljb24tNTEyLnBuZyIsInNpemVzIjoiNTEyeDUxMiIsInR5cGUiOiJpbWFnZS9wbmcifV19">
+    <title>传统中医日历</title>
+    <style>
 /* ===== 基础样式与变量 ===== */
 :root {
     --bg-primary: #f8f5f0;
@@ -257,13 +256,8 @@ body {
     border-radius: var(--radius-sm);
 }
 
-.weekday:first-child {
-    color: #c0392b;
-}
-
-.weekday:last-child {
-    color: #c0392b;
-}
+.weekday:first-child { color: #c0392b; }
+.weekday:last-child { color: #c0392b; }
 
 /* ===== 日历网格 ===== */
 .calendar-grid {
@@ -351,16 +345,8 @@ body {
     font-weight: 600;
 }
 
-.tag.solar-term {
-    background: #d5f5e3;
-    color: #1a7a3a;
-}
-
-.tag.jieqi {
-    background: #fdebd0;
-    color: #b7770b;
-}
-
+.tag.solar-term { background: #d5f5e3; color: #1a7a3a; }
+.tag.jieqi { background: #fdebd0; color: #b7770b; }
 .tag.wood { background: #d5f5e3; color: #1a7a3a; }
 .tag.fire { background: #fadbd8; color: #922b21; }
 .tag.earth { background: #fdebd0; color: #b7770b; }
@@ -399,15 +385,13 @@ body {
     backdrop-filter: blur(4px);
 }
 
-.modal-overlay.show {
-    display: flex;
-}
+.modal-overlay.show { display: flex; }
 
 .modal {
     background: var(--bg-card);
     border-radius: var(--radius);
     width: 90%;
-    max-width: 700px;
+    max-width: 900px;
     max-height: 85vh;
     overflow-y: auto;
     box-shadow: var(--shadow-lg);
@@ -432,10 +416,7 @@ body {
     border-radius: var(--radius) var(--radius) 0 0;
 }
 
-.modal-header h2 {
-    font-size: 1.2em;
-    color: var(--text-primary);
-}
+.modal-header h2 { font-size: 1.2em; color: var(--text-primary); }
 
 .close-btn {
     width: 36px;
@@ -452,20 +433,11 @@ body {
     transition: var(--transition);
 }
 
-.close-btn:hover {
-    background: #e74c3c;
-    color: white;
-}
-
-.modal-body {
-    padding: 20px 24px;
-}
+.close-btn:hover { background: #e74c3c; color: white; }
+.modal-body { padding: 20px 24px; }
 
 /* ===== 详情面板 ===== */
-.detail-section {
-    margin-bottom: 20px;
-}
-
+.detail-section { margin-bottom: 20px; }
 .detail-section h3 {
     font-size: 1em;
     margin-bottom: 10px;
@@ -502,598 +474,174 @@ body {
     color: var(--text-primary);
 }
 
-.yin-badge {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 10px;
-    background: var(--yin-bg);
-    color: #2c5f8a;
-    font-size: 0.75em;
-    font-weight: 600;
-}
-
-.yang-badge {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 10px;
-    background: var(--yang-bg);
-    color: #c0392b;
-    font-size: 0.75em;
-    font-weight: 600;
-}
+.yin-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; background: var(--yin-bg); color: #2c5f8a; font-size: 0.75em; font-weight: 600; }
+.yang-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; background: var(--yang-bg); color: #c0392b; font-size: 0.75em; font-weight: 600; }
 
 /* ===== 时辰表 ===== */
-.hour-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.8em;
-    margin-top: 10px;
-}
-
-.hour-table th {
-    background: var(--bg-sidebar);
-    color: var(--text-sidebar);
-    padding: 8px 6px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 0.85em;
-}
-
-.hour-table th:first-child {
-    border-radius: var(--radius-sm) 0 0 0;
-}
-
-.hour-table th:last-child {
-    border-radius: 0 var(--radius-sm) 0 0;
-}
-
-.hour-table td {
-    padding: 8px 6px;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-    color: var(--text-secondary);
-}
-
-.hour-table tr:hover td {
-    background: var(--bg-secondary);
-}
-
-.hour-table .acupoint-highlight {
-    color: var(--accent);
-    font-weight: 600;
-}
-
-.hour-table .meridian-name {
-    color: var(--water);
-}
-
-.hour-current {
-    background: rgba(76, 175, 80, 0.25) !important;
-    border-left: 4px solid #4caf50 !important;
-    box-shadow: inset 0 0 20px rgba(76, 175, 80, 0.1);
-}
-
-.hour-current td {
-    font-weight: 600;
-}
-
-/* 时辰表格展示 */
-.hour-table-wrapper {
-    overflow-x: auto;
-    max-height: 600px;
-    overflow-y: auto;
-    border-radius: 8px;
-    border: 1px solid #dee2e6;
-}
-
-.hour-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.8em;
-    white-space: nowrap;
-}
-
+.hour-table-wrapper { overflow-x: auto; max-height: 600px; overflow-y: auto; border-radius: 8px; border: 1px solid #dee2e6; }
+.hour-table { width: 100%; border-collapse: collapse; font-size: 0.8em; white-space: nowrap; }
 .hour-table thead th {
-    background: #2c3e50;
-    color: #ecf0f1;
-    padding: 10px 6px;
-    text-align: center;
-    font-weight: 600;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    background: #2c3e50; color: #ecf0f1; padding: 10px 6px; text-align: center;
+    font-weight: 600; position: sticky; top: 0; z-index: 1;
 }
+.hour-table tbody td { padding: 8px 6px; text-align: center; border-bottom: 1px solid #e0e0e0; vertical-align: middle; }
 
-.hour-table tbody td {
-    padding: 8px 6px;
-    text-align: center;
-    border-bottom: 1px solid #e0e0e0;
-    vertical-align: middle;
-}
+.hour-current { background: rgba(76, 175, 80, 0.25) !important; border-left: 4px solid #4caf50 !important; box-shadow: inset 0 0 20px rgba(76, 175, 80, 0.1); }
+.hour-current td { font-weight: 600; }
 
-.shichen-name {
-    font-size: 1.05em;
-}
+.acupoint-code { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 1px 5px; border-radius: 3px; font-weight: 700; font-size: 0.85em; margin: 1px; }
+.acupoint-highlight { color: #c4953a; font-weight: 600; }
+.meridian-name { color: #2c5f8a; }
 
-.ganzhi-cell {
-    font-weight: 600;
-    font-size: 1em;
-}
+.detail-header { display: flex; gap: 20px; flex-wrap: wrap; padding: 16px; background: linear-gradient(135deg, rgba(52,152,219,0.08), rgba(155,89,182,0.08)); border-radius: 10px; margin-bottom: 16px; }
+.dh-item { display: flex; flex-direction: column; gap: 4px; }
+.dh-label { font-size: 0.75em; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+.dh-value { font-size: 1.1em; font-weight: 600; }
+.dh-sub { font-size: 0.8em; color: #999; }
 
-.ganzhi-detail {
-    color: #666;
-    font-weight: normal;
-    font-size: 0.8em;
-}
-
-.acupoint-code {
-    display: inline-block;
-    background: #e8f5e9;
-    color: #2e7d32;
-    padding: 1px 5px;
-    border-radius: 3px;
-    font-weight: 700;
-    font-size: 0.85em;
-    margin: 1px;
-}
-
-.acupoint-name {
-    color: #333;
-    font-size: 0.9em;
-}
-
-.trigram-sym {
-    font-size: 1.3em;
-    margin-left: 3px;
-    vertical-align: middle;
-}
-
-.couple-note {
-    color: #999;
-    font-size: 0.8em;
-}
-
-.no-point {
-    color: #bbb;
-    font-style: italic;
-}
-
-.lg-cell, .najia-cell, .nazi-cell {
-    line-height: 1.5;
-}
-
-.nazi-main, .nazi-acc {
-    font-size: 0.82em;
-    line-height: 1.4;
-}
-
-/* 详情头部 */
-.detail-header {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 16px;
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.08), rgba(155, 89, 182, 0.08));
-    border-radius: 10px;
-    margin-bottom: 16px;
-}
-
-.dh-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.dh-label {
-    font-size: 0.75em;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.dh-value {
-    font-size: 1.1em;
-    font-weight: 600;
-}
-
-.dh-sub {
-    font-size: 0.8em;
-    color: #999;
-}
-
-/* 详情分段 */
-.detail-section {
-    margin-bottom: 20px;
-    border: 1px solid #e8e8e8;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.section-title {
-    background: #f5f7fa;
-    padding: 12px 16px;
-    font-weight: 700;
-    font-size: 0.95em;
-    color: #2c3e50;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border-bottom: 1px solid #e8e8e8;
-}
-
-.section-content {
-    padding: 14px 16px;
-    font-size: 0.9em;
-    line-height: 1.7;
-}
-
-.current-badge {
-    background: #4caf50;
-    color: #fff;
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 0.82em;
-    font-weight: 600;
-    animation: pulse-current 2s ease-in-out infinite;
-}
-
-@keyframes pulse-current {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-}
+.current-badge { background: #4caf50; color: #fff; padding: 3px 10px; border-radius: 12px; font-size: 0.82em; font-weight: 600; animation: pulse-current 2s ease-in-out infinite; }
+@keyframes pulse-current { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
 
 /* 五门十变 */
-.wumen-section .section-content {
-    background: linear-gradient(135deg, rgba(231, 76, 60, 0.05), rgba(46, 204, 113, 0.05));
-}
-
-.wumen-card {
-    text-align: center;
-    padding: 12px;
-}
-
-.wumen-formula {
-    font-size: 1.2em;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 8px;
-}
-
-.wumen-wuxing {
-    font-size: 1.1em;
-    margin-bottom: 6px;
-}
-
-.wx-highlight {
-    display: inline-block;
-    padding: 3px 12px;
-    border-radius: 14px;
-    color: #fff;
-    font-weight: 700;
-    margin: 0 4px;
-}
-
-.wx-木 { background: #27ae60; color: #fff; }
-.wx-火 { background: #e74c3c; color: #fff; }
-.wx-土 { background: #f39c12; color: #fff; }
-.wx-金 { background: #b8860b; color: #fff; }
+.wumen-section .section-content { background: linear-gradient(135deg, rgba(231,76,60,0.05), rgba(46,204,113,0.05)); }
+.wx-highlight { display: inline-block; padding: 3px 12px; border-radius: 14px; color: #fff; font-weight: 700; margin: 0 4px; }
+.wx-木 { background: #27ae60; color: #fff; } .wx-火 { background: #e74c3c; color: #fff; }
+.wx-土 { background: #f39c12; color: #fff; } .wx-金 { background: #b8860b; color: #fff; }
 .wx-水 { background: #2980b9; color: #fff; }
 
-.wumen-desc {
-    color: #666;
-    font-size: 0.85em;
-}
-
-/* 合日互用 */
-.he-gan-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
-    justify-content: center;
-}
-
-.he-gan-item {
-    background: #f0f4f8;
-    border: 1px solid #dce4ec;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85em;
-    font-weight: 600;
-    color: #2c3e50;
-}
+.he-gan-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; justify-content: center; }
+.he-gan-item { background: #f0f4f8; border: 1px solid #dce4ec; padding: 6px 14px; border-radius: 20px; font-size: 0.85em; font-weight: 600; color: #2c3e50; }
 
 /* 灵龟八法配穴卡片 */
-.trigram-pairs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 12px;
-    padding: 14px;
-}
+.trigram-pairs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; padding: 14px; }
+.trigram-pair-card { background: linear-gradient(135deg, #fafafa, #f0f0f0); border: 1px solid #e0e0e0; border-radius: 10px; padding: 14px; text-align: center; transition: all 0.2s; }
+.trigram-pair-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
 
-.trigram-pair-card {
-    background: linear-gradient(135deg, #fafafa, #f0f0f0);
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 14px;
-    text-align: center;
-    transition: all 0.2s;
-}
+/* 五输穴 */
+.wushu-row { margin-bottom: 8px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+.wushu-pills { display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.8em; }
+.wushu-pills span { background: #fff; padding: 3px 8px; border-radius: 6px; border: 1px solid #e8e8e8; }
+.wx-mini { font-style: normal; font-weight: 700; font-size: 0.8em; padding: 1px 4px; border-radius: 6px; margin: 0 2px; }
+.wx-mini.wx-木 { background: #27ae60; color: #fff; } .wx-mini.wx-火 { background: #e74c3c; color: #fff; }
+.wx-mini.wx-土 { background: #f39c12; color: #fff; } .wx-mini.wx-金 { background: #b8860b; color: #fff; }
+.wx-mini.wx-水 { background: #2980b9; color: #fff; }
 
-.trigram-pair-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
-
-.pair-names {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 6px;
-}
-
-.pair-point {
-    font-weight: 700;
-    font-size: 0.95em;
-}
-
-.pair-point small {
-    color: #888;
-    font-weight: normal;
-}
-
-.pair-connector {
-    font-size: 1.4em;
-    color: #bbb;
-}
-
-.pair-vessels {
-    font-size: 0.85em;
-    color: #555;
-    margin-bottom: 4px;
-}
-
-.pair-relation {
-    font-size: 0.8em;
-    color: #999;
-}
-
-/* 补泻表 */
-.supplement-drain-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.82em;
-}
-
-.supplement-drain-table thead th {
-    background: #e8e8e8;
-    padding: 8px 6px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.supplement-drain-table tbody td {
-    padding: 7px 6px;
-    text-align: center;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-/* 五输穴五行表 */
-.wushu-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.wushu-item {
-    background: #fafafa;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 10px 14px;
-}
-
-.wushu-meridian {
-    font-weight: 700;
-    font-size: 0.9em;
-    color: #2c3e50;
-    margin-bottom: 6px;
-}
-
-.wushu-sequence {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 0.82em;
-}
-
-.wushu-sequence span {
-    background: #fff;
-    padding: 4px 10px;
-    border-radius: 6px;
-    border: 1px solid #e8e8e8;
-}
-
-.wushu-sequence em {
-    font-style: normal;
-    font-weight: 700;
-    color: #fff;
-    padding: 1px 6px;
-    border-radius: 8px;
-    margin-left: 2px;
-    font-size: 0.85em;
-}
-
-/* 菜单按钮默认隐藏 */
-#menu-toggle {
-    display: none;
-}
+#menu-toggle { display: none; }
 
 /* ===== 响应式 ===== */
 @media (max-width: 900px) {
-    #menu-toggle {
-        display: flex !important;
-    }
-
-    .sidebar {
-        position: fixed;
-        left: -300px;
-        top: 0;
-        height: 100%;
-        width: 280px;
-        box-shadow: var(--shadow-lg);
-        transition: left 0.3s ease;
-    }
-
-    .sidebar.open {
-        left: 0;
-    }
-
-    .main-content {
-        padding: 12px;
-    }
-
-    .calendar-header {
-        gap: 6px;
-    }
-
-    .calendar-header h1 {
-        font-size: 1.15em;
-        min-width: 150px;
-    }
-
-    .nav-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 0.95em;
-    }
-
-    .day-cell {
-        min-height: 68px;
-        padding: 4px;
-    }
-
-    .day-cell .solar-date {
-        font-size: 0.95em;
-    }
-
-    .day-cell .ganzhi {
-        font-size: 0.62em;
-    }
-
-    .day-cell .tag {
-        font-size: 0.52em;
-    }
-
-    .modal {
-        width: 95%;
-        max-height: 90vh;
-    }
-
-    .detail-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hour-table {
-        font-size: 0.7em;
-    }
-
-    .hour-table th,
-    .hour-table td {
-        padding: 5px 3px;
-    }
+    #menu-toggle { display: flex !important; }
+    .sidebar { position: fixed; left: -300px; top: 0; height: 100%; width: 280px; box-shadow: var(--shadow-lg); transition: left 0.3s ease; }
+    .sidebar.open { left: 0; }
+    .main-content { padding: 12px; }
+    .calendar-header { gap: 6px; }
+    .calendar-header h1 { font-size: 1.15em; min-width: 150px; }
+    .nav-btn { width: 36px; height: 36px; font-size: 0.95em; }
+    .day-cell { min-height: 68px; padding: 4px; }
+    .day-cell .solar-date { font-size: 0.95em; }
+    .day-cell .ganzhi { font-size: 0.62em; }
+    .day-cell .tag { font-size: 0.52em; }
+    .modal { width: 95%; max-height: 90vh; }
+    .detail-grid { grid-template-columns: repeat(2, 1fr); }
+    .hour-table { font-size: 0.7em; }
+    .hour-table th, .hour-table td { padding: 5px 3px; }
 }
 
 @media (max-width: 480px) {
-    .day-cell {
-        min-height: 55px;
-        padding: 3px;
-    }
-
-    .day-cell .solar-date {
-        font-size: 0.85em;
-    }
-
-    .day-cell .ganzhi {
-        font-size: 0.55em;
-    }
-
-    .day-cell .tag {
-        font-size: 0.48em;
-        padding: 1px 2px;
-    }
-
-    .legend {
-        font-size: 0.7em;
-        gap: 6px;
-        padding: 8px 10px;
-    }
+    .day-cell { min-height: 55px; padding: 3px; }
+    .day-cell .solar-date { font-size: 0.85em; }
+    .day-cell .ganzhi { font-size: 0.55em; }
+    .day-cell .tag { font-size: 0.48em; padding: 1px 2px; }
+    .legend { font-size: 0.7em; gap: 6px; padding: 8px 10px; }
 }
 
-/* 移动端遮罩 */
-.sidebar-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    z-index: 99;
-}
+.sidebar-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 99; }
+.sidebar-overlay.show { display: block; }
 
-.sidebar-overlay.show {
-    display: block;
-}
-
-</style>
+/* 时辰阴阳着色 */
+.shi-yang { color: #d35400 !important; font-weight: 700; }
+.shi-yin { color: #2980b9 !important; font-weight: 700; }
+/* 互用穴特殊标记 */
+.huyong-mark { background: #e67e22; color: #fff; padding: 1px 4px; border-radius: 3px; font-size: 0.75em; margin-left: 4px; }
+/* 五输穴位标记 */
+.wushu-tag { font-size: 0.7em; padding: 1px 4px; border-radius: 3px; margin-left: 2px; background: #f0f0f0; color: #666; }
+/* 农历显示 */
+.lunar-tag { font-size: 0.65em; color: #888; display: block; margin-top: 2px; }
+.lunar-date { display: block; font-size: 10px; color: #999; line-height: 1.2; margin-bottom: 2px; }
+.lunar-first { color: #E65100; font-weight: 600; }
+.lunar-fifteen { color: #1565C0; font-weight: 600; }
+    </style>
 </head>
 <body>
-<div class="app-container">
-<aside class="sidebar" id="sidebar">
-<div class="sidebar-header"><h2>中医日历</h2><div class="subtitle">干支节气灵龟八法</div></div>
-<div class="sidebar-section"><h3>今日概要</h3><div id="today-summary"></div></div>
-<div class="sidebar-section"><h3>五运六气</h3><div id="wuyun-summary"></div></div>
-<div class="sidebar-section"><button class="btn-sidebar" onclick="goToToday()">回到今天</button><button class="btn-sidebar" onclick="toggleTheme()">切换主题</button></div>
-</aside>
-<main class="main-content">
-<div class="calendar-header"><button class="nav-btn" id="menu-toggle" onclick="toggleSidebar()">菜单</button><button class="nav-btn" onclick="navigateMonth(-1)">上月</button><h1 id="current-month-title"></h1><button class="nav-btn" onclick="navigateMonth(1)">下月</button></div>
-<div class="legend"><span class="legend-item"><span class="dot solar-term-dot"></span>节气</span><span class="legend-item"><span class="dot jieqi-dot"></span>节</span><span class="legend-item"><span class="dot wuxing-dot wood"></span>木</span><span class="legend-item"><span class="dot wuxing-dot fire"></span>火</span><span class="legend-item"><span class="dot wuxing-dot earth"></span>土</span><span class="legend-item"><span class="dot wuxing-dot metal"></span>金</span><span class="legend-item"><span class="dot wuxing-dot water"></span>水</span></div>
-<div class="weekday-row"><div class="weekday">日</div><div class="weekday">一</div><div class="weekday">二</div><div class="weekday">三</div><div class="weekday">四</div><div class="weekday">五</div><div class="weekday">六</div></div>
-<div class="calendar-grid" id="calendar-grid"></div>
-</main></div>
-<div class="modal-overlay" id="modal-overlay" onclick="closeModal()"><div class="modal" onclick="event.stopPropagation()"><div class="modal-header"><h2 id="modal-title"></h2><button class="close-btn" onclick="closeModal()">X</button></div><div class="modal-body" id="modal-body"></div></div></div>
-<script>
-/**
- * data.js - 中医日历核心数据定义
- * 包含：天干地支、五行、节气基础数据、穴位信息、五运六气常量等
- */
+    <div class="app-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>🌿 中医日历</h2>
+                <div class="subtitle">干支 · 节气 · 灵龟八法</div>
+            </div>
+            <div class="sidebar-section">
+                <h3>📅 今日概要</h3>
+                <div id="today-summary"></div>
+            </div>
+            <div class="sidebar-section">
+                <h3>☯ 五运六气</h3>
+                <div id="wuyun-summary"></div>
+            </div>
+            <div class="sidebar-section">
+                <button class="btn-sidebar" onclick="goToToday()">📅 回到今天</button>
+                <button class="btn-sidebar" onclick="toggleTheme()" id="theme-btn">🌙 切换主题</button>
+            </div>
+        </aside>
 
-// =================== 天干地支 ===================
+        <main class="main-content">
+            <div class="calendar-header">
+                <button class="nav-btn" id="menu-toggle" onclick="toggleSidebar()">☰</button>
+                <button class="nav-btn" onclick="navigateMonth(-1)">◀</button>
+                <h1 id="current-month-title"></h1>
+                <button class="nav-btn" onclick="navigateMonth(1)">▶</button>
+            </div>
+            <div class="legend">
+                <span class="legend-item"><span class="dot solar-term-dot"></span> 节气</span>
+                <span class="legend-item"><span class="dot jieqi-dot"></span> 节</span>
+                <span class="legend-item"><span class="dot wuxing-dot wood"></span> 木</span>
+                <span class="legend-item"><span class="dot wuxing-dot fire"></span> 火</span>
+                <span class="legend-item"><span class="dot wuxing-dot earth"></span> 土</span>
+                <span class="legend-item"><span class="dot wuxing-dot metal"></span> 金</span>
+                <span class="legend-item"><span class="dot wuxing-dot water"></span> 水</span>
+            </div>
+            <div class="weekday-row">
+                <div class="weekday">日</div><div class="weekday">一</div>
+                <div class="weekday">二</div><div class="weekday">三</div>
+                <div class="weekday">四</div><div class="weekday">五</div>
+                <div class="weekday">六</div>
+            </div>
+            <div class="calendar-grid" id="calendar-grid"></div>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <button class="close-btn" onclick="closeModal()">✕</button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+// =================== data.js ===================
 const TIAN_GAN = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
 const DI_ZHI = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
-
-// 六十甲子表 (0-59)
 const SEXAGENARY = [];
-for (let i = 0; i < 60; i++) {
-    SEXAGENARY.push(TIAN_GAN[i % 10] + DI_ZHI[i % 12]);
-}
-
-// 天干阴阳: 甲丙戊庚壬=阳, 乙丁己辛癸=阴
-const GAN_YIN_YANG = [1, 0, 1, 0, 1, 0, 1, 0, 1, 0]; // 1=阳, 0=阴
-// 地支阴阳: 子寅辰午申戌=阳, 丑卯巳未酉亥=阴
+for (let i = 0; i < 60; i++) { SEXAGENARY.push(TIAN_GAN[i % 10] + DI_ZHI[i % 12]); }
+const GAN_YIN_YANG = [1, 0, 1, 0, 1, 0, 1, 0, 1, 0];
 const ZHI_YIN_YANG = [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0];
-
-// 天干五行: 甲乙=木, 丙丁=火, 戊己=土, 庚辛=金, 壬癸=水
 const GAN_WU_XING = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4];
-// 地支五行: 寅卯=木, 巳午=火, 申酉=金, 亥子=水, 辰戌丑未=土
 const ZHI_WU_XING = [4, 2, 0, 0, 2, 1, 1, 2, 3, 3, 2, 4];
-
 const WU_XING_NAMES = ['木', '火', '土', '金', '水'];
 const WU_XING_COLORS = ['wood', 'fire', 'earth', 'metal', 'water'];
 
-// =================== 时辰 ===================
-// 十二时辰对应时间和经络
 const SHI_CHEN = [
     { name: '子时', start: 23, end: 1,  zhi: 0,  meridian: '胆经', meridianCN: '足少阳胆经' },
     { name: '丑时', start: 1,  end: 3,  zhi: 1,  meridian: '肝经', meridianCN: '足厥阴肝经' },
@@ -1109,1859 +657,995 @@ const SHI_CHEN = [
     { name: '亥时', start: 21, end: 23, zhi: 11, meridian: '三焦经', meridianCN: '手少阳三焦经' }
 ];
 
-// =================== 二十四节气基础数据 ===================
-// 名称、对应月份（节气月）、太阳黄经
 const SOLAR_TERMS = [
-    { name: '小寒', month: 0,  angle: 285, type: '节' },
-    { name: '大寒', month: 0,  angle: 300, type: '中' },
-    { name: '立春', month: 1,  angle: 315, type: '节' },
-    { name: '雨水', month: 1,  angle: 330, type: '中' },
-    { name: '惊蛰', month: 2,  angle: 345, type: '节' },
-    { name: '春分', month: 2,  angle: 0,   type: '中' },
-    { name: '清明', month: 3,  angle: 15,  type: '节' },
-    { name: '谷雨', month: 3,  angle: 30,  type: '中' },
-    { name: '立夏', month: 4,  angle: 45,  type: '节' },
-    { name: '小满', month: 4,  angle: 60,  type: '中' },
-    { name: '芒种', month: 5,  angle: 75,  type: '节' },
-    { name: '夏至', month: 5,  angle: 90,  type: '中' },
-    { name: '小暑', month: 6,  angle: 105, type: '节' },
-    { name: '大暑', month: 6,  angle: 120, type: '中' },
-    { name: '立秋', month: 7,  angle: 135, type: '节' },
-    { name: '处暑', month: 7,  angle: 150, type: '中' },
-    { name: '白露', month: 8,  angle: 165, type: '节' },
-    { name: '秋分', month: 8,  angle: 180, type: '中' },
-    { name: '寒露', month: 9,  angle: 195, type: '节' },
-    { name: '霜降', month: 9,  angle: 210, type: '中' },
-    { name: '立冬', month: 10, angle: 225, type: '节' },
-    { name: '小雪', month: 10, angle: 240, type: '中' },
-    { name: '大雪', month: 11, angle: 255, type: '节' },
-    { name: '冬至', month: 11, angle: 270, type: '中' }
+    { name: '小寒', month: 0,  angle: 285, type: '节' },{ name: '大寒', month: 0,  angle: 300, type: '中' },
+    { name: '立春', month: 1,  angle: 315, type: '节' },{ name: '雨水', month: 1,  angle: 330, type: '中' },
+    { name: '惊蛰', month: 2,  angle: 345, type: '节' },{ name: '春分', month: 2,  angle: 0,   type: '中' },
+    { name: '清明', month: 3,  angle: 15,  type: '节' },{ name: '谷雨', month: 3,  angle: 30,  type: '中' },
+    { name: '立夏', month: 4,  angle: 45,  type: '节' },{ name: '小满', month: 4,  angle: 60,  type: '中' },
+    { name: '芒种', month: 5,  angle: 75,  type: '节' },{ name: '夏至', month: 5,  angle: 90,  type: '中' },
+    { name: '小暑', month: 6,  angle: 105, type: '节' },{ name: '大暑', month: 6,  angle: 120, type: '中' },
+    { name: '立秋', month: 7,  angle: 135, type: '节' },{ name: '处暑', month: 7,  angle: 150, type: '中' },
+    { name: '白露', month: 8,  angle: 165, type: '节' },{ name: '秋分', month: 8,  angle: 180, type: '中' },
+    { name: '寒露', month: 9,  angle: 195, type: '节' },{ name: '霜降', month: 9,  angle: 210, type: '中' },
+    { name: '立冬', month: 10, angle: 225, type: '节' },{ name: '小雪', month: 10, angle: 240, type: '中' },
+    { name: '大雪', month: 11, angle: 255, type: '节' },{ name: '冬至', month: 11, angle: 270, type: '中' }
 ];
 
-// 节气计算C值 (基于通用公式: 日期 = [Y*D+C]-L)
-// D=0.2422, 世纪调整不同. 此处为21世纪C值
 const SOLAR_TERM_C = [
-    6.11,  20.84, // 小寒, 大寒
-    4.63,  19.70, // 立春, 雨水
-    6.42,  21.41, // 惊蛰, 春分
-    5.59,  20.67, // 清明, 谷雨
-    6.38,  21.54, // 立夏, 小满
-    6.88,  22.55, // 芒种, 夏至
-    8.38,  23.77, // 小暑, 大暑
-    8.80,  23.97, // 立秋, 处暑
-    8.68,  23.71, // 白露, 秋分
-    9.00,  24.31, // 寒露, 霜降
-    8.18,  23.02, // 立冬, 小雪
-    7.93,  22.43  // 大雪, 冬至
+    6.11,20.84,4.63,19.70,6.42,21.41,5.59,20.67,6.38,21.54,6.88,22.55,
+    8.38,23.77,8.80,23.97,8.68,23.71,9.00,24.31,8.18,23.02,7.93,22.43
 ];
 
-// =================== 二十四山/方位 ===================
-const EIGHT_TRIGRAMS = ['乾', '兑', '离', '震', '巽', '坎', '艮', '坤'];
+const EIGHT_TRIGRAMS = ['乾','兑','离','震','巽','坎','艮','坤'];
 
-// =================== 灵龟八法数据 ===================
-// 八脉交会穴
 const LINGGUI_ACUPOINTS = {
     1: { name: '申脉', code: 'BL62', meridian: '足太阳膀胱经', trigram: '坎', vessel: '阳跷脉', location: '外踝下缘凹陷处' },
-    2: { name: '照海', code: 'KI6',  meridian: '足少阴肾经',   trigram: '坤', vessel: '阴跷脉', location: '内踝下缘凹陷处' },
+    2: { name: '照海', code: 'KI6',  meridian: '足少阴肾经', trigram: '坤', vessel: '阴跷脉', location: '内踝下缘凹陷处' },
     3: { name: '外关', code: 'TE5',  meridian: '手少阳三焦经', trigram: '震', vessel: '阳维脉', location: '腕背横纹上2寸' },
-    4: { name: '足临泣', code: 'GB41', meridian: '足少阳胆经',  trigram: '巽', vessel: '带脉',   location: '足背第4-5跖骨间' },
-    5: { name: '照海', code: 'KI6',  meridian: '足少阴肾经',   trigram: '坤', vessel: '阴跷脉', location: '内踝下缘凹陷处' },
-    6: { name: '公孙', code: 'SP4',  meridian: '足太阴脾经',   trigram: '乾', vessel: '冲脉',   location: '足内侧第一跖骨底前下缘' },
-    7: { name: '后溪', code: 'SI3',  meridian: '手太阳小肠经', trigram: '兑', vessel: '督脉',   location: '第5掌指关节后尺侧' },
+    4: { name: '足临泣', code: 'GB41', meridian: '足少阳胆经', trigram: '巽', vessel: '带脉', location: '足背第4-5跖骨间' },
+    5: { name: '照海', code: 'KI6',  meridian: '足少阴肾经', trigram: '坤', vessel: '阴跷脉', location: '内踝下缘凹陷处' },
+    6: { name: '公孙', code: 'SP4',  meridian: '足太阴脾经', trigram: '乾', vessel: '冲脉', location: '足内侧第一跖骨底前下缘' },
+    7: { name: '后溪', code: 'SI3',  meridian: '手太阳小肠经', trigram: '兑', vessel: '督脉', location: '第5掌指关节后尺侧' },
     8: { name: '内关', code: 'PC6',  meridian: '手厥阴心包经', trigram: '艮', vessel: '阴维脉', location: '腕横纹上2寸' },
-    9: { name: '列缺', code: 'LU7',  meridian: '手太阴肺经',   trigram: '离', vessel: '任脉',   location: '桡骨茎突上方腕横纹上1.5寸' }
+    9: { name: '列缺', code: 'LU7',  meridian: '手太阴肺经', trigram: '离', vessel: '任脉', location: '桡骨茎突上方腕横纹上1.5寸' }
 };
 
-// 八法逐日干支数字（天干 -> 基数）
-const LINGGUI_DAY_GAN_NUM = {
-    '甲': 10, '己': 10,
-    '乙': 9,  '庚': 9,
-    '丁': 8,  '壬': 8,
-    '丙': 7,  '辛': 7,
-    '戊': 6,  '癸': 6
-};
+const LINGGUI_DAY_GAN_NUM = {'甲':10,'己':10,'乙':9,'庚':9,'丁':8,'壬':8,'丙':7,'辛':7,'戊':6,'癸':6};
+const LINGGUI_DAY_ZHI_NUM = {'子':9,'午':9,'丑':8,'未':8,'寅':7,'申':7,'卯':6,'酉':6,'辰':5,'戌':5,'巳':4,'亥':4};
+const LINGGUI_HOUR_GAN_NUM = {'甲':9,'己':9,'乙':8,'庚':8,'丙':7,'辛':7,'丁':6,'壬':6,'戊':5,'癸':5};
+const LINGGUI_HOUR_ZHI_NUM = {'子':9,'午':9,'丑':8,'未':8,'寅':7,'申':7,'卯':6,'酉':6,'辰':5,'戌':5,'巳':4,'亥':4};
 
-// 八法逐日地支数字
-const LINGGUI_DAY_ZHI_NUM = {
-    '子': 9, '午': 9,
-    '丑': 8, '未': 8,
-    '寅': 7, '申': 7,
-    '卯': 6, '酉': 6,
-    '辰': 5, '戌': 5,
-    '巳': 4, '亥': 4
-};
-
-// 八法临时干支数字（时辰天干）
-const LINGGUI_HOUR_GAN_NUM = {
-    '甲': 9, '己': 9,
-    '乙': 8, '庚': 8,
-    '丙': 7, '辛': 7,
-    '丁': 6, '壬': 6,
-    '戊': 5, '癸': 5
-};
-
-// 八法临时地支数字（时辰地支）
-const LINGGUI_HOUR_ZHI_NUM = {
-    '子': 9, '午': 9,
-    '丑': 8, '未': 8,
-    '寅': 7, '申': 7,
-    '卯': 6, '酉': 6,
-    '辰': 5, '戌': 5,
-    '巳': 4, '亥': 4
-};
-
-// =================== 子午流注纳甲法数据 ===================
-// 根据日干和时辰确定开穴（简化纳甲法）
-// 格式: {日干: {时辰地支索引: 穴位信息}}
 const ZIWU_NAJIA_POINTS = {
-    '甲': {
-        10: { name: '窍阴', code: 'GB44', meridian: '胆经', pointType: '井穴' },
-        11: { name: '中渚', code: 'TE3', meridian: '三焦经', pointType: '输穴' },
-        0:  { name: '足临泣', code: 'GB41', meridian: '胆经', pointType: '输穴' },
-        1:  { name: '太冲', code: 'LR3', meridian: '肝经', pointType: '输穴' },
-        2:  { name: '太渊', code: 'LU9', meridian: '肺经', pointType: '输穴' },
-        3:  { name: '陷谷', code: 'ST43', meridian: '胃经', pointType: '输穴' },
-        4:  { name: '阳溪', code: 'LI5', meridian: '大肠经', pointType: '经穴' },
-        5:  { name: '商丘', code: 'SP5', meridian: '脾经', pointType: '经穴' }
-    },
-    '乙': {
-        9:  { name: '大敦', code: 'LR1', meridian: '肝经', pointType: '井穴' },
-        10: { name: '足临泣', code: 'GB41', meridian: '胆经', pointType: '输穴' },
-        11: { name: '中渚', code: 'TE3', meridian: '三焦经', pointType: '输穴' },
-        0:  { name: '侠溪', code: 'GB43', meridian: '胆经', pointType: '荥穴' },
-        1:  { name: '行间', code: 'LR2', meridian: '肝经', pointType: '荥穴' },
-        2:  { name: '少府', code: 'HT8', meridian: '心经', pointType: '荥穴' },
-        3:  { name: '二间', code: 'LI2', meridian: '大肠经', pointType: '荥穴' },
-        4:  { name: '解溪', code: 'ST41', meridian: '胃经', pointType: '经穴' }
-    },
-    '丙': {
-        7:  { name: '少泽', code: 'SI1', meridian: '小肠经', pointType: '井穴' },
-        8:  { name: '后溪', code: 'SI3', meridian: '小肠经', pointType: '输穴' },
-        9:  { name: '太溪', code: 'KI3', meridian: '肾经', pointType: '输穴' },
-        10: { name: '阳辅', code: 'GB38', meridian: '胆经', pointType: '经穴' },
-        11: { name: '支沟', code: 'TE6', meridian: '三焦经', pointType: '经穴' },
-        0:  { name: '足窍阴', code: 'GB44', meridian: '胆经', pointType: '井穴' },
-        1:  { name: '曲泉', code: 'LR8', meridian: '肝经', pointType: '合穴' },
-        2:  { name: '尺泽', code: 'LU5', meridian: '肺经', pointType: '合穴' }
-    },
-    '丁': {
-        6:  { name: '少冲', code: 'HT9', meridian: '心经', pointType: '井穴' },
-        7:  { name: '后溪', code: 'SI3', meridian: '小肠经', pointType: '输穴' },
-        8:  { name: '束骨', code: 'BL65', meridian: '膀胱经', pointType: '输穴' },
-        9:  { name: '复溜', code: 'KI7', meridian: '肾经', pointType: '经穴' },
-        10: { name: '阳陵泉', code: 'GB34', meridian: '胆经', pointType: '合穴' },
-        11: { name: '天井', code: 'TE10', meridian: '三焦经', pointType: '合穴' },
-        0:  { name: '足临泣', code: 'GB41', meridian: '胆经', pointType: '输穴' },
-        1:  { name: '行间', code: 'LR2', meridian: '肝经', pointType: '荥穴' }
-    },
-    '戊': {
-        5:  { name: '厉兑', code: 'ST45', meridian: '胃经', pointType: '井穴' },
-        6:  { name: '神门', code: 'HT7', meridian: '心经', pointType: '输穴' },
-        7:  { name: '腕骨', code: 'SI4', meridian: '小肠经', pointType: '原穴' },
-        8:  { name: '京骨', code: 'BL64', meridian: '膀胱经', pointType: '原穴' },
-        9:  { name: '太溪', code: 'KI3', meridian: '肾经', pointType: '输穴' },
-        10: { name: '丘墟', code: 'GB40', meridian: '胆经', pointType: '原穴' },
-        11: { name: '阳池', code: 'TE4', meridian: '三焦经', pointType: '原穴' },
-        0:  { name: '足窍阴', code: 'GB44', meridian: '胆经', pointType: '井穴' }
-    },
-    '己': {
-        4:  { name: '隐白', code: 'SP1', meridian: '脾经', pointType: '井穴' },
-        5:  { name: '解溪', code: 'ST41', meridian: '胃经', pointType: '经穴' },
-        6:  { name: '神门', code: 'HT7', meridian: '心经', pointType: '输穴' },
-        7:  { name: '小海', code: 'SI8', meridian: '小肠经', pointType: '合穴' },
-        8:  { name: '委中', code: 'BL40', meridian: '膀胱经', pointType: '合穴' },
-        9:  { name: '阴谷', code: 'KI10', meridian: '肾经', pointType: '合穴' },
-        10: { name: '阳陵泉', code: 'GB34', meridian: '胆经', pointType: '合穴' },
-        11: { name: '天井', code: 'TE10', meridian: '三焦经', pointType: '合穴' }
-    },
-    '庚': {
-        3:  { name: '商阳', code: 'LI1', meridian: '大肠经', pointType: '井穴' },
-        4:  { name: '陷谷', code: 'ST43', meridian: '胃经', pointType: '输穴' },
-        5:  { name: '阳溪', code: 'LI5', meridian: '大肠经', pointType: '经穴' },
-        6:  { name: '少海', code: 'HT3', meridian: '心经', pointType: '合穴' },
-        7:  { name: '阳谷', code: 'SI5', meridian: '小肠经', pointType: '经穴' },
-        8:  { name: '昆仑', code: 'BL60', meridian: '膀胱经', pointType: '经穴' },
-        9:  { name: '复溜', code: 'KI7', meridian: '肾经', pointType: '经穴' },
-        10: { name: '阳辅', code: 'GB38', meridian: '胆经', pointType: '经穴' }
-    },
-    '辛': {
-        2:  { name: '少商', code: 'LU11', meridian: '肺经', pointType: '井穴' },
-        3:  { name: '二间', code: 'LI2', meridian: '大肠经', pointType: '荥穴' },
-        4:  { name: '足三里', code: 'ST36', meridian: '胃经', pointType: '合穴' },
-        5:  { name: '商丘', code: 'SP5', meridian: '脾经', pointType: '经穴' },
-        6:  { name: '少冲', code: 'HT9', meridian: '心经', pointType: '井穴' },
-        7:  { name: '前谷', code: 'SI2', meridian: '小肠经', pointType: '荥穴' },
-        8:  { name: '通谷', code: 'BL66', meridian: '膀胱经', pointType: '荥穴' },
-        9:  { name: '然谷', code: 'KI2', meridian: '肾经', pointType: '荥穴' }
-    },
-    '壬': {
-        1:  { name: '至阴', code: 'BL67', meridian: '膀胱经', pointType: '井穴' },
-        2:  { name: '侠白', code: 'LU4', meridian: '肺经', pointType: '-', note: '肺经原穴太渊也在此时' },
-        3:  { name: '合谷', code: 'LI4', meridian: '大肠经', pointType: '原穴' },
-        4:  { name: '冲阳', code: 'ST42', meridian: '胃经', pointType: '原穴' },
-        5:  { name: '太白', code: 'SP3', meridian: '脾经', pointType: '输穴/原穴' },
-        6:  { name: '神门', code: 'HT7', meridian: '心经', pointType: '输穴/原穴' },
-        7:  { name: '腕骨', code: 'SI4', meridian: '小肠经', pointType: '原穴' },
-        8:  { name: '京骨', code: 'BL64', meridian: '膀胱经', pointType: '原穴' }
-    },
-    '癸': {
-        0:  { name: '涌泉', code: 'KI1', meridian: '肾经', pointType: '井穴' },
-        1:  { name: '太冲', code: 'LR3', meridian: '肝经', pointType: '输穴/原穴' },
-        2:  { name: '太渊', code: 'LU9', meridian: '肺经', pointType: '输穴/原穴' },
-        3:  { name: '合谷', code: 'LI4', meridian: '大肠经', pointType: '原穴' },
-        4:  { name: '足三里', code: 'ST36', meridian: '胃经', pointType: '合穴' },
-        5:  { name: '太白', code: 'SP3', meridian: '脾经', pointType: '输穴/原穴' },
-        6:  { name: '少海', code: 'HT3', meridian: '心经', pointType: '合穴' },
-        7:  { name: '阳谷', code: 'SI5', meridian: '小肠经', pointType: '经穴' }
+    '甲':{
+        1:{name:'行间',code:'LR2',meridian:'肝经',pointType:'荥穴',wuXing:'火'},
+        2:{name:'神门、太溪、大陵',code:'HT7、KI3、PC7',meridian:'心经/肾经/心包经',pointType:'输穴',wuXing:'土'},
+        3:{name:'商丘',code:'SP5',meridian:'脾经',pointType:'经穴',wuXing:'金'},
+        4:{name:'尺泽',code:'LU5',meridian:'肺经',pointType:'合穴',wuXing:'水'},
+        5:{name:'中冲',code:'PC9',meridian:'心包经',pointType:'井穴',wuXing:'木'},
+        6:{name:'劳宫',code:'PC8',meridian:'心包经',pointType:'荥穴',wuXing:'火'}
+    },'乙':{
+        6:{name:'前谷',code:'SI2',meridian:'小肠经',pointType:'荥穴',wuXing:'水'},
+        7:{name:'陷谷、丘墟',code:'ST43、GB40',meridian:'胃经/胆经',pointType:'输穴/原穴',wuXing:'木'},
+        8:{name:'阳溪',code:'LI5',meridian:'大肠经',pointType:'经穴',wuXing:'火'},
+        9:{name:'委中',code:'BL40',meridian:'膀胱经',pointType:'合穴',wuXing:'土'}
+    },'丙':{
+        0:{name:'少泽',code:'SI1',meridian:'小肠经',pointType:'井穴',wuXing:'金'},
+        1:{name:'内庭',code:'ST44',meridian:'胃经',pointType:'荥穴',wuXing:'水'},
+        8:{name:'太白、太冲',code:'SP3、LR3',meridian:'脾经/肝经',pointType:'输穴/原穴',wuXing:'土'},
+        9:{name:'经渠',code:'LU8',meridian:'肺经',pointType:'经穴',wuXing:'金'},
+        10:{name:'阴谷',code:'KI10',meridian:'肾经',pointType:'合穴',wuXing:'水'},
+        11:{name:'劳宫',code:'PC8',meridian:'心包经',pointType:'荥穴',wuXing:'火'}
+    },'丁':{
+        0:{name:'三间、腕骨',code:'LI3、SI4',meridian:'大肠经/小肠经',pointType:'输穴/原穴',wuXing:'木'},
+        1:{name:'昆仑',code:'BL60',meridian:'膀胱经',pointType:'经穴',wuXing:'火'},
+        2:{name:'阳陵泉',code:'GB34',meridian:'胆经',pointType:'合穴',wuXing:'土'},
+        3:{name:'中渚',code:'TE3',meridian:'三焦经',pointType:'输穴',wuXing:'木'},
+        4:{name:'少冲',code:'HT9',meridian:'心经',pointType:'井穴',wuXing:'木'},
+        5:{name:'大都',code:'SP2',meridian:'脾经',pointType:'荥穴',wuXing:'火'}
+    },'戊':{
+        0:{name:'复溜',code:'KI7',meridian:'肾经',pointType:'经穴',wuXing:'金'},
+        1:{name:'曲泉',code:'LR8',meridian:'肝经',pointType:'合穴',wuXing:'水'},
+        2:{name:'大陵',code:'PC7',meridian:'心包经',pointType:'输穴',wuXing:'土'},
+        3:{name:'厉兑',code:'ST45',meridian:'胃经',pointType:'井穴',wuXing:'金'},
+        4:{name:'二间',code:'LI2',meridian:'大肠经',pointType:'荥穴',wuXing:'水'},
+        5:{name:'束骨、冲阳',code:'BL65、ST42',meridian:'膀胱经/胃经',pointType:'输穴/原穴',wuXing:'木'}
+    },'己':{
+        0:{name:'阳辅',code:'GB38',meridian:'胆经',pointType:'经穴',wuXing:'火'},
+        1:{name:'小海',code:'SI8',meridian:'小肠经',pointType:'合穴',wuXing:'土'},
+        2:{name:'支沟',code:'TE6',meridian:'三焦经',pointType:'经穴',wuXing:'火'},
+        3:{name:'隐白',code:'SP1',meridian:'脾经',pointType:'井穴',wuXing:'木'},
+        4:{name:'鱼际',code:'LU10',meridian:'肺经',pointType:'荥穴',wuXing:'火'},
+        5:{name:'太溪、太白',code:'KI3、SP3',meridian:'肾经/脾经',pointType:'输穴',wuXing:'土'},
+        6:{name:'中冲',code:'PC9',meridian:'心包经',pointType:'井穴',wuXing:'木'}
+    },'庚':{
+        6:{name:'少海',code:'HT3',meridian:'心经',pointType:'合穴',wuXing:'水'},
+        7:{name:'间使',code:'PC5',meridian:'心包经',pointType:'经穴',wuXing:'金'},
+        8:{name:'商阳',code:'LI1',meridian:'大肠经',pointType:'井穴',wuXing:'金'},
+        9:{name:'通谷',code:'BL66',meridian:'膀胱经',pointType:'荥穴',wuXing:'水'},
+        10:{name:'临泣、合谷',code:'GB41、LI4',meridian:'胆经/大肠经',pointType:'输穴/原穴',wuXing:'木'},
+        11:{name:'阳谷',code:'SI5',meridian:'小肠经',pointType:'经穴',wuXing:'火'}
+    },'辛':{
+        0:{name:'足三里',code:'ST36',meridian:'胃经',pointType:'合穴',wuXing:'土'},
+        1:{name:'天井',code:'TE10',meridian:'三焦经',pointType:'合穴',wuXing:'土'},
+        2:{name:'少商',code:'LU11',meridian:'肺经',pointType:'井穴',wuXing:'木'},
+        3:{name:'然谷',code:'KI2',meridian:'肾经',pointType:'荥穴',wuXing:'火'},
+        4:{name:'太冲、太渊',code:'LR3、LU9',meridian:'肝经/肺经',pointType:'输穴/原穴',wuXing:'木'},
+        5:{name:'灵道',code:'HT4',meridian:'心经',pointType:'经穴',wuXing:'金'},
+        11:{name:'阴陵泉',code:'SP9',meridian:'脾经',pointType:'合穴',wuXing:'水'}
+    },'壬':{
+        0:{name:'曲泽',code:'PC3',meridian:'心包经',pointType:'合穴',wuXing:'水'},
+        1:{name:'至阴',code:'BL67',meridian:'膀胱经',pointType:'井穴',wuXing:'金'},
+        2:{name:'侠溪',code:'GB43',meridian:'胆经',pointType:'荥穴',wuXing:'水'},
+        3:{name:'后溪、京骨、阳池',code:'SI3、BL64、TE4',meridian:'小肠经/膀胱经/三焦经',pointType:'输穴/原穴/原穴',wuXing:'木'},
+        4:{name:'解溪',code:'ST41',meridian:'胃经',pointType:'经穴',wuXing:'火'},
+        5:{name:'曲池',code:'LI11',meridian:'大肠经',pointType:'合穴',wuXing:'土'}
+    },'癸':{
+        0:{name:'关冲',code:'TE1',meridian:'三焦经',pointType:'井穴',wuXing:'金'}
     }
 };
 
-// 纳子法: 每个时辰对应的本经五输穴
 const ZIWU_NAZI_POINTS = [
-    { // 子时 胆经
-        meridian: '足少阳胆经',
-        well:  { name: '足窍阴',  code: 'GB44', type: '井穴' },
-        spring:{ name: '侠溪',    code: 'GB43', type: '荥穴' },
-        stream:{ name: '足临泣',  code: 'GB41', type: '输穴' },
-        river: { name: '阳辅',    code: 'GB38', type: '经穴' },
-        sea:   { name: '阳陵泉',  code: 'GB34', type: '合穴' },
-        yuan:  { name: '丘墟',    code: 'GB40', type: '原穴' }
-    },
-    { // 丑时 肝经
-        meridian: '足厥阴肝经',
-        well:  { name: '大敦',   code: 'LR1',  type: '井穴' },
-        spring:{ name: '行间',   code: 'LR2',  type: '荥穴' },
-        stream:{ name: '太冲',   code: 'LR3',  type: '输穴' },
-        river: { name: '中封',   code: 'LR4',  type: '经穴' },
-        sea:   { name: '曲泉',   code: 'LR8',  type: '合穴' },
-        yuan:  { name: '太冲',   code: 'LR3',  type: '原穴（同输穴）' }
-    },
-    { // 寅时 肺经
-        meridian: '手太阴肺经',
-        well:  { name: '少商',   code: 'LU11', type: '井穴' },
-        spring:{ name: '鱼际',   code: 'LU10', type: '荥穴' },
-        stream:{ name: '太渊',   code: 'LU9',  type: '输穴' },
-        river: { name: '经渠',   code: 'LU8',  type: '经穴' },
-        sea:   { name: '尺泽',   code: 'LU5',  type: '合穴' },
-        yuan:  { name: '太渊',   code: 'LU9',  type: '原穴（同输穴）' }
-    },
-    { // 卯时 大肠经
-        meridian: '手阳明大肠经',
-        well:  { name: '商阳',   code: 'LI1',  type: '井穴' },
-        spring:{ name: '二间',   code: 'LI2',  type: '荥穴' },
-        stream:{ name: '三间',   code: 'LI3',  type: '输穴' },
-        river: { name: '阳溪',   code: 'LI5',  type: '经穴' },
-        sea:   { name: '曲池',   code: 'LI11', type: '合穴' },
-        yuan:  { name: '合谷',   code: 'LI4',  type: '原穴' }
-    },
-    { // 辰时 胃经
-        meridian: '足阳明胃经',
-        well:  { name: '厉兑',   code: 'ST45', type: '井穴' },
-        spring:{ name: '内庭',   code: 'ST44', type: '荥穴' },
-        stream:{ name: '陷谷',   code: 'ST43', type: '输穴' },
-        river: { name: '解溪',   code: 'ST41', type: '经穴' },
-        sea:   { name: '足三里', code: 'ST36', type: '合穴' },
-        yuan:  { name: '冲阳',   code: 'ST42', type: '原穴' }
-    },
-    { // 巳时 脾经
-        meridian: '足太阴脾经',
-        well:  { name: '隐白',   code: 'SP1',  type: '井穴' },
-        spring:{ name: '大都',   code: 'SP2',  type: '荥穴' },
-        stream:{ name: '太白',   code: 'SP3',  type: '输穴' },
-        river: { name: '商丘',   code: 'SP5',  type: '经穴' },
-        sea:   { name: '阴陵泉', code: 'SP9',  type: '合穴' },
-        yuan:  { name: '太白',   code: 'SP3',  type: '原穴（同输穴）' }
-    },
-    { // 午时 心经
-        meridian: '手少阴心经',
-        well:  { name: '少冲',   code: 'HT9',  type: '井穴' },
-        spring:{ name: '少府',   code: 'HT8',  type: '荥穴' },
-        stream:{ name: '神门',   code: 'HT7',  type: '输穴' },
-        river: { name: '灵道',   code: 'HT4',  type: '经穴' },
-        sea:   { name: '少海',   code: 'HT3',  type: '合穴' },
-        yuan:  { name: '神门',   code: 'HT7',  type: '原穴（同输穴）' }
-    },
-    { // 未时 小肠经
-        meridian: '手太阳小肠经',
-        well:  { name: '少泽',   code: 'SI1',  type: '井穴' },
-        spring:{ name: '前谷',   code: 'SI2',  type: '荥穴' },
-        stream:{ name: '后溪',   code: 'SI3',  type: '输穴' },
-        river: { name: '阳谷',   code: 'SI5',  type: '经穴' },
-        sea:   { name: '小海',   code: 'SI8',  type: '合穴' },
-        yuan:  { name: '腕骨',   code: 'SI4',  type: '原穴' }
-    },
-    { // 申时 膀胱经
-        meridian: '足太阳膀胱经',
-        well:  { name: '至阴',   code: 'BL67', type: '井穴' },
-        spring:{ name: '足通谷', code: 'BL66', type: '荥穴' },
-        stream:{ name: '束骨',   code: 'BL65', type: '输穴' },
-        river: { name: '昆仑',   code: 'BL60', type: '经穴' },
-        sea:   { name: '委中',   code: 'BL40', type: '合穴' },
-        yuan:  { name: '京骨',   code: 'BL64', type: '原穴' }
-    },
-    { // 酉时 肾经
-        meridian: '足少阴肾经',
-        well:  { name: '涌泉',   code: 'KI1',  type: '井穴' },
-        spring:{ name: '然谷',   code: 'KI2',  type: '荥穴' },
-        stream:{ name: '太溪',   code: 'KI3',  type: '输穴' },
-        river: { name: '复溜',   code: 'KI7',  type: '经穴' },
-        sea:   { name: '阴谷',   code: 'KI10', type: '合穴' },
-        yuan:  { name: '太溪',   code: 'KI3',  type: '原穴（同输穴）' }
-    },
-    { // 戌时 心包经
-        meridian: '手厥阴心包经',
-        well:  { name: '中冲',   code: 'PC9',  type: '井穴' },
-        spring:{ name: '劳宫',   code: 'PC8',  type: '荥穴' },
-        stream:{ name: '大陵',   code: 'PC7',  type: '输穴' },
-        river: { name: '间使',   code: 'PC5',  type: '经穴' },
-        sea:   { name: '曲泽',   code: 'PC3',  type: '合穴' },
-        yuan:  { name: '大陵',   code: 'PC7',  type: '原穴（同输穴）' }
-    },
-    { // 亥时 三焦经
-        meridian: '手少阳三焦经',
-        well:  { name: '关冲',   code: 'TE1',  type: '井穴' },
-        spring:{ name: '液门',   code: 'TE2',  type: '荥穴' },
-        stream:{ name: '中渚',   code: 'TE3',  type: '输穴' },
-        river: { name: '支沟',   code: 'TE6',  type: '经穴' },
-        sea:   { name: '天井',   code: 'TE10', type: '合穴' },
-        yuan:  { name: '阳池',   code: 'TE4',  type: '原穴' }
-    }
+    {meridian:'足少阳胆经',well:{name:'足窍阴',code:'GB44',type:'井穴'},spring:{name:'侠溪',code:'GB43',type:'荥穴'},stream:{name:'足临泣',code:'GB41',type:'输穴'},river:{name:'阳辅',code:'GB38',type:'经穴'},sea:{name:'阳陵泉',code:'GB34',type:'合穴'},yuan:{name:'丘墟',code:'GB40',type:'原穴'}},
+    {meridian:'足厥阴肝经',well:{name:'大敦',code:'LR1',type:'井穴'},spring:{name:'行间',code:'LR2',type:'荥穴'},stream:{name:'太冲',code:'LR3',type:'输穴'},river:{name:'中封',code:'LR4',type:'经穴'},sea:{name:'曲泉',code:'LR8',type:'合穴'},yuan:{name:'太冲',code:'LR3',type:'原穴（同输穴）'}},
+    {meridian:'手太阴肺经',well:{name:'少商',code:'LU11',type:'井穴'},spring:{name:'鱼际',code:'LU10',type:'荥穴'},stream:{name:'太渊',code:'LU9',type:'输穴'},river:{name:'经渠',code:'LU8',type:'经穴'},sea:{name:'尺泽',code:'LU5',type:'合穴'},yuan:{name:'太渊',code:'LU9',type:'原穴（同输穴）'}},
+    {meridian:'手阳明大肠经',well:{name:'商阳',code:'LI1',type:'井穴'},spring:{name:'二间',code:'LI2',type:'荥穴'},stream:{name:'三间',code:'LI3',type:'输穴'},river:{name:'阳溪',code:'LI5',type:'经穴'},sea:{name:'曲池',code:'LI11',type:'合穴'},yuan:{name:'合谷',code:'LI4',type:'原穴'}},
+    {meridian:'足阳明胃经',well:{name:'厉兑',code:'ST45',type:'井穴'},spring:{name:'内庭',code:'ST44',type:'荥穴'},stream:{name:'陷谷',code:'ST43',type:'输穴'},river:{name:'解溪',code:'ST41',type:'经穴'},sea:{name:'足三里',code:'ST36',type:'合穴'},yuan:{name:'冲阳',code:'ST42',type:'原穴'}},
+    {meridian:'足太阴脾经',well:{name:'隐白',code:'SP1',type:'井穴'},spring:{name:'大都',code:'SP2',type:'荥穴'},stream:{name:'太白',code:'SP3',type:'输穴'},river:{name:'商丘',code:'SP5',type:'经穴'},sea:{name:'阴陵泉',code:'SP9',type:'合穴'},yuan:{name:'太白',code:'SP3',type:'原穴（同输穴）'}},
+    {meridian:'手少阴心经',well:{name:'少冲',code:'HT9',type:'井穴'},spring:{name:'少府',code:'HT8',type:'荥穴'},stream:{name:'神门',code:'HT7',type:'输穴'},river:{name:'灵道',code:'HT4',type:'经穴'},sea:{name:'少海',code:'HT3',type:'合穴'},yuan:{name:'神门',code:'HT7',type:'原穴（同输穴）'}},
+    {meridian:'手太阳小肠经',well:{name:'少泽',code:'SI1',type:'井穴'},spring:{name:'前谷',code:'SI2',type:'荥穴'},stream:{name:'后溪',code:'SI3',type:'输穴'},river:{name:'阳谷',code:'SI5',type:'经穴'},sea:{name:'小海',code:'SI8',type:'合穴'},yuan:{name:'腕骨',code:'SI4',type:'原穴'}},
+    {meridian:'足太阳膀胱经',well:{name:'至阴',code:'BL67',type:'井穴'},spring:{name:'足通谷',code:'BL66',type:'荥穴'},stream:{name:'束骨',code:'BL65',type:'输穴'},river:{name:'昆仑',code:'BL60',type:'经穴'},sea:{name:'委中',code:'BL40',type:'合穴'},yuan:{name:'京骨',code:'BL64',type:'原穴'}},
+    {meridian:'足少阴肾经',well:{name:'涌泉',code:'KI1',type:'井穴'},spring:{name:'然谷',code:'KI2',type:'荥穴'},stream:{name:'太溪',code:'KI3',type:'输穴'},river:{name:'复溜',code:'KI7',type:'经穴'},sea:{name:'阴谷',code:'KI10',type:'合穴'},yuan:{name:'太溪',code:'KI3',type:'原穴（同输穴）'}},
+    {meridian:'手厥阴心包经',well:{name:'中冲',code:'PC9',type:'井穴'},spring:{name:'劳宫',code:'PC8',type:'荥穴'},stream:{name:'大陵',code:'PC7',type:'输穴'},river:{name:'间使',code:'PC5',type:'经穴'},sea:{name:'曲泽',code:'PC3',type:'合穴'},yuan:{name:'大陵',code:'PC7',type:'原穴（同输穴）'}},
+    {meridian:'手少阳三焦经',well:{name:'关冲',code:'TE1',type:'井穴'},spring:{name:'液门',code:'TE2',type:'荥穴'},stream:{name:'中渚',code:'TE3',type:'输穴'},river:{name:'支沟',code:'TE6',type:'经穴'},sea:{name:'天井',code:'TE10',type:'合穴'},yuan:{name:'阳池',code:'TE4',type:'原穴'}}
 ];
 
-// =================== 五输穴五行属性 ===================
-// 阴经：井(木)→荥(火)→输(土)→经(金)→合(水)  五行顺序: 木火土金水
-// 阳经：井(金)→荥(水)→输(木)→经(火)→合(土)  五行顺序: 金水木火土
-const YIN_WUSHU_WUXING = ['木', '火', '土', '金', '水']; // 井荥输经合
-const YANG_WUSHU_WUXING = ['金', '水', '木', '火', '土']; // 井荥输经合
+const YIN_WUSHU_WUXING = ['木','火','土','金','水'];
+const YANG_WUSHU_WUXING = ['金','水','木','火','土'];
 
-// 各经络按时辰索引对应的五输穴五行 (阴经/阳经)
 function getShuPointWuxing(shiChenIdx, pointCategory) {
-    const isYang = [0, 3, 4, 7, 8, 11].includes(shiChenIdx);
-    const catMap = { well: 0, spring: 1, stream: 2, river: 3, sea: 4 };
+    const isYang = [0,3,4,7,8,11].includes(shiChenIdx);
+    const catMap = {well:0,spring:1,stream:2,river:3,sea:4};
     const idx = catMap[pointCategory];
-    if (idx === undefined) return null;
+    if(idx===undefined) return null;
     return isYang ? YANG_WUSHU_WUXING[idx] : YIN_WUSHU_WUXING[idx];
 }
 
-// =================== 纳子法主配穴（表里经配穴） ===================
-// 每个时辰当令经络的输穴为主穴，表里经原穴为配穴
 const NAZI_PAIR_POINTS = [
-    { // 子时 胆经(阳) ↔ 肝经(阴)
-        main: { name: '足临泣', code: 'GB41', reason: '胆经输穴，木' },
-        accompany: { name: '太冲', code: 'LR3', reason: '肝经原穴（表里配穴）' },
-        supplement: { name: '侠溪', code: 'GB43', reason: '胆经荥穴（水，母穴补法）' },
-        drain: { name: '阳辅', code: 'GB38', reason: '胆经经穴（火，子穴泻法）' }
-    },
-    { // 丑时 肝经(阴) ↔ 胆经(阳)
-        main: { name: '太冲', code: 'LR3', reason: '肝经输穴，土（同原穴）' },
-        accompany: { name: '足临泣', code: 'GB41', reason: '胆经输穴（表里配穴）' },
-        supplement: { name: '曲泉', code: 'LR8', reason: '肝经合穴（水，母穴补法）' },
-        drain: { name: '行间', code: 'LR2', reason: '肝经荥穴（火，子穴泻法）' }
-    },
-    { // 寅时 肺经(阴) ↔ 大肠经(阳)
-        main: { name: '太渊', code: 'LU9', reason: '肺经输穴，土（同原穴）' },
-        accompany: { name: '合谷', code: 'LI4', reason: '大肠经原穴（表里配穴）' },
-        supplement: { name: '太渊', code: 'LU9', reason: '肺经输穴（土，母穴补法）' },
-        drain: { name: '尺泽', code: 'LU5', reason: '肺经合穴（水，子穴泻法）' }
-    },
-    { // 卯时 大肠经(阳) ↔ 肺经(阴)
-        main: { name: '三间', code: 'LI3', reason: '大肠经输穴，木' },
-        accompany: { name: '太渊', code: 'LU9', reason: '肺经原穴（表里配穴）' },
-        supplement: { name: '曲池', code: 'LI11', reason: '大肠经合穴（土，母穴补法）' },
-        drain: { name: '二间', code: 'LI2', reason: '大肠经荥穴（水，子穴泻法）' }
-    },
-    { // 辰时 胃经(阳) ↔ 脾经(阴)
-        main: { name: '陷谷', code: 'ST43', reason: '胃经输穴，木' },
-        accompany: { name: '太白', code: 'SP3', reason: '脾经原穴（表里配穴）' },
-        supplement: { name: '解溪', code: 'ST41', reason: '胃经经穴（火，母穴补法）' },
-        drain: { name: '厉兑', code: 'ST45', reason: '胃经井穴（金，子穴泻法）' }
-    },
-    { // 巳时 脾经(阴) ↔ 胃经(阳)
-        main: { name: '太白', code: 'SP3', reason: '脾经输穴，土（同原穴）' },
-        accompany: { name: '冲阳', code: 'ST42', reason: '胃经原穴（表里配穴）' },
-        supplement: { name: '大都', code: 'SP2', reason: '脾经荥穴（火，母穴补法）' },
-        drain: { name: '商丘', code: 'SP5', reason: '脾经经穴（金，子穴泻法）' }
-    },
-    { // 午时 心经(阴) ↔ 小肠经(阳)
-        main: { name: '神门', code: 'HT7', reason: '心经输穴，土（同原穴）' },
-        accompany: { name: '腕骨', code: 'SI4', reason: '小肠经原穴（表里配穴）' },
-        supplement: { name: '少冲', code: 'HT9', reason: '心经井穴（木，母穴补法）' },
-        drain: { name: '神门', code: 'HT7', reason: '心经输穴（土，子穴泻法）' }
-    },
-    { // 未时 小肠经(阳) ↔ 心经(阴)
-        main: { name: '后溪', code: 'SI3', reason: '小肠经输穴，木' },
-        accompany: { name: '神门', code: 'HT7', reason: '心经原穴（表里配穴）' },
-        supplement: { name: '后溪', code: 'SI3', reason: '小肠经输穴（木，母穴补法）' },
-        drain: { name: '小海', code: 'SI8', reason: '小肠经合穴（土，子穴泻法）' }
-    },
-    { // 申时 膀胱经(阳) ↔ 肾经(阴)
-        main: { name: '束骨', code: 'BL65', reason: '膀胱经输穴，木' },
-        accompany: { name: '太溪', code: 'KI3', reason: '肾经原穴（表里配穴）' },
-        supplement: { name: '至阴', code: 'BL67', reason: '膀胱经井穴（金，母穴补法）' },
-        drain: { name: '束骨', code: 'BL65', reason: '膀胱经输穴（木，子穴泻法）' }
-    },
-    { // 酉时 肾经(阴) ↔ 膀胱经(阳)
-        main: { name: '太溪', code: 'KI3', reason: '肾经输穴，土（同原穴）' },
-        accompany: { name: '京骨', code: 'BL64', reason: '膀胱经原穴（表里配穴）' },
-        supplement: { name: '复溜', code: 'KI7', reason: '肾经经穴（金，母穴补法）' },
-        drain: { name: '涌泉', code: 'KI1', reason: '肾经井穴（木，子穴泻法）' }
-    },
-    { // 戌时 心包经(阴) ↔ 三焦经(阳)
-        main: { name: '大陵', code: 'PC7', reason: '心包经输穴，土（同原穴）' },
-        accompany: { name: '阳池', code: 'TE4', reason: '三焦经原穴（表里配穴）' },
-        supplement: { name: '中冲', code: 'PC9', reason: '心包经井穴（木，母穴补法）' },
-        drain: { name: '大陵', code: 'PC7', reason: '心包经输穴（土，子穴泻法）' }
-    },
-    { // 亥时 三焦经(阳) ↔ 心包经(阴)
-        main: { name: '中渚', code: 'TE3', reason: '三焦经输穴，木' },
-        accompany: { name: '大陵', code: 'PC7', reason: '心包经原穴（表里配穴）' },
-        supplement: { name: '中渚', code: 'TE3', reason: '三焦经输穴（木，母穴补法）' },
-        drain: { name: '天井', code: 'TE10', reason: '三焦经合穴（土，子穴泻法）' }
-    }
+    {main:{name:'阳辅',code:'GB38',reason:'胆经经穴，火'},accompany:{name:'太冲',code:'LR3',reason:'肝经原穴（表里配穴）'},supplement:{name:'侠溪',code:'GB43',reason:'胆经荥穴（水，母穴补法）'},drain:{name:'阳辅',code:'GB38',reason:'胆经经穴（火，子穴泻法）'}},
+    {main:{name:'行间',code:'LR2',reason:'肝经荥穴，火'},accompany:{name:'足临泣',code:'GB41',reason:'胆经输穴（表里配穴）'},supplement:{name:'曲泉',code:'LR8',reason:'肝经合穴（水，母穴补法）'},drain:{name:'行间',code:'LR2',reason:'肝经荥穴（火，子穴泻法）'}},
+    {main:{name:'尺泽',code:'LU5',reason:'肺经合穴，水'},accompany:{name:'合谷',code:'LI4',reason:'大肠经原穴（表里配穴）'},supplement:{name:'太渊',code:'LU9',reason:'肺经输穴（土，母穴补法）'},drain:{name:'尺泽',code:'LU5',reason:'肺经合穴（水，子穴泻法）'}},
+    {main:{name:'二间',code:'LI2',reason:'大肠经荥穴，水'},accompany:{name:'太渊',code:'LU9',reason:'肺经原穴（表里配穴）'},supplement:{name:'曲池',code:'LI11',reason:'大肠经合穴（土，母穴补法）'},drain:{name:'二间',code:'LI2',reason:'大肠经荥穴（水，子穴泻法）'}},
+    {main:{name:'厉兑',code:'ST45',reason:'胃经井穴，金'},accompany:{name:'太白',code:'SP3',reason:'脾经原穴（表里配穴）'},supplement:{name:'解溪',code:'ST41',reason:'胃经经穴（火，母穴补法）'},drain:{name:'厉兑',code:'ST45',reason:'胃经井穴（金，子穴泻法）'}},
+    {main:{name:'商丘',code:'SP5',reason:'脾经经穴，金'},accompany:{name:'冲阳',code:'ST42',reason:'胃经原穴（表里配穴）'},supplement:{name:'大都',code:'SP2',reason:'脾经荥穴（火，母穴补法）'},drain:{name:'商丘',code:'SP5',reason:'脾经经穴（金，子穴泻法）'}},
+    {main:{name:'神门',code:'HT7',reason:'心经输穴，土（同原穴）'},accompany:{name:'腕骨',code:'SI4',reason:'小肠经原穴（表里配穴）'},supplement:{name:'少冲',code:'HT9',reason:'心经井穴（木，母穴补法）'},drain:{name:'神门',code:'HT7',reason:'心经输穴（土，子穴泻法）'}},
+    {main:{name:'后溪',code:'SI3',reason:'小肠经输穴，木'},accompany:{name:'神门',code:'HT7',reason:'心经原穴（表里配穴）'},supplement:{name:'后溪',code:'SI3',reason:'小肠经输穴（木，母穴补法）'},drain:{name:'小海',code:'SI8',reason:'小肠经合穴（土，子穴泻法）'}},
+    {main:{name:'束骨',code:'BL65',reason:'膀胱经输穴，木'},accompany:{name:'太溪',code:'KI3',reason:'肾经原穴（表里配穴）'},supplement:{name:'至阴',code:'BL67',reason:'膀胱经井穴（金，母穴补法）'},drain:{name:'束骨',code:'BL65',reason:'膀胱经输穴（木，子穴泻法）'}},
+    {main:{name:'涌泉',code:'KI1',reason:'肾经井穴，木'},accompany:{name:'京骨',code:'BL64',reason:'膀胱经原穴（表里配穴）'},supplement:{name:'复溜',code:'KI7',reason:'肾经经穴（金，母穴补法）'},drain:{name:'涌泉',code:'KI1',reason:'肾经井穴（木，子穴泻法）'}},
+    {main:{name:'大陵',code:'PC7',reason:'心包经输穴，土（同原穴）'},accompany:{name:'阳池',code:'TE4',reason:'三焦经原穴（表里配穴）'},supplement:{name:'中冲',code:'PC9',reason:'心包经井穴（木，母穴补法）'},drain:{name:'大陵',code:'PC7',reason:'心包经输穴（土，子穴泻法）'}},
+    {main:{name:'天井',code:'TE10',reason:'三焦经合穴，土'},accompany:{name:'大陵',code:'PC7',reason:'心包经原穴（表里配穴）'},supplement:{name:'中渚',code:'TE3',reason:'三焦经输穴（木，母穴补法）'},drain:{name:'天井',code:'TE10',reason:'三焦经合穴（土，子穴泻法）'}}
 ];
 
-// =================== 纳甲法互用穴 ===================
-// 根据"合日互用"原理：甲与己合、乙与庚合、丙与辛合、丁与壬合、戊与癸合
-// 当某天干日不开某时辰穴位时，可使用合日日干的同一时辰穴位
-const NAJIA_HE_PAIRS = {
-    '甲': '己', '己': '甲',
-    '乙': '庚', '庚': '乙',
-    '丙': '辛', '辛': '丙',
-    '丁': '壬', '壬': '丁',
-    '戊': '癸', '癸': '戊'
-};
-
-// 互用穴描述
+const NAJIA_HE_PAIRS = {'甲':'己','己':'甲','乙':'庚','庚':'乙','丙':'辛','辛':'丙','丁':'壬','壬':'丁','戊':'癸','癸':'戊'};
 const NAJIA_HUYONG_INFO = {
-    '甲': '甲己合化土，胆经日可与脾经日互用',
-    '己': '甲己合化土，脾经日可与胆经日互用',
-    '乙': '乙庚合化金，肝经日可配大肠经日互用',
-    '庚': '乙庚合化金，大肠经日可配肝经日互用',
-    '丙': '丙辛合化水，小肠经日可配肺经日互用',
-    '辛': '丙辛合化水，肺经日可配小肠经日互用',
-    '丁': '丁壬合化木，心经日可配膀胱经日互用',
-    '壬': '丁壬合化木，膀胱经日可配心经日互用',
-    '戊': '戊癸合化火，胃经日可配肾经日互用',
-    '癸': '戊癸合化火，肾经日可配胃经日互用'
+    '甲':'甲己合化土，胆经日可与脾经日互用','己':'甲己合化土，脾经日可与胆经日互用',
+    '乙':'乙庚合化金，肝经日可配大肠经日互用','庚':'乙庚合化金，大肠经日可配肝经日互用',
+    '丙':'丙辛合化水，小肠经日可配肺经日互用','辛':'丙辛合化水，肺经日可配小肠经日互用',
+    '丁':'丁壬合化木，心经日可配膀胱经日互用','壬':'丁壬合化木，膀胱经日可配心经日互用',
+    '戊':'戊癸合化火，胃经日可配肾经日互用','癸':'戊癸合化火，肾经日可配胃经日互用'
 };
 
-// =================== 灵龟八法配穴（夫妇配合） ===================
-// 八脉交会穴两两配对
 const LINGGUI_COUPLES = [
-    { a: 1, b: 2, name: '申脉+照海', vesselA: '阳跷脉', vesselB: '阴跷脉', relation: '阴阳跷脉相配，主目疾、失眠、癫痫' },
-    { a: 3, b: 8, name: '外关+内关', vesselA: '阳维脉', vesselB: '阴维脉', relation: '阴阳维脉相配，主寒热、心胸病' },
-    { a: 4, b: 6, name: '足临泣+公孙', vesselA: '带脉', vesselB: '冲脉', relation: '带脉冲脉相配，主妇科、脾胃病' },
-    { a: 7, b: 9, name: '后溪+列缺', vesselA: '督脉', vesselB: '任脉', relation: '督任二脉相配，主颈项、肺系病' }
+    {a:1,b:2,name:'申脉+照海',vesselA:'阳跷脉',vesselB:'阴跷脉',relation:'阴阳跷脉相配，主目疾、失眠、癫痫'},
+    {a:3,b:8,name:'外关+内关',vesselA:'阳维脉',vesselB:'阴维脉',relation:'阴阳维脉相配，主寒热、心胸病'},
+    {a:4,b:6,name:'足临泣+公孙',vesselA:'带脉',vesselB:'冲脉',relation:'带脉冲脉相配，主妇科、脾胃病'},
+    {a:7,b:9,name:'后溪+列缺',vesselA:'督脉',vesselB:'任脉',relation:'督任二脉相配，主颈项、肺系病'}
 ];
 
-// 八脉交会穴详细数据（卦性）
 const LINGGUI_FULL_INFO = {
-    1: { name: '申脉', code: 'BL62', trigram: '坎', trigramName: '坎为水', trigramSymbol: '☵', couple: 2, coupleName: '照海', direction: '西北' },
-    2: { name: '照海', code: 'KI6', trigram: '坤', trigramName: '坤为地', trigramSymbol: '☷', couple: 1, coupleName: '申脉', direction: '西南' },
-    3: { name: '外关', code: 'TE5', trigram: '震', trigramName: '震为雷', trigramSymbol: '☳', couple: 8, coupleName: '内关', direction: '东' },
-    4: { name: '足临泣', code: 'GB41', trigram: '巽', trigramName: '巽为风', trigramSymbol: '☴', couple: 6, coupleName: '公孙', direction: '东南' },
-    5: { name: '照海', code: 'KI6', trigram: '坤', trigramName: '坤为地', trigramSymbol: '☷', couple: 1, coupleName: '申脉', direction: '西南' },
-    6: { name: '公孙', code: 'SP4', trigram: '乾', trigramName: '乾为天', trigramSymbol: '☰', couple: 4, coupleName: '足临泣', direction: '西北' },
-    7: { name: '后溪', code: 'SI3', trigram: '兑', trigramName: '兑为泽', trigramSymbol: '☱', couple: 9, coupleName: '列缺', direction: '西' },
-    8: { name: '内关', code: 'PC6', trigram: '艮', trigramName: '艮为山', trigramSymbol: '☶', couple: 3, coupleName: '外关', direction: '东北' },
-    9: { name: '列缺', code: 'LU7', trigram: '离', trigramName: '离为火', trigramSymbol: '☲', couple: 7, coupleName: '后溪', direction: '南' }
+    1:{name:'申脉',code:'BL62',trigram:'坎',trigramName:'坎为水',trigramSymbol:'☵',couple:7,coupleName:'后溪',direction:'西北'},
+    2:{name:'照海',code:'KI6',trigram:'坤',trigramName:'坤为地',trigramSymbol:'☷',couple:9,coupleName:'列缺',direction:'西南'},
+    3:{name:'外关',code:'TE5',trigram:'震',trigramName:'震为雷',trigramSymbol:'☳',couple:4,coupleName:'足临泣',direction:'东'},
+    4:{name:'足临泣',code:'GB41',trigram:'巽',trigramName:'巽为风',trigramSymbol:'☴',couple:3,coupleName:'外关',direction:'东南'},
+    5:{name:'照海',code:'KI6',trigram:'坤',trigramName:'坤为地',trigramSymbol:'☷',couple:9,coupleName:'列缺',direction:'西南'},
+    6:{name:'公孙',code:'SP4',trigram:'乾',trigramName:'乾为天',trigramSymbol:'☰',couple:8,coupleName:'内关',direction:'西北'},
+    7:{name:'后溪',code:'SI3',trigram:'兑',trigramName:'兑为泽',trigramSymbol:'☱',couple:1,coupleName:'申脉',direction:'西'},
+    8:{name:'内关',code:'PC6',trigram:'艮',trigramName:'艮为山',trigramSymbol:'☶',couple:6,coupleName:'公孙',direction:'东北'},
+    9:{name:'列缺',code:'LU7',trigram:'离',trigramName:'离为火',trigramSymbol:'☲',couple:2,coupleName:'照海',direction:'南'}
 };
 
-// =================== 五门十变 ===================
-// 天干合化五行配经络:
-// 甲己合化土 → 胆经(甲)与脾经(己)  土运
-// 乙庚合化金 → 肝经(乙)与大肠经(庚) 金运
-// 丙辛合化水 → 小肠经(丙)与肺经(辛) 水运
-// 丁壬合化木 → 心经(丁)与膀胱经(壬) 木运
-// 戊癸合化火 → 胃经(戊)与肾经(癸) 火运
 const WUMEN_HE_INFO = {
-    '甲': { partnerGan: '己', huaWuxing: '土', meridian1: '足少阳胆经', meridian2: '足太阴脾经', desc: '胆脾合化土，治脾胃肝胆病' },
-    '己': { partnerGan: '甲', huaWuxing: '土', meridian1: '足太阴脾经', meridian2: '足少阳胆经', desc: '脾胆合化土，治脾胃肝胆病' },
-    '乙': { partnerGan: '庚', huaWuxing: '金', meridian1: '足厥阴肝经', meridian2: '手阳明大肠经', desc: '肝大肠合化金，治肝肠肺病' },
-    '庚': { partnerGan: '乙', huaWuxing: '金', meridian1: '手阳明大肠经', meridian2: '足厥阴肝经', desc: '大肠肝合化金，治肝肠肺病' },
-    '丙': { partnerGan: '辛', huaWuxing: '水', meridian1: '手太阳小肠经', meridian2: '手太阴肺经', desc: '小肠肺合化水，治心肾肺病' },
-    '辛': { partnerGan: '丙', huaWuxing: '水', meridian1: '手太阴肺经', meridian2: '手太阳小肠经', desc: '肺小肠合化水，治心肾肺病' },
-    '丁': { partnerGan: '壬', huaWuxing: '木', meridian1: '手少阴心经', meridian2: '足太阳膀胱经', desc: '心膀胱合化木，治心脑肝肾' },
-    '壬': { partnerGan: '丁', huaWuxing: '木', meridian1: '足太阳膀胱经', meridian2: '手少阴心经', desc: '膀胱心合化木，治心脑肝肾' },
-    '戊': { partnerGan: '癸', huaWuxing: '火', meridian1: '足阳明胃经', meridian2: '足少阴肾经', desc: '胃肾合化火，治脾胃肾命门' },
-    '癸': { partnerGan: '戊', huaWuxing: '火', meridian1: '足少阴肾经', meridian2: '足阳明胃经', desc: '肾胃合化火，治脾胃肾命门' }
+    '甲':{partnerGan:'己',huaWuxing:'土',meridian1:'足少阳胆经',meridian2:'足太阴脾经',desc:'胆脾合化土，治脾胃肝胆病'},
+    '己':{partnerGan:'甲',huaWuxing:'土',meridian1:'足太阴脾经',meridian2:'足少阳胆经',desc:'脾胆合化土，治脾胃肝胆病'},
+    '乙':{partnerGan:'庚',huaWuxing:'金',meridian1:'足厥阴肝经',meridian2:'手阳明大肠经',desc:'肝大肠合化金，治肝肠肺病'},
+    '庚':{partnerGan:'乙',huaWuxing:'金',meridian1:'手阳明大肠经',meridian2:'足厥阴肝经',desc:'大肠肝合化金，治肝肠肺病'},
+    '丙':{partnerGan:'辛',huaWuxing:'水',meridian1:'手太阳小肠经',meridian2:'手太阴肺经',desc:'小肠肺合化水，治心肾肺病'},
+    '辛':{partnerGan:'丙',huaWuxing:'水',meridian1:'手太阴肺经',meridian2:'手太阳小肠经',desc:'肺小肠合化水，治心肾肺病'},
+    '丁':{partnerGan:'壬',huaWuxing:'木',meridian1:'手少阴心经',meridian2:'足太阳膀胱经',desc:'心膀胱合化木，治心脑肝肾'},
+    '壬':{partnerGan:'丁',huaWuxing:'木',meridian1:'足太阳膀胱经',meridian2:'手少阴心经',desc:'膀胱心合化木，治心脑肝肾'},
+    '戊':{partnerGan:'癸',huaWuxing:'火',meridian1:'足阳明胃经',meridian2:'足少阴肾经',desc:'胃肾合化火，治脾胃肾命门'},
+    '癸':{partnerGan:'戊',huaWuxing:'火',meridian1:'足少阴肾经',meridian2:'足阳明胃经',desc:'肾胃合化火，治脾胃肾命门'}
 };
 
-// =================== 辅助函数 ===================
-function getWuXingName(idx) {
-    return WU_XING_NAMES[idx] || '';
+function getWuXingName(idx) { return WU_XING_NAMES[idx] || ''; }
+function getWuXingColor(idx) { return WU_XING_COLORS[idx] || ''; }
+function getGanYinYang(ganIdx) { return GAN_YIN_YANG[ganIdx]===1 ? '阳' : '阴'; }
+function getZhiYinYang(zhiIdx) { return ZHI_YIN_YANG[zhiIdx]===1 ? '阳' : '阴'; }
+
+const NAYIN_WUXING = [
+    '海中金','海中金','炉中火','炉中火','大林木','大林木',
+    '路旁土','路旁土','剑锋金','剑锋金','山头火','山头火',
+    '涧下水','涧下水','城头土','城头土','白蜡金','白蜡金',
+    '杨柳木','杨柳木','泉中水','泉中水','屋上土','屋上土',
+    '霹雳火','霹雳火','松柏木','松柏木','长流水','长流水',
+    '砂中金','砂中金','山下火','山下火','平地木','平地木',
+    '壁上土','壁上土','金箔金','金箔金','覆灯火','覆灯火',
+    '天河水','天河水','大驿土','大驿土','钗钏金','钗钏金',
+    '桑柘木','桑柘木','大溪水','大溪水','沙中土','沙中土',
+    '天上火','天上火','石榴木','石榴木','大海水','大海水'
+];
+
+function getNaYin(sexagenaryNum) {
+    if(typeof sexagenaryNum==='undefined'||sexagenaryNum===null) return '';
+    const idx = ((sexagenaryNum%60)+60)%60;
+    return NAYIN_WUXING[idx]||'';
 }
 
-function getWuXingColor(idx) {
-    return WU_XING_COLORS[idx] || '';
-}
-
-function getGanYinYang(ganIdx) {
-    return GAN_YIN_YANG[ganIdx] === 1 ? '阳' : '阴';
-}
-
-function getZhiYinYang(zhiIdx) {
-    return ZHI_YIN_YANG[zhiIdx] === 1 ? '阳' : '阴';
-}
-
-</script>
-<script>
-/**
- * calendar.js - 干支计算、节气计算、五运六气计算
- */
-
-// =================== 缓存 ===================
+// =================== calendar.js ===================
 const _solarTermCache = {};
 const _dayGZCache = {};
 
-// =================== 干支计算 ===================
-
-/**
- * 计算年干支
- * 以立春为界，立春前属上一年
- */
 function getYearGanZhi(date) {
     const year = date.getFullYear();
     const solarTerms = getSolarTermDates(year);
-    const liChun = solarTerms[2]; // 立春索引
-
+    const liChun = solarTerms[2];
     let effectiveYear = year;
-    if (date < liChun) {
-        effectiveYear = year - 1;
-    }
-
+    if(date < liChun) effectiveYear = year - 1;
     const ganIdx = (effectiveYear - 4) % 10;
     const zhiIdx = (effectiveYear - 4) % 12;
     return {
-        gan: TIAN_GAN[ganIdx < 0 ? ganIdx + 10 : ganIdx],
-        zhi: DI_ZHI[zhiIdx < 0 ? zhiIdx + 12 : zhiIdx],
-        ganzhi: TIAN_GAN[ganIdx < 0 ? ganIdx + 10 : ganIdx] + DI_ZHI[zhiIdx < 0 ? zhiIdx + 12 : zhiIdx],
-        ganIdx: ganIdx < 0 ? ganIdx + 10 : ganIdx,
-        zhiIdx: zhiIdx < 0 ? zhiIdx + 12 : zhiIdx,
-        sexagenaryNum: getSexagenaryNum(ganIdx < 0 ? ganIdx + 10 : ganIdx, zhiIdx < 0 ? zhiIdx + 12 : zhiIdx)
+        gan: TIAN_GAN[ganIdx<0?ganIdx+10:ganIdx],
+        zhi: DI_ZHI[zhiIdx<0?zhiIdx+12:zhiIdx],
+        ganzhi: TIAN_GAN[ganIdx<0?ganIdx+10:ganIdx] + DI_ZHI[zhiIdx<0?zhiIdx+12:zhiIdx],
+        ganIdx: ganIdx<0?ganIdx+10:ganIdx,
+        zhiIdx: zhiIdx<0?zhiIdx+12:zhiIdx,
+        sexagenaryNum: getSexagenaryNum(ganIdx<0?ganIdx+10:ganIdx, zhiIdx<0?zhiIdx+12:zhiIdx)
     };
 }
 
-/**
- * 计算月干支
- * 以节气为月界：立春=寅月，惊蛰=卯月，清明=辰月...
- * 五虎遁：甲己之年丙作首，乙庚之岁戊为头，丙辛必定寻庚起，丁壬壬位顺行流，若问戊癸何方发，甲寅之上好追求
- */
 function getMonthGanZhi(date) {
     const year = date.getFullYear();
     const solarTerms = getSolarTermDates(year);
     const prevYearTerms = getSolarTermDates(year - 1);
     const liChunThisYear = solarTerms[2];
     const xiaoHanThisYear = solarTerms[0];
-
-    // 节气月界定：
-    // 小寒→丑月, 立春→寅月, 惊蛰→卯月, ..., 大雪→子月
-    // 节索引 -> 月: 0→11(丑),2→0(寅),4→1(卯),6→2(辰),8→3(巳),
-    //                   10→4(午),12→5(未),14→6(申),16→7(酉),
-    //                   18→8(戌),20→9(亥),22→10(子)
-
     let lunarMonthIdx = 0;
     let effectiveYear = year;
-
-    if (date >= liChunThisYear) {
-        // 立春及之后 → 属于本年干支年
+    if(date >= liChunThisYear) {
         effectiveYear = year;
-        // 从索引22(大雪)开始倒查，找到最近的节
-        const jieIndices = [22, 20, 18, 16, 14, 12, 10, 8, 6, 4, 2];
-        const jieToMonth = { 22: 10, 20: 9, 18: 8, 16: 7, 14: 6, 12: 5, 10: 4, 8: 3, 6: 2, 4: 1, 2: 0 };
-        for (const j of jieIndices) {
-            if (date >= solarTerms[j]) {
-                lunarMonthIdx = jieToMonth[j];
-                break;
-            }
-        }
-        // 默认立春 → 寅月(0)
-    } else if (date >= xiaoHanThisYear) {
-        // 小寒后、立春前 → 属于上年干支年的丑月
+        const jieIndices = [22,20,18,16,14,12,10,8,6,4,2];
+        const jieToMonth = {22:10,20:9,18:8,16:7,14:6,12:5,10:4,8:3,6:2,4:1,2:0};
+        for(const j of jieIndices) { if(date >= solarTerms[j]) { lunarMonthIdx = jieToMonth[j]; break; } }
+    } else if(date >= xiaoHanThisYear) {
         effectiveYear = year - 1;
         lunarMonthIdx = 11;
     } else {
-        // 小寒之前 → 属于上年干支年，需要查找到对应的月
         effectiveYear = year - 1;
-        // 首先查看上一年12月的大雪
         const prevDaXue = prevYearTerms[22];
-        if (date >= prevDaXue) {
-            lunarMonthIdx = 10; // 子月
+        if(date >= prevDaXue) {
+            lunarMonthIdx = 10;
         } else {
-            // 继续往前查（上一年12月前还有其他月）
-            const jieIndices = [20, 18, 16, 14, 12, 10, 8, 6, 4, 2];
-            const jieToMonth = { 20: 9, 18: 8, 16: 7, 14: 6, 12: 5, 10: 4, 8: 3, 6: 2, 4: 1, 2: 0 };
+            const jieIndices = [20,18,16,14,12,10,8,6,4,2];
+            const jieToMonth = {20:9,18:8,16:7,14:6,12:5,10:4,8:3,6:2,4:1,2:0};
             let found = false;
-            for (const j of jieIndices) {
-                if (date >= prevYearTerms[j]) {
-                    lunarMonthIdx = jieToMonth[j];
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) {
-                // 在去年立春之前（极罕见，1月初），也属于子月
-                lunarMonthIdx = 10;
-            }
+            for(const j of jieIndices) { if(date >= prevYearTerms[j]) { lunarMonthIdx = jieToMonth[j]; found=true; break; } }
+            if(!found) lunarMonthIdx = 10;
         }
     }
-
-    // 五虎遁：根据年干计算月干起首
     const yearGanIdx = (effectiveYear - 4) % 10;
     const adjustedYearGanIdx = yearGanIdx < 0 ? yearGanIdx + 10 : yearGanIdx;
-
-    // 五虎遁规则：(年干对应的寅月天干)
-    // 甲己 → 丙寅, 乙庚 → 戊寅, 丙辛 → 庚寅, 丁壬 → 壬寅, 戊癸 → 甲寅
-    const huDunStart = [2, 4, 6, 8, 0]; // 甲/己→2(丙), 乙/庚→4(戊), 丙/辛→6(庚), 丁/壬→8(壬), 戊/癸→0(甲)
-    const groupIdx = Math.floor(adjustedYearGanIdx / 2); // 0=甲己, 1=乙庚, 2=丙辛, 3=丁壬, 4=戊癸
+    const huDunStart = [2,4,6,8,0];
+    const groupIdx = Math.floor(adjustedYearGanIdx/2);
     const monthGanIdx = (huDunStart[groupIdx] + lunarMonthIdx) % 10;
-    const monthZhiIdx = (lunarMonthIdx + 2) % 12; // 寅=2
-
+    const monthZhiIdx = (lunarMonthIdx + 2) % 12;
     return {
-        gan: TIAN_GAN[monthGanIdx],
-        zhi: DI_ZHI[monthZhiIdx],
+        gan: TIAN_GAN[monthGanIdx], zhi: DI_ZHI[monthZhiIdx],
         ganzhi: TIAN_GAN[monthGanIdx] + DI_ZHI[monthZhiIdx],
-        ganIdx: monthGanIdx,
-        zhiIdx: monthZhiIdx,
-        lunarMonth: lunarMonthIdx + 1
+        ganIdx: monthGanIdx, zhiIdx: monthZhiIdx, lunarMonth: lunarMonthIdx + 1
     };
 }
 
-/**
- * 计算日干支
- * 基准: 1900年1月1日 = 甲戌日 (60甲子序号: 10)
- */
 function getDayGanZhi(date) {
-    // 计算从1900-01-01到目标日期的天数
-    const baseDate = new Date(1900, 0, 1);
-    const targetDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-    const diffTime = targetDate.getTime() - baseDate.getTime();
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-    // 1900-01-01是甲戌日，60甲子序号为10
-    const cycleDay = ((diffDays % 60) + 10 + 60) % 60;
-
+    const base = new Date(Date.UTC(2000, 0, 1));
+    const utc = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    const diffDays = Math.floor((utc - base) / 86400000);
+    const cycleDay = (54 + ((diffDays % 60) + 60) % 60) % 60;
     const ganIdx = cycleDay % 10;
     const zhiIdx = cycleDay % 12;
-
     return {
-        gan: TIAN_GAN[ganIdx],
-        zhi: DI_ZHI[zhiIdx],
+        gan: TIAN_GAN[ganIdx], zhi: DI_ZHI[zhiIdx],
         ganzhi: TIAN_GAN[ganIdx] + DI_ZHI[zhiIdx],
-        ganIdx: ganIdx,
-        zhiIdx: zhiIdx,
-        sexagenaryNum: cycleDay
+        ganIdx: ganIdx, zhiIdx: zhiIdx, sexagenaryNum: cycleDay
     };
 }
 
-/**
- * 计算时干支
- * 五鼠遁：甲己还加甲，乙庚丙作初，丙辛从戊起，丁壬庚子居，戊癸何方发，壬子是真途
- */
 function getHourGanZhi(date, hour) {
     const dayGZ = getDayGanZhi(date);
     const dayGanIdx = dayGZ.ganIdx;
-
-    // 找到时辰
     let shiChenIdx = 0;
-    if (hour >= 23 || hour < 1) shiChenIdx = 0;      // 子时
-    else if (hour >= 1 && hour < 3) shiChenIdx = 1;   // 丑时
-    else if (hour >= 3 && hour < 5) shiChenIdx = 2;   // 寅时
-    else if (hour >= 5 && hour < 7) shiChenIdx = 3;   // 卯时
-    else if (hour >= 7 && hour < 9) shiChenIdx = 4;   // 辰时
-    else if (hour >= 9 && hour < 11) shiChenIdx = 5;  // 巳时
-    else if (hour >= 11 && hour < 13) shiChenIdx = 6; // 午时
-    else if (hour >= 13 && hour < 15) shiChenIdx = 7; // 未时
-    else if (hour >= 15 && hour < 17) shiChenIdx = 8; // 申时
-    else if (hour >= 17 && hour < 19) shiChenIdx = 9; // 酉时
-    else if (hour >= 19 && hour < 21) shiChenIdx = 10; // 戌时
-    else if (hour >= 21 && hour < 23) shiChenIdx = 11; // 亥时
-
-    // 五鼠遁：日干对应的子时天干
-    // 甲己→甲子, 乙庚→丙子, 丙辛→戊子, 丁壬→庚子, 戊癸→壬子
-    const ratDunStart = [0, 2, 4, 6, 8]; // 甲/己→0(甲), 乙/庚→2(丙), ...
-    const groupIdx = Math.floor(dayGanIdx / 2);
+    if(hour>=23||hour<1) shiChenIdx=0;
+    else if(hour>=1&&hour<3) shiChenIdx=1;
+    else if(hour>=3&&hour<5) shiChenIdx=2;
+    else if(hour>=5&&hour<7) shiChenIdx=3;
+    else if(hour>=7&&hour<9) shiChenIdx=4;
+    else if(hour>=9&&hour<11) shiChenIdx=5;
+    else if(hour>=11&&hour<13) shiChenIdx=6;
+    else if(hour>=13&&hour<15) shiChenIdx=7;
+    else if(hour>=15&&hour<17) shiChenIdx=8;
+    else if(hour>=17&&hour<19) shiChenIdx=9;
+    else if(hour>=19&&hour<21) shiChenIdx=10;
+    else if(hour>=21&&hour<23) shiChenIdx=11;
+    const ratDunStart = [0,2,4,6,8];
+    const groupIdx = Math.floor(dayGanIdx/2);
     const hourGanIdx = (ratDunStart[groupIdx] + shiChenIdx) % 10;
-
     return {
-        gan: TIAN_GAN[hourGanIdx],
-        zhi: DI_ZHI[shiChenIdx],
+        gan: TIAN_GAN[hourGanIdx], zhi: DI_ZHI[shiChenIdx],
         ganzhi: TIAN_GAN[hourGanIdx] + DI_ZHI[shiChenIdx],
-        ganIdx: hourGanIdx,
-        zhiIdx: shiChenIdx,
-        shiChen: SHI_CHEN[shiChenIdx]
+        ganIdx: hourGanIdx, zhiIdx: shiChenIdx, shiChen: SHI_CHEN[shiChenIdx]
     };
 }
 
-/**
- * 获取当前时辰的描述（一个时辰=两小时）
- */
 function getCurrentShiChen(date) {
     const hour = date.getHours();
-    const hgz = getHourGanZhi(date, hour);
-    return hgz;
+    return getHourGanZhi(date, hour);
 }
 
-// =================== 节气计算 ===================
-
-/**
- * 计算太阳黄经的近似值（度数）
- * 使用简化的太阳位置算法
- */
 function getSunLongitude(jd) {
-    // Julian centuries from J2000.0
     const T = (jd - 2451545.0) / 36525.0;
     const T2 = T * T;
-    const T3 = T2 * T;
-
-    // Mean longitude of the sun
     let L0 = 280.46646 + 36000.76983 * T + 0.0003032 * T2;
-
-    // Mean anomaly of the sun
     const M = 357.52911 + 35999.05029 * T - 0.0001537 * T2;
     const Mrad = M * Math.PI / 180.0;
-
-    // Sun's equation of center
-    const C = (1.914602 - 0.004817 * T - 0.000014 * T2) * Math.sin(Mrad)
-            + (0.019993 - 0.000101 * T) * Math.sin(2 * Mrad)
-            + 0.000289 * Math.sin(3 * Mrad);
-
-    // True longitude
+    const C = (1.914602 - 0.004817 * T - 0.000014 * T2) * Math.sin(Mrad) + (0.019993 - 0.000101 * T) * Math.sin(2 * Mrad) + 0.000289 * Math.sin(3 * Mrad);
     let L = L0 + C;
-
-    // Normalize to [0, 360)
     L = ((L % 360) + 360) % 360;
-
     return L;
 }
 
-/**
- * 计算指定年份的二十四节气日期
- * 使用二分法迭代求解太阳黄经到达指定角度的时刻
- */
 function getSolarTermDates(year) {
-    if (_solarTermCache[year]) return _solarTermCache[year];
-
+    if(_solarTermCache[year]) return _solarTermCache[year];
     const terms = [];
-
-    for (let i = 0; i < 24; i++) {
+    for(let i=0;i<24;i++) {
         const targetAngle = SOLAR_TERMS[i].angle;
         const baseMonth = SOLAR_TERMS[i].month;
-
-        // 初始估计：使用通用公式
-        const Y = year % 100;
-        let estimatedDay = Math.floor(Y * 0.2422 + SOLAR_TERM_C[i]) - Math.floor(Y / 4);
-
-        if (baseMonth === 0 && i >= 22) {
-            // 小寒大寒在次年1月
-            const nextY = (year + 1) % 100;
-            estimatedDay = Math.floor(nextY * 0.2422 + SOLAR_TERM_C[i]) - Math.floor(nextY / 4);
+        let estimatedDay, actualYear, month0;
+        if(baseMonth===0 && i>=22) {
+            const nextY = (year+1)%100;
+            estimatedDay = Math.floor(nextY*0.2422+SOLAR_TERM_C[i]) - Math.floor(nextY/4);
+            actualYear = year+1; month0 = 0;
+        } else {
+            const Y = year%100;
+            estimatedDay = Math.floor(Y*0.2422+SOLAR_TERM_C[i]) - Math.floor(Y/4);
+            actualYear = year; month0 = baseMonth;
         }
-
-        // 使用二分法精确求解
-        const month0 = (baseMonth === 0 && i >= 22) ? 0 : baseMonth;
-        const actualYear = (baseMonth === 0 && i >= 22) ? year + 1 : year;
-
-        // 在估算日期前后搜索精确日期
-        let bestDate = null;
-        let minDiff = Infinity;
-
-        for (let d = estimatedDay - 2; d <= estimatedDay + 2; d++) {
-            if (d < 1 || d > 31) continue;
-
-            // 在当天不同时间点尝试（中午12点作为基准）
+        let bestDate = null; let minDiff = Infinity;
+        for(let d=estimatedDay-2; d<=estimatedDay+2; d++) {
+            if(d<1||d>31) continue;
             const testDate = new Date(actualYear, month0, d, 12, 0, 0);
             const jd = getJulianDay(testDate);
             const actualAngle = getSunLongitude(jd);
-
-            // 计算太阳黄经与目标角度的差值
             let diff = actualAngle - targetAngle;
-            if (diff > 180) diff -= 360;
-            if (diff < -180) diff += 360;
-
-            if (Math.abs(diff) < Math.abs(minDiff)) {
-                minDiff = diff;
-                bestDate = new Date(actualYear, month0, d);
-            }
+            if(diff>180) diff-=360;
+            if(diff<-180) diff+=360;
+            if(Math.abs(diff)<Math.abs(minDiff)) { minDiff=diff; bestDate=new Date(actualYear, month0, d); }
         }
-
-        // 如果需要更精确，进行日内的二分修正
-        if (bestDate && Math.abs(minDiff) > 1.5) {
-            // 调整日期
-            const adjustDir = minDiff > 0 ? -1 : 1;
+        if(bestDate && Math.abs(minDiff)>1.5) {
+            const adjustDir = minDiff>0?-1:1;
             const adjustedDate = new Date(bestDate);
-            adjustedDate.setDate(adjustedDate.getDate() + adjustDir);
-
+            adjustedDate.setDate(adjustedDate.getDate()+adjustDir);
             const jd2 = getJulianDay(adjustedDate);
             const angle2 = getSunLongitude(jd2);
             let diff2 = angle2 - targetAngle;
-            if (diff2 > 180) diff2 -= 360;
-            if (diff2 < -180) diff2 += 360;
-
-            if (Math.abs(diff2) < Math.abs(minDiff)) {
-                bestDate = adjustedDate;
-                minDiff = diff2;
-            }
+            if(diff2>180) diff2-=360;
+            if(diff2<-180) diff2+=360;
+            if(Math.abs(diff2)<Math.abs(minDiff)) { bestDate=adjustedDate; minDiff=diff2; }
         }
-
-        terms.push(bestDate || new Date(actualYear, month0, estimatedDay));
+        terms.push(bestDate||new Date(actualYear, month0, estimatedDay));
     }
-
     _solarTermCache[year] = terms;
     return terms;
 }
 
-/**
- * 获取某天所在的节气
- */
 function getCurrentSolarTerm(date) {
     const year = date.getFullYear();
     const terms = getSolarTermDates(year);
-    const termsNextYear = getSolarTermDates(year + 1);
-    const termsPrevYear = getSolarTermDates(year - 1);
-
-    // 合并三年节气数据确保覆盖所有日期
+    const termsNextYear = getSolarTermDates(year+1);
+    const termsPrevYear = getSolarTermDates(year-1);
     const allTerms = [...termsPrevYear, ...terms, ...termsNextYear];
-
-    // 找到 date 之前的最后一个节气
-    let currentTerm = null;
-    for (let i = allTerms.length - 1; i >= 0; i--) {
-        if (date >= allTerms[i]) {
-            currentTerm = { ...SOLAR_TERMS[i % 24], date: allTerms[i], index: i % 24 };
-            break;
-        }
+    let currentTerm=null;
+    for(let i=allTerms.length-1; i>=0; i--) {
+        if(date>=allTerms[i]) { currentTerm={...SOLAR_TERMS[i%24], date:allTerms[i], index:i%24}; break; }
     }
-
-    // 找到下一个节气
-    let nextTerm = null;
-    for (let i = 0; i < allTerms.length; i++) {
-        if (date < allTerms[i]) {
-            nextTerm = { ...SOLAR_TERMS[i % 24], date: allTerms[i], index: i % 24 };
-            break;
-        }
+    let nextTerm=null;
+    for(let i=0; i<allTerms.length; i++) {
+        if(date<allTerms[i]) { nextTerm={...SOLAR_TERMS[i%24], date:allTerms[i], index:i%24}; break; }
     }
-
-    return { current: currentTerm, next: nextTerm };
+    return {current:currentTerm, next:nextTerm};
 }
 
-/**
- * 获取指定日期的节气（如果当天是节气）
- */
 function getSolarTermOnDate(date) {
     const year = date.getFullYear();
     const terms = getSolarTermDates(year);
-    const termsNextYear = getSolarTermDates(year + 1);
-
+    const termsNextYear = getSolarTermDates(year+1);
     const checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-
-    for (let i = 0; i < terms.length; i++) {
+    for(let i=0; i<terms.length; i++) {
         const termDate = new Date(terms[i].getFullYear(), terms[i].getMonth(), terms[i].getDate());
-        if (checkDate.getTime() === termDate.getTime()) {
-            return { ...SOLAR_TERMS[i], date: terms[i] };
-        }
+        if(checkDate.getTime()===termDate.getTime()) return {...SOLAR_TERMS[i], date:terms[i]};
     }
-
-    // 检查下一年一月的节气
-    for (let i = 0; i < 2; i++) {
+    for(let i=0; i<2; i++) {
         const termDate = new Date(termsNextYear[i].getFullYear(), termsNextYear[i].getMonth(), termsNextYear[i].getDate());
-        if (checkDate.getTime() === termDate.getTime()) {
-            return { ...SOLAR_TERMS[i], date: termsNextYear[i] };
-        }
+        if(checkDate.getTime()===termDate.getTime()) return {...SOLAR_TERMS[i], date:termsNextYear[i]};
     }
-
     return null;
 }
 
-/**
- * 计算儒略日
- */
 function getJulianDay(date) {
-    let y = date.getFullYear();
-    let m = date.getMonth() + 1;
-    const d = date.getDate() + date.getHours() / 24.0 + date.getMinutes() / 1440.0;
-
-    if (m <= 2) {
-        y -= 1;
-        m += 12;
-    }
-
-    const A = Math.floor(y / 100);
-    const B = 2 - A + Math.floor(A / 4);
-
-    return Math.floor(365.25 * (y + 4716)) + Math.floor(30.6001 * (m + 1)) + d + B - 1524.5;
+    let y=date.getFullYear(), m=date.getMonth()+1;
+    const d=date.getDate()+date.getHours()/24.0+date.getMinutes()/1440.0;
+    if(m<=2) { y-=1; m+=12; }
+    const A=Math.floor(y/100), B=2-A+Math.floor(A/4);
+    return Math.floor(365.25*(y+4716))+Math.floor(30.6001*(m+1))+d+B-1524.5;
 }
 
-// =================== 五运六气计算 ===================
-
-/**
- * 岁运（中运）:
- * 甲己→土运，乙庚→金运，丙辛→水运，丁壬→木运，戊癸→火运
- * 阳干→太过，阴干→不及
- */
 function getYearMovement(yearGanZhi) {
-    const ganIdx = yearGanZhi.ganIdx;
-    // 天干五行对应：甲乙木(0,1), 丙丁火(2,3), 戊己土(4,5), 庚辛金(6,7), 壬癸水(8,9)
-    const wuXingMap = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4];
-    const wxIdx = wuXingMap[ganIdx];
-    const isYang = GAN_YIN_YANG[ganIdx] === 1;
-
+    const ganIdx=yearGanZhi.ganIdx;
+    const wuXingMap=[0,0,1,1,2,2,3,3,4,4];
+    const wxIdx=wuXingMap[ganIdx];
+    const isYang=GAN_YIN_YANG[ganIdx]===1;
     return {
-        name: yearGanZhi.gan + '年',
-        wuXing: WU_XING_NAMES[wxIdx],
-        wuXingIdx: wxIdx,
-        excess: isYang ? '太过' : '不及',
-        description: `${yearGanZhi.gan}为${isYang ? '阳' : '阴'}干，${WU_XING_NAMES[wxIdx]}运${isYang ? '太过' : '不及'}`
+        name:yearGanZhi.gan+'年', wuXing:WU_XING_NAMES[wxIdx], wuXingIdx:wxIdx,
+        excess:isYang?'太过':'不及',
+        description: yearGanZhi.gan+'为'+(isYang?'阳':'阴')+'干，'+WU_XING_NAMES[wxIdx]+'运'+(isYang?'太过':'不及')
     };
 }
 
-/**
- * 主运（木火土金水，每年固定顺序）
- * 各运主73日5刻
- */
 function getHostMovement() {
     return [
-        { name: '初运', wuXing: '木', wuXingIdx: 0, period: '大寒至春分后13日' },
-        { name: '二运', wuXing: '火', wuXingIdx: 1, period: '春分后13日至芒种后10日' },
-        { name: '三运', wuXing: '土', wuXingIdx: 2, period: '芒种后10日至处暑后7日' },
-        { name: '四运', wuXing: '金', wuXingIdx: 3, period: '处暑后7日至立冬后4日' },
-        { name: '五运', wuXing: '水', wuXingIdx: 4, period: '立冬后4日至大寒' }
+        {name:'初运',wuXing:'木',wuXingIdx:0,period:'大寒至春分后13日'},
+        {name:'二运',wuXing:'火',wuXingIdx:1,period:'春分后13日至芒种后10日'},
+        {name:'三运',wuXing:'土',wuXingIdx:2,period:'芒种后10日至处暑后7日'},
+        {name:'四运',wuXing:'金',wuXingIdx:3,period:'处暑后7日至立冬后4日'},
+        {name:'五运',wuXing:'水',wuXingIdx:4,period:'立冬后4日至大寒'}
     ];
 }
 
-/**
- * 客运：以岁运为初运，按五行相生顺序排列
- */
 function getGuestMovement(yearMovement) {
-    const order = [0, 1, 2, 3, 4]; // 木火土金水顺序
-    const startIdx = yearMovement.wuXingIdx;
-    const names = ['初运', '二运', '三运', '四运', '五运'];
-
-    const result = [];
-    for (let i = 0; i < 5; i++) {
-        const wxIdx = (startIdx + i) % 5;
-        const isYang = ((i + startIdx + (yearMovement.excess === '太过' ? 1 : 0)) % 2 === 0);
-        result.push({
-            name: names[i],
-            wuXing: WU_XING_NAMES[wxIdx],
-            wuXingIdx: wxIdx,
-            excess: isYang ? '太过' : '不及'
-        });
+    const startIdx=yearMovement.wuXingIdx;
+    const names=['初运','二运','三运','四运','五运'];
+    const result=[];
+    for(let i=0;i<5;i++) {
+        const wxIdx=(startIdx+i)%5;
+        const isYang=((i+startIdx+(yearMovement.excess==='太过'?1:0))%2===0);
+        result.push({name:names[i],wuXing:WU_XING_NAMES[wxIdx],wuXingIdx:wxIdx,excess:isYang?'太过':'不及'});
     }
     return result;
 }
 
-/**
- * 主气（六气）：厥阴风木、少阴君火、少阳相火、太阴湿土、阳明燥金、太阳寒水
- * 每气60日87.5刻
- */
 function getHostQi() {
     return [
-        { name: '初之气', qi: '厥阴风木', wuXing: '木', wuXingIdx: 0, period: '大寒至春分' },
-        { name: '二之气', qi: '少阴君火', wuXing: '火', wuXingIdx: 1, period: '春分至小满' },
-        { name: '三之气', qi: '少阳相火', wuXing: '火', wuXingIdx: 1, period: '小满至大暑' },
-        { name: '四之气', qi: '太阴湿土', wuXing: '土', wuXingIdx: 2, period: '大暑至秋分' },
-        { name: '五之气', qi: '阳明燥金', wuXing: '金', wuXingIdx: 3, period: '秋分至小雪' },
-        { name: '终之气', qi: '太阳寒水', wuXing: '水', wuXingIdx: 4, period: '小雪至大寒' }
+        {name:'初之气',qi:'厥阴风木',wuXing:'木',wuXingIdx:0,period:'大寒至春分'},
+        {name:'二之气',qi:'少阴君火',wuXing:'火',wuXingIdx:1,period:'春分至小满'},
+        {name:'三之气',qi:'少阳相火',wuXing:'火',wuXingIdx:1,period:'小满至大暑'},
+        {name:'四之气',qi:'太阴湿土',wuXing:'土',wuXingIdx:2,period:'大暑至秋分'},
+        {name:'五之气',qi:'阳明燥金',wuXing:'金',wuXingIdx:3,period:'秋分至小雪'},
+        {name:'终之气',qi:'太阳寒水',wuXing:'水',wuXingIdx:4,period:'小雪至大寒'}
     ];
 }
 
-/**
- * 客气：根据年支推算司天在泉
- * 子午→少阴君火司天/阳明燥金在泉
- * 丑未→太阴湿土/太阳寒水
- * 寅申→少阳相火/厥阴风木
- * 卯酉→阳明燥金/少阴君火
- * 辰戌→太阳寒水/太阴湿土
- * 巳亥→厥阴风木/少阳相火
- */
 function getGuestQi(yearGanZhi) {
-    const zhiIdx = yearGanZhi.zhiIdx;
-    const siTianMap = [
-        { siTian: '少阴君火', zaiQuan: '阳明燥金' }, // 子午
-        { siTian: '太阴湿土', zaiQuan: '太阳寒水' }, // 丑未
-        { siTian: '少阳相火', zaiQuan: '厥阴风木' }, // 寅申
-        { siTian: '阳明燥金', zaiQuan: '少阴君火' }, // 卯酉
-        { siTian: '太阳寒水', zaiQuan: '太阴湿土' }, // 辰戌
-        { siTian: '厥阴风木', zaiQuan: '少阳相火' }, // 巳亥
+    const zhiIdx=yearGanZhi.zhiIdx;
+    const siTianMap=[
+        {siTian:'少阴君火',zaiQuan:'阳明燥金'},
+        {siTian:'太阴湿土',zaiQuan:'太阳寒水'},
+        {siTian:'少阳相火',zaiQuan:'厥阴风木'},
+        {siTian:'阳明燥金',zaiQuan:'少阴君火'},
+        {siTian:'太阳寒水',zaiQuan:'太阴湿土'},
+        {siTian:'厥阴风木',zaiQuan:'少阳相火'}
     ];
-
-    const pairIdx = Math.floor(zhiIdx / 2);
-    const base = siTianMap[pairIdx];
-
-    // 六气顺序（按三阴三阳排列）
-    const qiOrder = [
-        '厥阴风木', '少阴君火', '太阴湿土', '少阳相火', '阳明燥金', '太阳寒水'
-    ];
-
-    const siTianOrder = qiOrder.indexOf(base.siTian);
-
-    const guestQiList = [];
-    const stepNames = ['初之气', '二之气', '三之气', '四之气', '五之气', '终之气'];
-
-    // 客气：以司天为三之气，按三阴三阳顺序排列
-    for (let i = 0; i < 6; i++) {
-        const offset = (i - 2); // 相对于司天（三之气的位置）
-        const qiIdx = ((siTianOrder + offset) % 6 + 6) % 6;
-        guestQiList.push({
-            name: stepNames[i],
-            qi: qiOrder[qiIdx],
-            isSiTian: i === 2,
-            isZaiQuan: i === 5
-        });
+    const pairIdx=Math.floor(zhiIdx/2);
+    const base=siTianMap[pairIdx];
+    const qiOrder=['厥阴风木','少阴君火','太阴湿土','少阳相火','阳明燥金','太阳寒水'];
+    const siTianOrder=qiOrder.indexOf(base.siTian);
+    const guestQiList=[];
+    const stepNames=['初之气','二之气','三之气','四之气','五之气','终之气'];
+    for(let i=0;i<6;i++) {
+        const offset=(i-2);
+        const qiIdx=((siTianOrder+offset)%6+6)%6;
+        guestQiList.push({name:stepNames[i],qi:qiOrder[qiIdx],isSiTian:i===2,isZaiQuan:i===5});
     }
-
-    return {
-        siTian: base.siTian,
-        zaiQuan: base.zaiQuan,
-        steps: guestQiList
-    };
+    return {siTian:base.siTian,zaiQuan:base.zaiQuan,steps:guestQiList};
 }
 
-/**
- * 获取当前日期的五运六气详情
- */
 function getWuYunLiuQiForDate(date) {
-    const year = date.getFullYear();
-    const yearGZ = getYearGanZhi(date);
-    const yearMovement = getYearMovement(yearGZ);
-    const hostMovements = getHostMovement();
-    const guestMovements = getGuestMovement(yearMovement);
-    const hostQi = getHostQi();
-    const guestQi = getGuestQi(yearGZ);
-
-    // 使用实际节气日期来确定运和气
-    const currTerms = getSolarTermDates(year);
-    const prevTerms = getSolarTermDates(year - 1);
-
-    // 运气周期从大寒开始
-    // 运：初运(大寒→春分后13日), 二运(~4/3→~6/15), 三运(~6/15→~8/27), 四运(~8/27→~11/7), 五运(~11/7→大寒)
-    // 气：初气(大寒→春分), 二气(春分→小满), 三气(小满→大暑), 四气(大暑→秋分), 五气(秋分→小雪), 终气(小雪→大寒)
-    
-    const daHan = currTerms[1];       // 大寒
-    const chunFen = currTerms[5];     // 春分
-    const xiaoMan = currTerms[9];     // 小满
-    const daShu = currTerms[13];      // 大暑
-    const qiuFen = currTerms[17];     // 秋分
-    const xiaoXue = currTerms[21];    // 小雪
-    const nextDaHan = getSolarTermDates(year + 1)[1]; // 下一年大寒
-
-    // 运边界：初运~二运(~春分+13天)，大致用惊蛰(春分前1节气)到春分中点近似
-    const jingZhe = currTerms[3];     // 惊蛰 ~3/6
-    const mangZhong = currTerms[10];  // 芒种 ~6/6
-    const chuShu = currTerms[15];     // 处暑 ~8/23
-    const liDong = currTerms[19];     // 立冬 ~11/7
-
-    let currentHostMove = hostMovements[0];
-    let currentGuestMove = guestMovements[0];
-    let currentHostQ = hostQi[0];
-    let currentGuestQ = guestQi.steps[0];
-
-    // 判断运
-    if (date >= daHan && date < chunFen) {
-        // 初运（简化：大寒到春分附近）
-        currentHostMove = hostMovements[0];
-        currentGuestMove = guestMovements[0];
-    } else if (date >= chunFen && date < mangZhong) {
-        currentHostMove = hostMovements[1];
-        currentGuestMove = guestMovements[1];
-    } else if (date >= mangZhong && date < chuShu) {
-        currentHostMove = hostMovements[2];
-        currentGuestMove = guestMovements[2];
-    } else if (date >= chuShu && date < liDong) {
-        currentHostMove = hostMovements[3];
-        currentGuestMove = guestMovements[3];
-    } else {
-        currentHostMove = hostMovements[4];
-        currentGuestMove = guestMovements[4];
-    }
-
-    // 判断气
-    if (date >= daHan && date < chunFen) {
-        currentHostQ = hostQi[0];
-        currentGuestQ = guestQi.steps[0];
-    } else if (date >= chunFen && date < xiaoMan) {
-        currentHostQ = hostQi[1];
-        currentGuestQ = guestQi.steps[1];
-    } else if (date >= xiaoMan && date < daShu) {
-        currentHostQ = hostQi[2];
-        currentGuestQ = guestQi.steps[2];
-    } else if (date >= daShu && date < qiuFen) {
-        currentHostQ = hostQi[3];
-        currentGuestQ = guestQi.steps[3];
-    } else if (date >= qiuFen && date < xiaoXue) {
-        currentHostQ = hostQi[4];
-        currentGuestQ = guestQi.steps[4];
-    } else {
-        currentHostQ = hostQi[5];
-        currentGuestQ = guestQi.steps[5];
-    }
-
-    return {
-        yearMovement,
-        hostMovements,
-        guestMovements,
-        hostQi,
-        guestQi,
-        currentHostMove,
-        currentGuestMove,
-        currentHostQ,
-        currentGuestQ
-    };
+    const year=date.getFullYear();
+    const yearGZ=getYearGanZhi(date);
+    const yearMovement=getYearMovement(yearGZ);
+    const hostMovements=getHostMovement();
+    const guestMovements=getGuestMovement(yearMovement);
+    const hostQi=getHostQi();
+    const guestQi=getGuestQi(yearGZ);
+    const currTerms=getSolarTermDates(year);
+    const daHan=currTerms[1], chunFen=currTerms[5], xiaoMan=currTerms[9];
+    const daShu=currTerms[13], qiuFen=currTerms[17], xiaoXue=currTerms[21];
+    const mangZhong=currTerms[10], chuShu=currTerms[15], liDong=currTerms[19];
+    let currentHostMove=hostMovements[0], currentGuestMove=guestMovements[0];
+    let currentHostQ=hostQi[0], currentGuestQ=guestQi.steps[0];
+    if(date>=daHan&&date<chunFen) { currentHostMove=hostMovements[0]; currentGuestMove=guestMovements[0]; }
+    else if(date>=chunFen&&date<mangZhong) { currentHostMove=hostMovements[1]; currentGuestMove=guestMovements[1]; }
+    else if(date>=mangZhong&&date<chuShu) { currentHostMove=hostMovements[2]; currentGuestMove=guestMovements[2]; }
+    else if(date>=chuShu&&date<liDong) { currentHostMove=hostMovements[3]; currentGuestMove=guestMovements[3]; }
+    else { currentHostMove=hostMovements[4]; currentGuestMove=guestMovements[4]; }
+    if(date>=daHan&&date<chunFen) { currentHostQ=hostQi[0]; currentGuestQ=guestQi.steps[0]; }
+    else if(date>=chunFen&&date<xiaoMan) { currentHostQ=hostQi[1]; currentGuestQ=guestQi.steps[1]; }
+    else if(date>=xiaoMan&&date<daShu) { currentHostQ=hostQi[2]; currentGuestQ=guestQi.steps[2]; }
+    else if(date>=daShu&&date<qiuFen) { currentHostQ=hostQi[3]; currentGuestQ=guestQi.steps[3]; }
+    else if(date>=qiuFen&&date<xiaoXue) { currentHostQ=hostQi[4]; currentGuestQ=guestQi.steps[4]; }
+    else { currentHostQ=hostQi[5]; currentGuestQ=guestQi.steps[5]; }
+    return {yearMovement,hostMovements,guestMovements,hostQi,guestQi,currentHostMove,currentGuestMove,currentHostQ,currentGuestQ};
 }
 
-/**
- * 获取天干对应的五行属性
- */
 function getGanWuXing(ganIdx) {
-    return {
-        wuXing: WU_XING_NAMES[GAN_WU_XING[ganIdx]],
-        wuXingIdx: GAN_WU_XING[ganIdx],
-        yinYang: getGanYinYang(ganIdx)
-    };
+    return {wuXing:WU_XING_NAMES[GAN_WU_XING[ganIdx]],wuXingIdx:GAN_WU_XING[ganIdx],yinYang:getGanYinYang(ganIdx)};
 }
 
 function getZhiWuXing(zhiIdx) {
-    return {
-        wuXing: WU_XING_NAMES[ZHI_WU_XING[zhiIdx]],
-        wuXingIdx: ZHI_WU_XING[zhiIdx],
-        yinYang: getZhiYinYang(zhiIdx)
-    };
+    return {wuXing:WU_XING_NAMES[ZHI_WU_XING[zhiIdx]],wuXingIdx:ZHI_WU_XING[zhiIdx],yinYang:getZhiYinYang(zhiIdx)};
 }
 
-/**
- * 计算天干地支对应的六十甲子序号 (0-59)
- * 公式: (gan * 6 - zhi * 5 + 60) % 60
- */
 function getSexagenaryNum(ganIdx, zhiIdx) {
-    return ((ganIdx * 6 - zhiIdx * 5) % 60 + 60) % 60;
+    return ((ganIdx*6 - zhiIdx*5)%60+60)%60;
 }
 
-/**
- * 纳音五行（六十甲子纳音）
- */
-function getNaYin(sexagenaryNum) {
-    const naYin = [
-        '海中金', '海中金',   // 0:甲子, 1:乙丑
-        '炉中火', '炉中火',   // 2:丙寅, 3:丁卯
-        '大林木', '大林木',   // 4:戊辰, 5:己巳
-        '路旁土', '路旁土',   // 6:庚午, 7:辛未
-        '剑锋金', '剑锋金',   // 8:壬申, 9:癸酉
-        '山头火', '山头火',   // 10:甲戌, 11:乙亥
-        '涧下水', '涧下水',   // 12:丙子, 13:丁丑
-        '城头土', '城头土',   // 14:戊寅, 15:己卯
-        '白蜡金', '白蜡金',   // 16:庚辰, 17:辛巳
-        '杨柳木', '杨柳木',   // 18:壬午, 19:癸未
-        '泉中水', '泉中水',   // 20:甲申, 21:乙酉
-        '屋上土', '屋上土',   // 22:丙戌, 23:丁亥
-        '霹雳火', '霹雳火',   // 24:戊子, 25:己丑
-        '松柏木', '松柏木',   // 26:庚寅, 27:辛卯
-        '长流水', '长流水',   // 28:壬辰, 29:癸巳
-        '砂中金', '砂中金',   // 30:甲午, 31:乙未
-        '山下火', '山下火',   // 32:丙申, 33:丁酉
-        '平地木', '平地木',   // 34:戊戌, 35:己亥
-        '壁上土', '壁上土',   // 36:庚子, 37:辛丑
-        '金箔金', '金箔金',   // 38:壬寅, 39:癸卯
-        '覆灯火', '覆灯火',   // 40:甲辰, 41:乙巳
-        '天河水', '天河水',   // 42:丙午, 43:丁未
-        '大驿土', '大驿土',   // 44:戊申, 45:己酉
-        '钗钏金', '钗钏金',   // 46:庚戌, 47:辛亥
-        '桑柘木', '桑柘木',   // 48:壬子, 49:癸丑
-        '大溪水', '大溪水',   // 50:甲寅, 51:乙卯
-        '沙中土', '沙中土',   // 52:丙辰, 53:丁巳
-        '天上火', '天上火',   // 54:戊午, 55:己未
-        '石榴木', '石榴木',   // 56:庚申, 57:辛酉
-        '大海水', '大海水'    // 58:壬戌, 59:癸亥
-    ];
+// =================== 农历（万年历） ===================
+const LUNAR_INFO = [
+    0x04bd8,0x04ae0,0x0a570,0x054d5,0x0d260,0x0d950,0x16554,0x056a0,0x09ad0,0x055d2,
+    0x04ae0,0x0a5b6,0x0a4d0,0x0d250,0x1d255,0x0b540,0x0d6a0,0x0ada2,0x095b0,0x14977,
+    0x04970,0x0a4b0,0x0b4b5,0x06a50,0x06d40,0x1ab54,0x02b60,0x09570,0x052f2,0x04970,
+    0x06566,0x0d4a0,0x0ea50,0x06e95,0x05ad0,0x02b60,0x186e3,0x092e0,0x1c8d7,0x0c950,
+    0x0d4a0,0x1d8a6,0x0b550,0x056a0,0x1a5b4,0x025d0,0x092d0,0x0d2b2,0x0a950,0x0b557,
+    0x06ca0,0x0b550,0x15355,0x04da0,0x0a5b0,0x14573,0x052b0,0x0a9a8,0x0e950,0x06aa0,
+    0x0aea6,0x0ab50,0x04b60,0x0aae4,0x0a570,0x05260,0x0f263,0x0d950,0x05b57,0x056a0,
+    0x096d0,0x04dd5,0x04ad0,0x0a4d0,0x0d4d4,0x0d250,0x0d558,0x0b540,0x0b6a0,0x195a6,
+    0x095b0,0x049b0,0x0a974,0x0a4b0,0x0b27a,0x06a50,0x06d40,0x0af46,0x0ab60,0x09570,
+    0x04af5,0x04970,0x064b0,0x074a3,0x0ea50,0x06b58,0x05ac0,0x0ab60,0x096d5,0x092e0,
+    0x0c960,0x0d954,0x0d4a0,0x0da50,0x07552,0x056a0,0x0abb7,0x025d0,0x092d0,0x0cab5,
+    0x0a950,0x0b4a0,0x0baa4,0x0ad50,0x055d9,0x04ba0,0x0a5b0,0x15176,0x052b0,0x0a930,
+    0x07954,0x06aa0,0x0ad50,0x05b52,0x04b60,0x0a6e6,0x0a4e0,0x0d260,0x0ea65,0x0d530,
+    0x05aa0,0x076a3,0x096d0,0x04afb,0x04ad0,0x0a4d0,0x1d0b6,0x0d250,0x0d520,0x0dd45,
+    0x0b5a0,0x056d0,0x055b2,0x049b0,0x0a577,0x0a4b0,0x0aa50,0x1b255,0x06d20,0x0ada0,
+    0x14b63
+];
 
-    return naYin[sexagenaryNum] || '';
+const LUNAR_MONTH_NAMES = ['正月','二月','三月','四月','五月','六月','七月','八月','九月','十月','冬月','腊月'];
+const LUNAR_DAY_NAMES = [
+    '','初一','初二','初三','初四','初五','初六','初七','初八','初九','初十',
+    '十一','十二','十三','十四','十五','十六','十七','十八','十九','二十',
+    '廿一','廿二','廿三','廿四','廿五','廿六','廿七','廿八','廿九','三十'
+];
+
+function lunarYearDays(y) {
+    let sum = 348;
+    for(let i=0x8000;i>0x8;i>>=1) { sum+=(LUNAR_INFO[y]&i)?1:0; }
+    return sum+leapMonthDays(y);
 }
+function leapMonthDays(y) { if(leapMonth(y)) return (LUNAR_INFO[y]&0x10000)?30:29; return 0; }
+function leapMonth(y) { return LUNAR_INFO[y]&0xf; }
+function lunarMonthDays(y, m) { return (LUNAR_INFO[y]&(0x10000>>m))?30:29; }
 
-</script>
-<script>
-/**
- * acupoint.js - 灵龟八法、子午流注开穴计算
- * 包含：灵龟八法(含配穴/卦性)、纳甲法(含互用穴)、纳子法(含主配穴/补泻)、五门十变
- */
-
-/**
- * 灵龟八法开穴计算（含配穴和卦性）
- */
-function getLingGuiBaFa(date, shiChenGanZhi) {
-    const dayGZ = getDayGanZhi(date);
-    const dayGan = dayGZ.gan;
-    const dayZhi = dayGZ.zhi;
-
-    const hourGan = shiChenGanZhi.gan;
-    const hourZhi = shiChenGanZhi.zhi;
-
-    // 日干支基数
-    const dayGanNum = LINGGUI_DAY_GAN_NUM[dayGan] || 0;
-    const dayZhiNum = LINGGUI_DAY_ZHI_NUM[dayZhi] || 0;
-    const dayBase = (dayGanNum + dayZhiNum) % 9;
-    const dayBaseFinal = dayBase === 0 ? 9 : dayBase;
-
-    // 时干支基数
-    const hourGanNum = LINGGUI_HOUR_GAN_NUM[hourGan] || 0;
-    const hourZhiNum = LINGGUI_HOUR_ZHI_NUM[hourZhi] || 0;
-    const hourBase = (hourGanNum + hourZhiNum) % 9;
-    const hourBaseFinal = hourBase === 0 ? 9 : hourBase;
-
-    // 开穴数
-    const openNum = (dayBaseFinal + hourBaseFinal) % 9;
-    const openNumFinal = openNum === 0 ? 9 : openNum;
-
-    const acupoint = LINGGUI_ACUPOINTS[openNumFinal];
-    const fullInfo = LINGGUI_FULL_INFO[openNumFinal];
-
-    // 配穴（夫妇配合）
-    let coupleInfo = null;
-    if (fullInfo && fullInfo.couple) {
-        const coupleData = LINGGUI_ACUPOINTS[fullInfo.couple];
-        const coupleFull = LINGGUI_FULL_INFO[fullInfo.couple];
-        coupleInfo = {
-            num: fullInfo.couple,
-            name: coupleData.name,
-            code: coupleData.code,
-            meridian: coupleData.meridian,
-            trigram: coupleFull.trigram,
-            trigramSymbol: coupleFull.trigramSymbol,
-            vessel: coupleData.vessel,
-            relation: `主客配穴：${acupoint.name}(${acupoint.code}) ↔ ${coupleData.name}(${coupleData.code})`
-        };
+function getLunarDate(date) {
+    const baseYear=1900;
+    const baseDate=new Date(1900,0,31);
+    let offset=Math.floor((date-baseDate)/86400000);
+    let year=0, daysInYear;
+    for(year=baseYear;year<2101&&offset>0;year++) {
+        daysInYear=lunarYearDays(year-baseYear);
+        offset-=daysInYear;
     }
-
-    return {
-        openNum: openNumFinal,
-        acupoint: acupoint,
-        fullInfo: fullInfo,
-        dayBase: dayBaseFinal,
-        hourBase: hourBaseFinal,
-        calculation: `${dayGanNum}+${dayZhiNum}=${dayGanNum + dayZhiNum} → ${dayBaseFinal}; ${hourGanNum}+${hourZhiNum}=${hourGanNum + hourZhiNum} → ${hourBaseFinal}; ${dayBaseFinal}+${hourBaseFinal}=${openNumFinal}`,
-        trigram: fullInfo ? fullInfo.trigram : '',
-        trigramName: fullInfo ? fullInfo.trigramName : '',
-        trigramSymbol: fullInfo ? fullInfo.trigramSymbol : '',
-        couple: coupleInfo,
-        description: acupoint ? `${acupoint.name}(${acupoint.code}) - ${acupoint.meridian}，通${acupoint.vessel}，位于${acupoint.location}` : ''
-    };
-}
-
-/**
- * 子午流注纳甲法 - 根据日干和时辰计算开穴（含互用穴）
- * 原理：按日干取对应时辰的井荥输经合等开穴
- * 互用穴：合日日干的同一时辰穴位
- */
-function getZiWuLiuZhuNaJia(date, shiChenGanZhi) {
-    const dayGZ = getDayGanZhi(date);
-    const dayGan = dayGZ.gan;
-    const hourZhiIdx = shiChenGanZhi.zhiIdx;
-
-    const dayPoints = ZIWU_NAJIA_POINTS[dayGan];
-    const point = dayPoints ? (dayPoints[hourZhiIdx] || null) : null;
-
-    // 互用穴：取合日日干对应时辰穴位
-    const partnerGan = NAJIA_HE_PAIRS[dayGan];
-    let huyongPoint = null;
-    if (partnerGan) {
-        const partnerPoints = ZIWU_NAJIA_POINTS[partnerGan];
-        huyongPoint = partnerPoints ? (partnerPoints[hourZhiIdx] || null) : null;
-    }
-
-    return {
-        mainPoint: point,
-        huyongPoint: huyongPoint,
-        huyongGan: partnerGan,
-        huyongInfo: NAJIA_HUYONG_INFO[dayGan] || '',
-        hasHuyong: point === null && huyongPoint !== null
-    };
-}
-
-/**
- * 子午流注纳子法 - 根据时辰获取本经开穴（含主配穴、五输穴五行、补泻穴）
- */
-function getZiWuLiuZhuNaZi(shiChenIdx) {
-    if (shiChenIdx < 0 || shiChenIdx >= 12) return null;
-
-    const naziPoint = ZIWU_NAZI_POINTS[shiChenIdx];
-    const pairData = NAZI_PAIR_POINTS[shiChenIdx];
-    if (!naziPoint || !pairData) return null;
-
-    const isYangMeridian = [0, 3, 4, 7, 8, 11].includes(shiChenIdx);
-
-    // 五输穴五行
-    const wellWX = getShuPointWuxing(shiChenIdx, 'well');
-    const springWX = getShuPointWuxing(shiChenIdx, 'spring');
-    const streamWX = getShuPointWuxing(shiChenIdx, 'stream');
-    const riverWX = getShuPointWuxing(shiChenIdx, 'river');
-    const seaWX = getShuPointWuxing(shiChenIdx, 'sea');
-
-    return {
-        meridian: naziPoint.meridian,
-        shiChen: SHI_CHEN[shiChenIdx].name,
-        well: { ...naziPoint.well, wuXing: wellWX },
-        spring: { ...naziPoint.spring, wuXing: springWX },
-        stream: { ...naziPoint.stream, wuXing: streamWX },
-        river: { ...naziPoint.river, wuXing: riverWX },
-        sea: { ...naziPoint.sea, wuXing: seaWX },
-        yuan: naziPoint.yuan,
-        isYangMeridian: isYangMeridian,
-        mainPoint: pairData.main,
-        accompanyPoint: pairData.accompany,
-        supplementPoint: pairData.supplement,
-        drainPoint: pairData.drain,
-        description: `${SHI_CHEN[shiChenIdx].name} ${naziPoint.meridian}当令，主穴${pairData.main.name}(${pairData.main.code})，配穴${pairData.accompany.name}(${pairData.accompany.code})`
-    };
-}
-
-/**
- * 五门十变 - 根据日干计算合化关系
- * 天干合化 → 对应经络互用
- */
-function getWuMenShiBian(date) {
-    const dayGZ = getDayGanZhi(date);
-    const dayGan = dayGZ.gan;
-    const info = WUMEN_HE_INFO[dayGan];
-    if (!info) return null;
-
-    // 获取合化干支对应的经络五输穴
-    const partnerGan = info.partnerGan;
-
-    return {
-        dayGan: dayGan,
-        partnerGan: partnerGan,
-        huaWuxing: info.huaWuxing,
-        meridian1: info.meridian1,
-        meridian2: info.meridian2,
-        description: info.desc,
-        formula: `${dayGan}(${info.meridian1}) + ${partnerGan}(${info.meridian2}) → 合化${info.huaWuxing}`
-    };
-}
-
-/**
- * 获取某个日期所有时辰的完整穴位信息
- */
-function getAllHourAcupointInfo(date) {
-    const result = [];
-
-    for (let h = 0; h < 24; h += 2) {
-        const calcHour = (h === 0) ? 23 : h - 1;
-        const tempDate = new Date(date);
-        if (h === 0) {
-            tempDate.setHours(23, 0, 0, 0);
+    if(offset<0) { offset+=daysInYear; year--; }
+    const lunarY=year;
+    const yearIdx=year-baseYear;
+    const leap=leapMonth(yearIdx);
+    let isLeap=false;
+    let month=0;
+    for(month=1;month<=12&&offset>0;month++) {
+        if(leap>0&&month===(leap+1)&&!isLeap) {
+            month--;
+            isLeap=true;
+            const leapDays=leapMonthDays(yearIdx);
+            if(offset>=leapDays) { offset-=leapDays; isLeap=false; month++; }
         } else {
-            tempDate.setHours(calcHour, 0, 0, 0);
+            const mDays=lunarMonthDays(yearIdx,month);
+            if(offset>=mDays) offset-=mDays;
+            else break;
         }
-
-        const hgz = getHourGanZhi(tempDate, calcHour);
-        const shiChenIdx = hgz.zhiIdx;
-
-        const linggui = getLingGuiBaFa(date, hgz);
-        const najia = getZiWuLiuZhuNaJia(date, hgz);
-        const nazi = getZiWuLiuZhuNaZi(shiChenIdx);
-
-        // 时间范围
-        let timeRange = '';
-        switch (shiChenIdx) {
-            case 0: timeRange = '23:00-01:00'; break;
-            case 1: timeRange = '01:00-03:00'; break;
-            case 2: timeRange = '03:00-05:00'; break;
-            case 3: timeRange = '05:00-07:00'; break;
-            case 4: timeRange = '07:00-09:00'; break;
-            case 5: timeRange = '09:00-11:00'; break;
-            case 6: timeRange = '11:00-13:00'; break;
-            case 7: timeRange = '13:00-15:00'; break;
-            case 8: timeRange = '15:00-17:00'; break;
-            case 9: timeRange = '17:00-19:00'; break;
-            case 10: timeRange = '19:00-21:00'; break;
-            case 11: timeRange = '21:00-23:00'; break;
-        }
-
-        // 时干属性
-        const shiGanWX = getGanWuXing(hgz.ganIdx);
-
-        result.push({
-            shiChenIdx: shiChenIdx,
-            shiChenName: SHI_CHEN[shiChenIdx].name,
-            timeRange: timeRange,
-            ganzhi: hgz.ganzhi,
-            shiGan: hgz.gan,
-            shiZhi: hgz.zhi,
-            shiGanYinYang: shiGanWX.yinYang,
-            shiGanWuXing: shiGanWX.wuXing,
-            shiZhiWuXing: getZhiWuXing(hgz.zhiIdx).wuXing,
-            meridian: SHI_CHEN[shiChenIdx].meridian,
-            meridianCN: SHI_CHEN[shiChenIdx].meridianCN,
-            linggui: linggui,
-            najia: najia,
-            nazi: nazi,
-            wuXingGan: getGanWuXing(hgz.ganIdx),
-            wuXingZhi: getZhiWuXing(hgz.zhiIdx)
-        });
     }
+    const day=Math.floor(offset)+1;
+    if(month>12) month=12;
+    if(day<1) day=1;
+    const yearGZ=getYearGanZhi(date);
+    const animals=['鼠','牛','虎','兔','龙','蛇','马','羊','猴','鸡','狗','猪'];
+    const animal=animals[yearGZ.zhiIdx];
+    let monthName=LUNAR_MONTH_NAMES[month-1]||'';
+    if(isLeap) monthName='闰'+monthName;
+    let dayName=LUNAR_DAY_NAMES[day]||'';
+    return {year:lunarY,month:month,day:day,isLeap:isLeap,monthName:monthName,dayName:dayName,yearGanZhi:yearGZ.ganzhi,yearAnimal:animal};
+}
 
+// =================== acupoint.js ===================
+function getLingGuiBaFa(date, shiChenGanZhi) {
+    const dayGZ=getDayGanZhi(date);
+    const dayGan=dayGZ.gan, dayZhi=dayGZ.zhi;
+    const hourGan=shiChenGanZhi.gan, hourZhi=shiChenGanZhi.zhi;
+    const dayGanNum=LINGGUI_DAY_GAN_NUM[dayGan]||0;
+    const dayZhiNum=LINGGUI_DAY_ZHI_NUM[dayZhi]||0;
+    const dayBase=(dayGanNum+dayZhiNum)%9;
+    const dayBaseFinal=dayBase===0?9:dayBase;
+    const hourGanNum=LINGGUI_HOUR_GAN_NUM[hourGan]||0;
+    const hourZhiNum=LINGGUI_HOUR_ZHI_NUM[hourZhi]||0;
+    const hourBase=(hourGanNum+hourZhiNum)%9;
+    const hourBaseFinal=hourBase===0?9:hourBase;
+    const openNum=(dayBaseFinal+hourBaseFinal)%9;
+    const openNumFinal=openNum===0?9:openNum;
+    const acupoint=LINGGUI_ACUPOINTS[openNumFinal];
+    const fullInfo=LINGGUI_FULL_INFO[openNumFinal];
+    let coupleInfo=null;
+    if(fullInfo&&fullInfo.couple) {
+        const coupleData=LINGGUI_ACUPOINTS[fullInfo.couple];
+        const coupleFull=LINGGUI_FULL_INFO[fullInfo.couple];
+        coupleInfo={num:fullInfo.couple,name:coupleData.name,code:coupleData.code,meridian:coupleData.meridian,trigram:coupleFull.trigram,trigramSymbol:coupleFull.trigramSymbol,vessel:coupleData.vessel,relation:'主客配穴：'+acupoint.name+'('+acupoint.code+') ↔ '+coupleData.name+'('+coupleData.code+')'};
+    }
+    return {openNum:openNumFinal,acupoint:acupoint,fullInfo:fullInfo,dayBase:dayBaseFinal,hourBase:hourBaseFinal,calculation:dayGanNum+'+'+dayZhiNum+'='+(dayGanNum+dayZhiNum)+' → '+dayBaseFinal+'; '+hourGanNum+'+'+hourZhiNum+'='+(hourGanNum+hourZhiNum)+' → '+hourBaseFinal+'; '+dayBaseFinal+'+'+hourBaseFinal+'='+openNumFinal,trigram:fullInfo?fullInfo.trigram:'',trigramName:fullInfo?fullInfo.trigramName:'',trigramSymbol:fullInfo?fullInfo.trigramSymbol:'',couple:coupleInfo,description:acupoint?acupoint.name+'('+acupoint.code+') - '+acupoint.meridian+'，通'+acupoint.vessel+'，位于'+acupoint.location:''};
+}
+
+function getZiWuLiuZhuNaJia(date, shiChenGanZhi) {
+    const dayGZ=getDayGanZhi(date);
+    const dayGan=dayGZ.gan;
+    const hourZhiIdx=shiChenGanZhi.zhiIdx;
+    const dayPoints=ZIWU_NAJIA_POINTS[dayGan];
+    const point=dayPoints?(dayPoints[hourZhiIdx]||null):null;
+    const dayGanIdx=TIAN_GAN.indexOf(dayGan);
+    const isYangDay=[0,2,4,6,8].includes(dayGanIdx);
+    const isYangHour=[0,2,4,6,8,10].includes(hourZhiIdx);
+    const partnerGan=NAJIA_HE_PAIRS[dayGan];
+    let huyongPoint=null;
+    if(partnerGan&&point===null&&((isYangDay&&!isYangHour)||(!isYangDay&&isYangHour))) {
+        const partnerPoints=ZIWU_NAJIA_POINTS[partnerGan];
+        huyongPoint=partnerPoints?(partnerPoints[hourZhiIdx]||null):null;
+    }
+    return {mainPoint:point,huyongPoint:huyongPoint,huyongGan:partnerGan,huyongInfo:NAJIA_HUYONG_INFO[dayGan]||'',hasHuyong:point===null&&huyongPoint!==null};
+}
+
+function getZiWuLiuZhuNaZi(shiChenIdx) {
+    if(shiChenIdx<0||shiChenIdx>=12) return null;
+    const naziPoint=ZIWU_NAZI_POINTS[shiChenIdx];
+    const pairData=NAZI_PAIR_POINTS[shiChenIdx];
+    if(!naziPoint||!pairData) return null;
+    const isYangMeridian=[0,3,4,7,8,11].includes(shiChenIdx);
+    const wellWX=getShuPointWuxing(shiChenIdx,'well');
+    const springWX=getShuPointWuxing(shiChenIdx,'spring');
+    const streamWX=getShuPointWuxing(shiChenIdx,'stream');
+    const riverWX=getShuPointWuxing(shiChenIdx,'river');
+    const seaWX=getShuPointWuxing(shiChenIdx,'sea');
+    return {meridian:naziPoint.meridian,shiChen:SHI_CHEN[shiChenIdx].name,well:{...naziPoint.well,wuXing:wellWX},spring:{...naziPoint.spring,wuXing:springWX},stream:{...naziPoint.stream,wuXing:streamWX},river:{...naziPoint.river,wuXing:riverWX},sea:{...naziPoint.sea,wuXing:seaWX},yuan:naziPoint.yuan,isYangMeridian:isYangMeridian,mainPoint:pairData.main,accompanyPoint:pairData.accompany,supplementPoint:pairData.supplement,drainPoint:pairData.drain,description:SHI_CHEN[shiChenIdx].name+' '+naziPoint.meridian+'当令，主穴'+pairData.main.name+'('+pairData.main.code+')，配穴'+pairData.accompany.name+'('+pairData.accompany.code+')'};
+}
+
+function getWuMenShiBian(date) {
+    const dayGZ=getDayGanZhi(date);
+    const dayGan=dayGZ.gan;
+    const info=WUMEN_HE_INFO[dayGan];
+    if(!info) return null;
+    const partnerGan=info.partnerGan;
+    return {dayGan:dayGan,partnerGan:partnerGan,huaWuxing:info.huaWuxing,meridian1:info.meridian1,meridian2:info.meridian2,description:info.desc,formula:dayGan+'('+info.meridian1+') + '+partnerGan+'('+info.meridian2+') → 合化'+info.huaWuxing};
+}
+
+function getAllHourAcupointInfo(date) {
+    const result=[];
+    for(let h=0;h<24;h+=2) {
+        const calcHour=(h===0)?23:h-1;
+        const tempDate=new Date(date);
+        if(h===0) tempDate.setHours(23,0,0,0);
+        else tempDate.setHours(calcHour,0,0,0);
+        const hgz=getHourGanZhi(tempDate,calcHour);
+        const shiChenIdx=hgz.zhiIdx;
+        const linggui=getLingGuiBaFa(date,hgz);
+        const najia=getZiWuLiuZhuNaJia(date,hgz);
+        const nazi=getZiWuLiuZhuNaZi(shiChenIdx);
+        let timeRange='';
+        switch(shiChenIdx) {
+            case 0:timeRange='23:00-01:00';break;case 1:timeRange='01:00-03:00';break;
+            case 2:timeRange='03:00-05:00';break;case 3:timeRange='05:00-07:00';break;
+            case 4:timeRange='07:00-09:00';break;case 5:timeRange='09:00-11:00';break;
+            case 6:timeRange='11:00-13:00';break;case 7:timeRange='13:00-15:00';break;
+            case 8:timeRange='15:00-17:00';break;case 9:timeRange='17:00-19:00';break;
+            case 10:timeRange='19:00-21:00';break;case 11:timeRange='21:00-23:00';break;
+        }
+        const shiGanWX=getGanWuXing(hgz.ganIdx);
+        const shiZhiWX=getZhiWuXing(hgz.zhiIdx);
+        result.push({shiChenIdx:shiChenIdx,shiChenName:SHI_CHEN[shiChenIdx].name,timeRange:timeRange,ganzhi:hgz.ganzhi,shiGan:hgz.gan,shiZhi:hgz.zhi,shiGanYinYang:shiGanWX.yinYang,shiGanWuXing:shiGanWX.wuXing,shiZhiWuXing:shiZhiWX.wuXing,shiZhiYinYang:shiZhiWX.yinYang,meridian:SHI_CHEN[shiChenIdx].meridian,meridianCN:SHI_CHEN[shiChenIdx].meridianCN,linggui:linggui,najia:najia,nazi:nazi,wuXingGan:shiGanWX,wuXingZhi:shiZhiWX});
+    }
     return result;
 }
 
-</script>
-<script>
-/**
- * app.js - UI渲染与交互
- */
-
+// =================== app.js ===================
 let currentYear, currentMonth;
 
-document.addEventListener('DOMContentLoaded', () => {
-    const now = new Date();
-    currentYear = now.getFullYear();
-    currentMonth = now.getMonth();
+document.addEventListener('DOMContentLoaded', ()=>{
+    const now=new Date();
+    currentYear=now.getFullYear();
+    currentMonth=now.getMonth();
     loadTheme();
     renderCalendar();
     renderSidebar();
     setupKeyboard();
 });
 
-// =================== 主题 ===================
 function loadTheme() {
-    const t = localStorage.getItem('tcm-calendar-theme');
-    if (t) document.documentElement.setAttribute('data-theme', t);
+    const t=localStorage.getItem('tcm-calendar-theme');
+    if(t) document.documentElement.setAttribute('data-theme',t);
 }
 
 function toggleTheme() {
-    const cur = document.documentElement.getAttribute('data-theme');
-    const next = cur === 'dark' ? '' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('tcm-calendar-theme', next);
+    const cur=document.documentElement.getAttribute('data-theme');
+    const next=cur==='dark'?'':'dark';
+    document.documentElement.setAttribute('data-theme',next);
+    localStorage.setItem('tcm-calendar-theme',next);
 }
 
-// =================== 键盘 ===================
 function setupKeyboard() {
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') closeModal();
-        if (e.key === 'ArrowLeft' && !document.getElementById('modal-overlay').classList.contains('show')) navigateMonth(-1);
-        if (e.key === 'ArrowRight' && !document.getElementById('modal-overlay').classList.contains('show')) navigateMonth(1);
-        if (e.ctrlKey && e.key === 't') { e.preventDefault(); goToToday(); }
+    document.addEventListener('keydown', e=>{
+        if(e.key==='Escape') closeModal();
+        if(e.key==='ArrowLeft'&&!document.getElementById('modal-overlay').classList.contains('show')) navigateMonth(-1);
+        if(e.key==='ArrowRight'&&!document.getElementById('modal-overlay').classList.contains('show')) navigateMonth(1);
+        if(e.ctrlKey&&e.key==='t') { e.preventDefault(); goToToday(); }
     });
 }
 
-// =================== 导航 ===================
 function goToToday() {
-    const now = new Date();
-    currentYear = now.getFullYear();
-    currentMonth = now.getMonth();
+    const now=new Date();
+    currentYear=now.getFullYear();
+    currentMonth=now.getMonth();
     renderCalendar();
     renderSidebar();
 }
 
 function navigateMonth(delta) {
-    currentMonth += delta;
-    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
-    if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+    currentMonth+=delta;
+    if(currentMonth>11) { currentMonth=0; currentYear++; }
+    if(currentMonth<0) { currentMonth=11; currentYear--; }
     renderCalendar();
     renderSidebar();
 }
 
 function toggleSidebar() {
-    const sb = document.getElementById('sidebar');
+    const sb=document.getElementById('sidebar');
     sb.classList.toggle('open');
-    let ol = document.querySelector('.sidebar-overlay');
-    if (!ol) {
-        ol = document.createElement('div');
-        ol.className = 'sidebar-overlay';
-        ol.onclick = toggleSidebar;
+    let ol=document.querySelector('.sidebar-overlay');
+    if(!ol) {
+        ol=document.createElement('div');
+        ol.className='sidebar-overlay';
+        ol.onclick=toggleSidebar;
         document.body.appendChild(ol);
     }
     ol.classList.toggle('show');
 }
 
-// =================== 侧边栏 ===================
 function renderSidebar() {
     renderTodaySummary(new Date());
     renderWuYunSummary(new Date());
 }
 
 function renderTodaySummary(date) {
-    const el = document.getElementById('today-summary');
-    if (!el) return;
-    const dGZ = getDayGanZhi(date);
-    const mGZ = getMonthGanZhi(date);
-    const yGZ = getYearGanZhi(date);
-    const hGZ = getHourGanZhi(date, date.getHours());
-    const termInfo = getCurrentSolarTerm(date);
-    const naYin = getNaYin(dGZ.sexagenaryNum);
-    const dWx = getGanWuXing(dGZ.ganIdx);
-    const zWx = getZhiWuXing(dGZ.zhiIdx);
-    const yWx = getGanWuXing(yGZ.ganIdx);
-    const mWx = getGanWuXing(mGZ.ganIdx);
-    const hWx = getGanWuXing(hGZ.ganIdx);
-
-    const curTerm = termInfo.current;
-    const nextTerm = termInfo.next;
-
-    el.innerHTML = `
-        <div class="info-item"><span class="label">公历:</span> ${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日 星期${['日','一','二','三','四','五','六'][date.getDay()]}</div>
-        <div class="info-item"><span class="label">年干支:</span> ${yGZ.ganzhi}年 <span class="tag ${getWuXingColor(yWx.wuXingIdx)}">${yWx.wuXing}</span> ${getNaYin(yGZ.sexagenaryNum)}</div>
-        <div class="info-item"><span class="label">月干支:</span> ${mGZ.ganzhi}月 <span class="tag ${getWuXingColor(mWx.wuXingIdx)}">${mWx.wuXing}</span></div>
-        <div class="info-item"><span class="label">日干支:</span> ${dGZ.ganzhi}日 <span class="tag ${getWuXingColor(dWx.wuXingIdx)}">${dWx.wuXing}</span> <span class="${dWx.yinYang==='阳'?'yang-badge':'yin-badge'}">${dWx.yinYang}</span></div>
-        <div class="info-item"><span class="label">时干支:</span> ${hGZ.ganzhi}时 <span class="${hWx.yinYang==='阳'?'yang-badge':'yin-badge'}">${hWx.yinYang}${hWx.wuXing}</span> (${hGZ.shiChen.name})</div>
-        <div class="info-item"><span class="label">纳音:</span> ${naYin}</div>
-        ${curTerm ? `<div class="info-item"><span class="label">当前节气:</span> ${curTerm.name} (${curTerm.type})</div>` : ''}
-        ${nextTerm ? `<div class="info-item"><span class="label">下一节气:</span> ${nextTerm.name} ${nextTerm.date.getMonth()+1}/${nextTerm.date.getDate()}</div>` : ''}
-        ${getWuMenShiBian(date) ? `<div class="info-item"><span class="label">五门十变:</span> <span style="font-size:0.8em;">${getWuMenShiBian(date).formula}</span> → 合化${getWuMenShiBian(date).huaWuxing}</div>` : ''}
-    `;
+    const el=document.getElementById('today-summary');
+    if(!el) return;
+    const dGZ=getDayGanZhi(date);
+    const mGZ=getMonthGanZhi(date);
+    const yGZ=getYearGanZhi(date);
+    const hGZ=getHourGanZhi(date,date.getHours());
+    const termInfo=getCurrentSolarTerm(date);
+    const naYin=getNaYin(dGZ.sexagenaryNum);
+    const dWx=getGanWuXing(dGZ.ganIdx);
+    const yWx=getGanWuXing(yGZ.ganIdx);
+    const mWx=getGanWuXing(mGZ.ganIdx);
+    const hWx=getGanWuXing(hGZ.ganIdx);
+    const curTerm=termInfo.current;
+    const nextTerm=termInfo.next;
+    const lunar=getLunarDate(date);
+    el.innerHTML=[
+        '<div class="info-item"><span class="label">公历:</span> '+date.getFullYear()+'年'+(date.getMonth()+1)+'月'+date.getDate()+'日 星期'+['日','一','二','三','四','五','六'][date.getDay()]+'</div>',
+        '<div class="info-item"><span class="label">农历:</span> '+(lunar?(lunar.yearGanZhi+'年 '+lunar.yearAnimal+'年 '+lunar.monthName+lunar.dayName):'')+'</div>',
+        '<div class="info-item"><span class="label">年干支:</span> '+yGZ.ganzhi+'年 <span class="tag '+getWuXingColor(yWx.wuXingIdx)+'">'+yWx.wuXing+'</span> '+getNaYin(yGZ.sexagenaryNum)+'</div>',
+        '<div class="info-item"><span class="label">月干支:</span> '+mGZ.ganzhi+'月 <span class="tag '+getWuXingColor(mWx.wuXingIdx)+'">'+mWx.wuXing+'</span></div>',
+        '<div class="info-item"><span class="label">日干支:</span> '+dGZ.ganzhi+'日 <span class="tag '+getWuXingColor(dWx.wuXingIdx)+'">'+dWx.wuXing+'</span> <span class="'+(dWx.yinYang==='阳'?'yang-badge':'yin-badge')+'">'+dWx.yinYang+'</span></div>',
+        '<div class="info-item"><span class="label">时干支:</span> '+hGZ.ganzhi+'时 <span class="'+(hWx.yinYang==='阳'?'yang-badge':'yin-badge')+'">'+hWx.yinYang+hWx.wuXing+'</span> ('+hGZ.shiChen.name+')</div>',
+        '<div class="info-item"><span class="label">纳音:</span> '+naYin+'</div>',
+        curTerm?'<div class="info-item"><span class="label">当前节气:</span> '+curTerm.name+' ('+curTerm.type+')</div>':'',
+        nextTerm?'<div class="info-item"><span class="label">下一节气:</span> '+nextTerm.name+' '+(nextTerm.date.getMonth()+1)+'/'+nextTerm.date.getDate()+'</div>':'',
+        getWuMenShiBian(date)?'<div class="info-item"><span class="label">五门十变:</span> <span style="font-size:0.8em;">'+getWuMenShiBian(date).formula+'</span> → 合化'+getWuMenShiBian(date).huaWuxing+'</div>':''
+    ].join('');
 }
 
 function renderWuYunSummary(date) {
-    const el = document.getElementById('wuyun-summary');
-    if (!el) return;
-    const wy = getWuYunLiuQiForDate(date);
-    const ym = wy.yearMovement;
-    const gq = wy.guestQi;
-    el.innerHTML = `
-        <div class="info-item"><span class="label">岁运:</span> ${ym.wuXing}运${ym.excess}</div>
-        <div class="info-item"><span class="label">司天:</span> ${gq.siTian}</div>
-        <div class="info-item"><span class="label">在泉:</span> ${gq.zaiQuan}</div>
-        <div class="info-item"><span class="label">主运:</span> ${wy.currentHostMove.name} ${wy.currentHostMove.wuXing}</div>
-        <div class="info-item"><span class="label">客运:</span> ${wy.currentGuestMove.name} ${wy.currentGuestMove.wuXing}</div>
-        <div class="info-item"><span class="label">主气:</span> ${wy.currentHostQ.qi}</div>
-        <div class="info-item"><span class="label">客气:</span> ${wy.currentGuestQ.qi}${wy.currentGuestQ.isSiTian?' (司天)':''}${wy.currentGuestQ.isZaiQuan?' (在泉)':''}</div>
-    `;
+    const el=document.getElementById('wuyun-summary');
+    if(!el) return;
+    const wy=getWuYunLiuQiForDate(date);
+    const ym=wy.yearMovement;
+    const gq=wy.guestQi;
+    el.innerHTML=[
+        '<div class="info-item"><span class="label">岁运:</span> '+ym.wuXing+'运'+ym.excess+'</div>',
+        '<div class="info-item"><span class="label">司天:</span> '+gq.siTian+'</div>',
+        '<div class="info-item"><span class="label">在泉:</span> '+gq.zaiQuan+'</div>',
+        '<div class="info-item"><span class="label">主运:</span> '+wy.currentHostMove.name+' '+wy.currentHostMove.wuXing+'</div>',
+        '<div class="info-item"><span class="label">客运:</span> '+wy.currentGuestMove.name+' '+wy.currentGuestMove.wuXing+'</div>',
+        '<div class="info-item"><span class="label">主气:</span> '+wy.currentHostQ.qi+'</div>',
+        '<div class="info-item"><span class="label">客气:</span> '+wy.currentGuestQ.qi+(wy.currentGuestQ.isSiTian?' (司天)':'')+(wy.currentGuestQ.isZaiQuan?' (在泉)':'')+'</div>'
+    ].join('');
 }
 
-// =================== 日历渲染 ===================
 function renderCalendar() {
-    document.getElementById('current-month-title').textContent =
-        `${currentYear}年 ${currentMonth + 1}月`;
-
-    const grid = document.getElementById('calendar-grid');
-    grid.innerHTML = '';
-
-    const firstDay = new Date(currentYear, currentMonth, 1);
-    const startDow = firstDay.getDay();
-    const totalDays = new Date(currentYear, currentMonth + 1, 0).getDate();
-    const prevLast = new Date(currentYear, currentMonth, 0).getDate();
-
-    // 上月
-    for (let i = startDow - 1; i >= 0; i--) {
-        grid.innerHTML += buildDayCell(new Date(currentYear, currentMonth - 1, prevLast - i), true);
-    }
-    // 本月
-    for (let d = 1; d <= totalDays; d++) {
-        grid.innerHTML += buildDayCell(new Date(currentYear, currentMonth, d), false);
-    }
-    // 下月
-    const remain = 42 - (startDow + totalDays);
-    for (let i = 1; i <= remain; i++) {
-        grid.innerHTML += buildDayCell(new Date(currentYear, currentMonth + 1, i), true);
-    }
+    document.getElementById('current-month-title').textContent = currentYear+'年 '+(currentMonth+1)+'月';
+    const grid=document.getElementById('calendar-grid');
+    grid.innerHTML='';
+    const firstDay=new Date(currentYear,currentMonth,1);
+    const startDow=firstDay.getDay();
+    const totalDays=new Date(currentYear,currentMonth+1,0).getDate();
+    const prevLast=new Date(currentYear,currentMonth,0).getDate();
+    for(let i=startDow-1;i>=0;i--) { grid.innerHTML+=buildDayCell(new Date(currentYear,currentMonth-1,prevLast-i),true); }
+    for(let d=1;d<=totalDays;d++) { grid.innerHTML+=buildDayCell(new Date(currentYear,currentMonth,d),false); }
+    const remain=42-(startDow+totalDays);
+    for(let i=1;i<=remain;i++) { grid.innerHTML+=buildDayCell(new Date(currentYear,currentMonth+1,i),true); }
 }
 
 function buildDayCell(date, isOther) {
-    const dGZ = getDayGanZhi(date);
-    const dWx = getGanWuXing(dGZ.ganIdx);
-    const dow = date.getDay();
-    const isWeekend = dow === 0 || dow === 6;
-    const dayNum = date.getDate();
-
-    // 是否今天
-    const now = new Date(); now.setHours(0,0,0,0);
-    const dOnly = new Date(date); dOnly.setHours(0,0,0,0);
-    const isToday = dOnly.getTime() === now.getTime();
-
-    // 节气
-    const term = getSolarTermOnDate(date);
-    let termHtml = '';
-    if (term) {
-        const tClass = term.type === '节' ? 'jieqi' : 'solar-term';
-        termHtml = `<span class="tag ${tClass}">${term.name}${term.type}</span>`;
+    const dGZ=getDayGanZhi(date);
+    const dWx=getGanWuXing(dGZ.ganIdx);
+    const dow=date.getDay();
+    const isWeekend=dow===0||dow===6;
+    const dayNum=date.getDate();
+    const naYinDay=getNaYin(dGZ.sexagenaryNum);
+    const lunar=getLunarDate(date);
+    let lunarHtml='';
+    if(lunar) {
+        const special=(lunar.day===1)?' lunar-first':'';
+        const midMonth=(lunar.day===15)?' lunar-fifteen':'';
+        lunarHtml='<span class="lunar-date'+special+midMonth+'">'+lunar.monthName+lunar.dayName+'</span>';
     }
-
-    const cls = [
-        'day-cell',
-        isOther ? 'other-month' : '',
-        isToday ? 'today' : '',
-        isWeekend && !isOther ? 'weekend' : ''
-    ].filter(Boolean).join(' ');
-
-    const wxc = getWuXingColor(dWx.wuXingIdx);
-    const dateKey = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
-
-    return `
-    <div class="${cls}" onclick="openDayDetail('${dateKey}')" title="${dGZ.ganzhi}日">
-        <span class="wuxing-indicator" style="background: var(--${wxc})"></span>
-        <span class="solar-date">${dayNum}</span>
-        <span class="ganzhi">${dGZ.ganzhi}</span>
-        <div class="tag-row">
-            <span class="tag ${wxc}">${dWx.wuXing}${dWx.yinYang}</span>
-            ${termHtml}
-        </div>
-    </div>`;
+    const now=new Date(); now.setHours(0,0,0,0);
+    const dOnly=new Date(date); dOnly.setHours(0,0,0,0);
+    const isToday=dOnly.getTime()===now.getTime();
+    const term=getSolarTermOnDate(date);
+    let termHtml='';
+    if(term) {
+        const tClass=term.type==='节'?'jieqi':'solar-term';
+        termHtml='<span class="tag '+tClass+'">'+term.name+term.type+'</span>';
+    }
+    const cls=['day-cell',isOther?'other-month':'',isToday?'today':'',isWeekend&&!isOther?'weekend':''].filter(Boolean).join(' ');
+    const wxc=getWuXingColor(dWx.wuXingIdx);
+    const dateKey=date.getFullYear()+'-'+date.getMonth()+'-'+date.getDate();
+    return '<div class="'+cls+'" onclick="openDayDetail(\''+dateKey+'\')" title="'+dGZ.ganzhi+'日"><span class="wuxing-indicator" style="background: var(--'+wxc+')"></span><span class="solar-date">'+dayNum+'</span><span class="ganzhi">'+dGZ.ganzhi+'</span>'+lunarHtml+'<div class="tag-row"><span class="tag '+wxc+'">'+dWx.wuXing+dWx.yinYang+'</span>'+(naYinDay?'<span class="tag" style="background:#f0f0f0;color:#666;">'+naYinDay+'</span>':'')+termHtml+'</div></div>';
 }
 
-// =================== 弹窗 ===================
 function openDayDetail(dateKey) {
-    const [y, m, d] = dateKey.split('-').map(Number);
-    const date = new Date(y, m, d);
+    const parts=dateKey.split('-');
+    const y=parseInt(parts[0]), m=parseInt(parts[1]), d=parseInt(parts[2]);
+    const date=new Date(y,m,d);
+    const dayGZ=getDayGanZhi(date);
+    const monthGZ=getMonthGanZhi(date);
+    const yearGZ=getYearGanZhi(date);
+    const dWx=getGanWuXing(dayGZ.ganIdx);
+    const zWx=getZhiWuXing(dayGZ.zhiIdx);
+    const mWx=getGanWuXing(monthGZ.ganIdx);
+    const yWx=getGanWuXing(yearGZ.ganIdx);
+    const naYinDay=getNaYin(dayGZ.sexagenaryNum);
+    const naYinYear=getNaYin(yearGZ.sexagenaryNum);
+    const wy=getWuYunLiuQiForDate(date);
+    const allHours=getAllHourAcupointInfo(date);
+    const wumen=getWuMenShiBian(date);
+    const term=getSolarTermOnDate(date);
+    const termInfo=getCurrentSolarTerm(date);
+    const now=new Date();
+    const curHour=now.getHours();
+    let curShiChenIdx=0;
+    if(curHour>=23||curHour<1) curShiChenIdx=0;
+    else if(curHour>=1&&curHour<3) curShiChenIdx=1;
+    else curShiChenIdx=Math.floor((curHour+1)/2);
+    const isTodayCheck=y===now.getFullYear()&&m===now.getMonth()&&d===now.getDate();
+    const weekDays=['日','一','二','三','四','五','六'];
+    const lunarDateInfo=getLunarDate(date);
+    document.getElementById('modal-title').textContent=y+'年'+(m+1)+'月'+d+'日 星期'+weekDays[date.getDay()]+' '+dayGZ.ganzhi+'日'+(lunarDateInfo?' · '+lunarDateInfo.yearAnimal+'年'+lunarDateInfo.monthName+lunarDateInfo.dayName:'');
+    let html='';
+    html+='<div class="detail-section"><h3>📌 干支信息</h3><div class="detail-grid"><div class="detail-card"><div class="card-label">年干支 / 纳音</div><div class="card-value">'+yearGZ.ganzhi+' <span class="tag '+getWuXingColor(yWx.wuXingIdx)+'">'+yWx.wuXing+'</span></div><div style="font-size:0.7em;color:var(--text-light);margin-top:4px;">'+naYinYear+'</div></div><div class="detail-card"><div class="card-label">月干支</div><div class="card-value">'+monthGZ.ganzhi+' <span class="tag '+getWuXingColor(mWx.wuXingIdx)+'">'+mWx.wuXing+'</span></div><div style="font-size:0.7em;color:var(--text-light);margin-top:4px;">节气月第'+monthGZ.lunarMonth+'月</div></div><div class="detail-card"><div class="card-label">日干支 / 纳音</div><div class="card-value">'+dayGZ.ganzhi+' <span class="tag '+getWuXingColor(dWx.wuXingIdx)+'">'+dWx.wuXing+'</span></div><div style="font-size:0.7em;color:var(--text-light);margin-top:4px;">'+naYinDay+' | 六十甲子第'+(dayGZ.sexagenaryNum+1)+'位</div></div><div class="detail-card"><div class="card-label">农历</div><div class="card-value">'+(lunarDateInfo?(lunarDateInfo.yearGanZhi+'年 '+lunarDateInfo.yearAnimal+'年'):'')+'</div><div style="font-size:0.7em;color:var(--text-light);margin-top:4px;">'+(lunarDateInfo?(lunarDateInfo.monthName+lunarDateInfo.dayName):'')+'</div></div><div class="detail-card"><div class="card-label">阴阳五行</div><div class="card-value">日干: <span class="'+(dWx.yinYang==='阳'?'yang-badge':'yin-badge')+'">'+dWx.yinYang+dWx.wuXing+'</span> 日支: <span class="'+(zWx.yinYang==='阳'?'yang-badge':'yin-badge')+'">'+zWx.yinYang+zWx.wuXing+'</span></div></div></div></div>';
 
-    const dayGZ = getDayGanZhi(date);
-    const monthGZ = getMonthGanZhi(date);
-    const yearGZ = getYearGanZhi(date);
-    const dWx = getGanWuXing(dayGZ.ganIdx);
-    const zWx = getZhiWuXing(dayGZ.zhiIdx);
-    const mWx = getGanWuXing(monthGZ.ganIdx);
-    const yWx = getGanWuXing(yearGZ.ganIdx);
-
-    const naYinDay = getNaYin(dayGZ.sexagenaryNum);
-    const naYinYear = getNaYin(yearGZ.sexagenaryNum);
-    const wy = getWuYunLiuQiForDate(date);
-    const allHours = getAllHourAcupointInfo(date);
-    const wumen = getWuMenShiBian(date);
-    const term = getSolarTermOnDate(date);
-    const termInfo = getCurrentSolarTerm(date);
-
-    // 当前时辰
-    const now = new Date();
-    const curHour = now.getHours();
-    let curShiChenIdx = 0;
-    if (curHour >= 23 || curHour < 1) curShiChenIdx = 0;
-    else if (curHour >= 1 && curHour < 3) curShiChenIdx = 1;
-    else curShiChenIdx = Math.floor((curHour + 1) / 2);
-    const isTodayCheck = y === now.getFullYear() && m === now.getMonth() && d === now.getDate();
-
-    const weekDays = ['日','一','二','三','四','五','六'];
-
-    document.getElementById('modal-title').textContent =
-        `${y}年${m+1}月${d}日 星期${weekDays[date.getDay()]} ${dayGZ.ganzhi}日`;
-
-    let html = '';
-
-    // ---- 干支信息 ----
-    html += `<div class="detail-section">
-        <h3>📌 干支信息</h3>
-        <div class="detail-grid">
-            <div class="detail-card">
-                <div class="card-label">年干支 / 纳音</div>
-                <div class="card-value">${yearGZ.ganzhi} <span class="tag ${getWuXingColor(yWx.wuXingIdx)}">${yWx.wuXing}</span></div>
-                <div style="font-size:0.7em;color:var(--text-light);margin-top:4px;">${naYinYear}</div>
-            </div>
-            <div class="detail-card">
-                <div class="card-label">月干支</div>
-                <div class="card-value">${monthGZ.ganzhi} <span class="tag ${getWuXingColor(mWx.wuXingIdx)}">${mWx.wuXing}</span></div>
-                <div style="font-size:0.7em;color:var(--text-light);margin-top:4px;">节气月第${monthGZ.lunarMonth}月</div>
-            </div>
-            <div class="detail-card">
-                <div class="card-label">日干支 / 纳音</div>
-                <div class="card-value">${dayGZ.ganzhi} <span class="tag ${getWuXingColor(dWx.wuXingIdx)}">${dWx.wuXing}</span></div>
-                <div style="font-size:0.7em;color:var(--text-light);margin-top:4px;">${naYinDay} | 六十甲子第${dayGZ.sexagenaryNum+1}位</div>
-            </div>
-            <div class="detail-card">
-                <div class="card-label">阴阳五行</div>
-                <div class="card-value">
-                    日干: <span class="${dWx.yinYang==='阳'?'yang-badge':'yin-badge'}">${dWx.yinYang}${dWx.wuXing}</span>
-                    日支: <span class="${zWx.yinYang==='阳'?'yang-badge':'yin-badge'}">${zWx.yinYang}${zWx.wuXing}</span>
-                </div>
-            </div>
-        </div>
-    </div>`;
-
-    // ---- 节气 ----
-    if (term || termInfo.current) {
-        const ct = term || termInfo.current;
-        html += `<div class="detail-section">
-            <h3>🌤 节气</h3>
-            <div class="detail-grid">
-                <div class="detail-card" style="grid-column:1/-1;">
-                    <div class="card-value">
-                        ${ct.name} (${ct.type || ''})
-                        ${termInfo.next ? ` → 下一节气: ${termInfo.next.name} (${termInfo.next.date.getMonth()+1}/${termInfo.next.date.getDate()})` : ''}
-                    </div>
-                </div>
-            </div>
-        </div>`;
+    if(term||termInfo.current) {
+        const ct=term||termInfo.current;
+        html+='<div class="detail-section"><h3>🌤 节气</h3><div class="detail-grid"><div class="detail-card" style="grid-column:1/-1;"><div class="card-value">'+ct.name+' ('+(ct.type||'')+')'+(termInfo.next?' → 下一节气: '+termInfo.next.name+' ('+(termInfo.next.date.getMonth()+1)+'/'+termInfo.next.date.getDate()+')':'')+'</div></div></div></div>';
     }
 
-    // ---- 五运六气 ----
-    html += `<div class="detail-section">
-        <h3>🌿 五运六气</h3>
-        <div class="detail-grid">
-            <div class="detail-card"><div class="card-label">岁运</div><div class="card-value">${wy.yearMovement.wuXing}运${wy.yearMovement.excess}</div></div>
-            <div class="detail-card"><div class="card-label">当前主运</div><div class="card-value">${wy.currentHostMove.name}·${wy.currentHostMove.wuXing}</div></div>
-            <div class="detail-card"><div class="card-label">当前客运</div><div class="card-value">${wy.currentGuestMove.name}·${wy.currentGuestMove.wuXing}</div></div>
-            <div class="detail-card"><div class="card-label">当前主气</div><div class="card-value">${wy.currentHostQ.qi}</div></div>
-            <div class="detail-card"><div class="card-label">当前客气</div><div class="card-value">${wy.currentGuestQ.qi}${wy.currentGuestQ.isSiTian?'(司天)':''}${wy.currentGuestQ.isZaiQuan?'(在泉)':''}</div></div>
-            <div class="detail-card"><div class="card-label">司天/在泉</div><div class="card-value" style="font-size:0.9em;">${wy.guestQi.siTian}/${wy.guestQi.zaiQuan}</div></div>
-        </div>
-    </div>`;
+    html+='<div class="detail-section"><h3>🌿 五运六气</h3><div class="detail-grid"><div class="detail-card"><div class="card-label">岁运</div><div class="card-value">'+wy.yearMovement.wuXing+'运'+wy.yearMovement.excess+'</div></div><div class="detail-card"><div class="card-label">当前主运</div><div class="card-value">'+wy.currentHostMove.name+'·'+wy.currentHostMove.wuXing+'</div></div><div class="detail-card"><div class="card-label">当前客运</div><div class="card-value">'+wy.currentGuestMove.name+'·'+wy.currentGuestMove.wuXing+'</div></div><div class="detail-card"><div class="card-label">当前主气</div><div class="card-value">'+wy.currentHostQ.qi+'</div></div><div class="detail-card"><div class="card-label">当前客气</div><div class="card-value">'+wy.currentGuestQ.qi+(wy.currentGuestQ.isSiTian?'(司天)':'')+(wy.currentGuestQ.isZaiQuan?'(在泉)':'')+'</div></div><div class="detail-card"><div class="card-label">司天/在泉</div><div class="card-value" style="font-size:0.9em;">'+wy.guestQi.siTian+'/'+wy.guestQi.zaiQuan+'</div></div></div></div>';
 
-    // ---- 五门十变 ----
-    if (wumen) {
-        html += `<div class="detail-section wumen-section">
-            <h3>⚫ 五门十变</h3>
-            <div style="padding:14px;text-align:center;">
-                <div style="font-size:1.15em;font-weight:700;color:#2c3e50;margin-bottom:6px;">${wumen.formula}</div>
-                <div style="font-size:1.05em;margin-bottom:4px;">合化 <span class="wx-highlight wx-${wumen.huaWuxing}">${wumen.huaWuxing}</span></div>
-                <div style="color:#666;font-size:0.85em;">${wumen.description}</div>
-            </div>
-        </div>`;
+    if(wumen) {
+        html+='<div class="detail-section wumen-section"><h3>⚫ 五门十变</h3><div style="padding:14px;text-align:center;"><div style="font-size:1.15em;font-weight:700;color:#2c3e50;margin-bottom:6px;">'+wumen.formula+'</div><div style="font-size:1.05em;margin-bottom:4px;">合化 <span class="wx-highlight wx-'+wumen.huaWuxing+'">'+wumen.huaWuxing+'</span></div><div style="color:#666;font-size:0.85em;">'+wumen.description+'</div></div></div>';
     }
 
-    // ---- 时辰开穴详情表 ----
-    html += `<div class="detail-section">
-        <h3>⏰ 时辰开穴 · 灵龟八法 & 子午流注
-            ${isTodayCheck ? `<span class="current-badge">当前：${SHI_CHEN[curShiChenIdx].name} (${SHI_CHEN[curShiChenIdx].start}:00-${SHI_CHEN[curShiChenIdx].end}:00)</span>` : ''}
-        </h3>
-        <div style="font-size:0.7em;color:var(--text-light);margin-bottom:8px;">灵龟八法含配穴及卦性，纳子法含主配穴与补泻，纳甲法含合日互用穴</div>
-        <div class="hour-table-wrapper">
-        <table class="hour-table">
-            <thead><tr>
-                <th>时辰</th><th>时间</th><th>时干支</th><th>时干属性</th><th>当令经络</th>
-                <th>灵龟八法(开穴/配穴/卦)</th><th>纳甲法(开穴/互用)</th><th>纳子法(主/配)</th>
-            </tr></thead><tbody>`;
+    html+='<div class="detail-section"><h3>⏰ 时辰开穴 · 灵龟八法 & 子午流注'+(isTodayCheck?' <span class="current-badge">当前：'+SHI_CHEN[curShiChenIdx].name+' ('+SHI_CHEN[curShiChenIdx].start+':00-'+SHI_CHEN[curShiChenIdx].end+':00)</span>':'')+'</h3><div style="font-size:0.7em;color:var(--text-light);margin-bottom:8px;">灵龟八法含配穴及卦性，纳子法含主配穴与补泻，纳甲法含合日互用穴</div><div class="hour-table-wrapper"><table class="hour-table"><thead><tr><th>时辰</th><th>时间</th><th>时干支</th><th>时干属性</th><th>当令经络</th><th>灵龟八法(开穴/配穴/卦)</th><th>纳甲法(开穴/互用)</th><th>纳子法(主/配)</th></tr></thead><tbody>';
 
-    allHours.forEach(h => {
-        const isCur = isTodayCheck && h.shiChenIdx === curShiChenIdx;
-        const trCls = isCur ? 'hour-current' : '';
-        const lg = h.linggui;
-        const fi = lg.fullInfo;
-
-        // 灵龟八法格
-        let lgHtml = '-';
-        if (lg.acupoint) {
-            lgHtml = `<b>${lg.acupoint.code}</b> ${lg.acupoint.name}
-                <span title="${fi ? fi.trigramName : ''}" style="font-size:1.2em;margin-left:2px;">${fi ? fi.trigramSymbol : ''}</span>
-                <br><small style="color:#888;">通${lg.acupoint.vessel}</small>`;
-            if (lg.couple) {
-                lgHtml += `<br><small style="color:#c4953a;">配: ${lg.couple.name}(${lg.couple.code}) ${lg.couple.trigramSymbol}</small>`;
-            }
+    allHours.forEach(h=>{
+        const isCur=isTodayCheck&&h.shiChenIdx===curShiChenIdx;
+        const trCls=isCur?'hour-current':'';
+        const lg=h.linggui;
+        const fi=lg.fullInfo;
+        let lgHtml='-';
+        if(lg.acupoint) {
+            lgHtml='<b>'+lg.acupoint.code+'</b> '+lg.acupoint.name+' <span title="'+(fi?fi.trigramName:'')+'" style="font-size:1.2em;margin-left:2px;">'+(fi?fi.trigramSymbol:'')+'</span><br><small style="color:#888;">通'+lg.acupoint.vessel+'</small>';
+            if(lg.couple) lgHtml+='<br><small style="color:#c4953a;">配: '+lg.couple.name+'('+lg.couple.code+') '+lg.couple.trigramSymbol+'</small>';
         }
-
-        // 纳甲法格
-        let njHtml = '-';
-        if (h.najia.mainPoint) {
-            njHtml = `<b>${h.najia.mainPoint.code}</b> ${h.najia.mainPoint.name}
-                <br><small>${h.najia.mainPoint.pointType}</small>`;
+        let njHtml='-';
+        if(h.najia.mainPoint) {
+            const pt=h.najia.mainPoint;
+            const wuXing=pt.wuXing||'';
+            njHtml='<b>'+pt.code+'</b> '+pt.name+'<br><small>'+pt.pointType+(wuXing?'('+wuXing+')':'')+'</small>';
         }
-        if (h.najia.huyongPoint) {
-            const color = h.najia.hasHuyong ? '#e67e22' : '#888';
-            const label = h.najia.hasHuyong ? '互用穴:' : '合用:';
-            njHtml += `<br><small style="color:${color};">${label} ${h.najia.huyongPoint.code} ${h.najia.huyongPoint.name}</small>`;
+        if(h.najia.huyongPoint) {
+            const color=h.najia.hasHuyong?'#e67e22':'#888';
+            const label=h.najia.hasHuyong?'<span class="huyong-mark">夫妻互用</span>':'合用:';
+            const pt=h.najia.huyongPoint;
+            const wuXing=pt.wuXing||'';
+            njHtml+='<br><small style="color:'+color+';">'+label+' '+pt.code+' '+pt.name+(wuXing?'('+wuXing+')':'')+'</small>';
         }
-
-        // 纳子法格
-        let nzHtml = '-';
-        if (h.nazi) {
-            nzHtml = `<b>主:</b>${h.nazi.mainPoint.code} ${h.nazi.mainPoint.name}
-                <br><small style="color:#666;">配:</small>${h.nazi.accompanyPoint.code} ${h.nazi.accompanyPoint.name}`;
+        let nzHtml='-';
+        if(h.nazi) {
+            nzHtml='<b>主:</b>'+h.nazi.mainPoint.code+' '+h.nazi.mainPoint.name+'<br><small style="color:#666;">配:</small>'+h.nazi.accompanyPoint.code+' '+h.nazi.accompanyPoint.name;
         }
-
-        html += `<tr class="${trCls}">
-            <td><strong>${h.shiChenName}</strong></td>
-            <td>${h.timeRange}</td>
-            <td style="font-weight:600;">${h.ganzhi}<br><small style="color:#666;font-weight:400;">${h.shiGan}${h.shiGanYinYang}${h.shiGanWuXing}·${h.shiZhi}${h.shiZhiWuXing}</small></td>
-            <td style="color:${getWuXingColor(h.shiGanWuXing)};font-weight:600;">${h.shiGanWuXing}(${h.shiGanYinYang})</td>
-            <td class="meridian-name">${h.meridianCN}<br><small>${h.meridian}</small></td>
-            <td class="lg-cell">${lgHtml}</td>
-            <td class="najia-cell" style="font-size:0.78em;">${njHtml}</td>
-            <td class="nazi-cell" style="font-size:0.78em;">${nzHtml}</td>
-        </tr>`;
+        html+='<tr class="'+trCls+'"><td><strong>'+h.shiChenName+'</strong></td><td>'+h.timeRange+'</td><td style="font-weight:600;" class="'+(h.shiZhiYinYang==='阳'?'shi-yang':'shi-yin')+'">'+h.ganzhi+'<br><small style="color:#666;font-weight:400;">'+h.shiGan+h.shiGanYinYang+h.shiGanWuXing+'·'+h.shiZhi+h.shiZhiWuXing+'</small></td><td style="color:'+getWuXingColor(h.shiGanWuXing)+';font-weight:600;">'+h.shiGanWuXing+'('+h.shiGanYinYang+')</td><td class="meridian-name">'+h.meridianCN+'<br><small>'+h.meridian+'</small></td><td class="lg-cell">'+lgHtml+'</td><td class="najia-cell" style="font-size:0.78em;">'+njHtml+'</td><td class="nazi-cell" style="font-size:0.78em;">'+nzHtml+'</td></tr>';
     });
 
-    html += `</tbody></table></div></div>`;
+    html+='</tbody></table></div></div>';
 
-    // ---- 灵龟八法配穴总表 ----
-    html += `<div class="detail-section">
-        <h3>🐢 灵龟八法 · 八脉交会穴配伍</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;padding:14px;">`;
-    LINGGUI_COUPLES.forEach(cp => {
-        const a = LINGGUI_ACUPOINTS[cp.a];
-        const b = LINGGUI_ACUPOINTS[cp.b];
-        const fiA = LINGGUI_FULL_INFO[cp.a];
-        const fiB = LINGGUI_FULL_INFO[cp.b];
-        html += `<div class="trigram-pair-card">
-            <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:6px;">
-                <span style="font-weight:700;">${cp.a}.${a.name} <small style="color:#888;">(${fiA.trigramSymbol}${fiA.trigram})</small></span>
-                <span style="font-size:1.3em;color:#bbb;">↔</span>
-                <span style="font-weight:700;">${cp.b}.${b.name} <small style="color:#888;">(${fiB.trigramSymbol}${fiB.trigram})</small></span>
-            </div>
-            <div style="font-size:0.85em;color:#555;">${cp.vesselA} ↔ ${cp.vesselB}</div>
-            <div style="font-size:0.78em;color:#999;">${cp.relation}</div>
-        </div>`;
+    html+='<div class="detail-section"><h3>🐢 灵龟八法 · 八脉交会穴配伍</h3><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;padding:14px;">';
+    LINGGUI_COUPLES.forEach(cp=>{
+        const a=LINGGUI_ACUPOINTS[cp.a];
+        const b=LINGGUI_ACUPOINTS[cp.b];
+        const fiA=LINGGUI_FULL_INFO[cp.a];
+        const fiB=LINGGUI_FULL_INFO[cp.b];
+        html+='<div class="trigram-pair-card"><div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:6px;"><span style="font-weight:700;">'+cp.a+'.'+a.name+' <small style="color:#888;">('+fiA.trigramSymbol+fiA.trigram+')</small></span><span style="font-size:1.3em;color:#bbb;">↔</span><span style="font-weight:700;">'+cp.b+'.'+b.name+' <small style="color:#888;">('+fiB.trigramSymbol+fiB.trigram+')</small></span></div><div style="font-size:0.85em;color:#555;">'+cp.vesselA+' ↔ '+cp.vesselB+'</div><div style="font-size:0.78em;color:#999;">'+cp.relation+'</div></div>';
     });
-    html += `</div></div>`;
+    html+='</div></div>';
 
-    // ---- 纳子法补泻详表 ----
-    html += `<div class="detail-section">
-        <h3>💉 纳子法 · 十二经主配穴与补泻</h3>
-        <div style="overflow-x:auto;">
-        <table class="hour-table">
-            <thead><tr>
-                <th>时辰</th><th>经络</th><th>主穴(输穴)</th><th>配穴(表里)</th><th>补法(母穴)</th><th>泻法(子穴)</th>
-            </tr></thead><tbody>`;
-    allHours.forEach(h => {
-        const nz = h.nazi;
-        if (!nz) return;
-        const isCur = isTodayCheck && h.shiChenIdx === curShiChenIdx;
-        html += `<tr class="${isCur ? 'hour-current' : ''}">
-            <td>${h.shiChenName}</td><td>${nz.meridian}</td>
-            <td class="acupoint-highlight">${nz.mainPoint.name}(${nz.mainPoint.code})</td>
-            <td>${nz.accompanyPoint.name}(${nz.accompanyPoint.code})<br><small style="color:#888;">${nz.accompanyPoint.reason.replace(/([（(]).*?([)）])/g,'')}</small></td>
-            <td style="color:#27ae60;">${nz.supplementPoint.name}(${nz.supplementPoint.code})<br><small>${nz.supplementPoint.reason}</small></td>
-            <td style="color:#e74c3c;">${nz.drainPoint.name}(${nz.drainPoint.code})<br><small>${nz.drainPoint.reason}</small></td>
-        </tr>`;
+    html+='<div class="detail-section"><h3>💉 纳子法 · 十二经主配穴与补泻</h3><div style="overflow-x:auto;"><table class="hour-table"><thead><tr><th>时辰</th><th>经络</th><th>主穴(输穴)</th><th>配穴(表里)</th><th>补法(母穴)</th><th>泻法(子穴)</th></tr></thead><tbody>';
+    allHours.forEach(h=>{
+        const nz=h.nazi;
+        if(!nz) return;
+        const isCur=isTodayCheck&&h.shiChenIdx===curShiChenIdx;
+        html+='<tr class="'+(isCur?'hour-current':'')+'"><td>'+h.shiChenName+'</td><td>'+nz.meridian+'</td><td class="acupoint-highlight">'+nz.mainPoint.name+'('+nz.mainPoint.code+')</td><td>'+nz.accompanyPoint.name+'('+nz.accompanyPoint.code+')<br><small style="color:#888;">'+nz.accompanyPoint.reason.replace(/[（(].*?[)）]/g,'')+'</small></td><td style="color:#27ae60;">'+nz.supplementPoint.name+'('+nz.supplementPoint.code+')<br><small>'+nz.supplementPoint.reason+'</small></td><td style="color:#e74c3c;">'+nz.drainPoint.name+'('+nz.drainPoint.code+')<br><small>'+nz.drainPoint.reason+'</small></td></tr>';
     });
-    html += `</tbody></table></div></div>`;
+    html+='</tbody></table></div></div>';
 
-    // ---- 五输穴五行 ----
-    html += `<div class="detail-section">
-        <h3>🖐 五输穴五行属性</h3>
-        <div style="font-size:0.78em;padding:10px 14px;color:#888;">阴经：井木→荥火→输土→经金→合水 | 阳经：井金→荥水→输木→经火→合土</div>
-        <div style="padding:0 14px 14px;">`;
-    allHours.forEach(h => {
-        const nz = h.nazi;
-        if (!nz) return;
-        html += `<div class="wushu-row">
-            <div style="font-weight:700;color:#2c3e50;margin-bottom:4px;">${h.shiChenName} ${nz.meridian}</div>
-            <div class="wushu-pills">
-                <span>井<em class="wx-mini wx-${nz.well.wuXing}">${nz.well.wuXing}</em>${nz.well.name}</span>
-                <span>荥<em class="wx-mini wx-${nz.spring.wuXing}">${nz.spring.wuXing}</em>${nz.spring.name}</span>
-                <span>输<em class="wx-mini wx-${nz.stream.wuXing}">${nz.stream.wuXing}</em>${nz.stream.name}</span>
-                <span>经<em class="wx-mini wx-${nz.river.wuXing}">${nz.river.wuXing}</em>${nz.river.name}</span>
-                <span>合<em class="wx-mini wx-${nz.sea.wuXing}">${nz.sea.wuXing}</em>${nz.sea.name}</span>
-            </div>
-        </div>`;
+    html+='<div class="detail-section"><h3>🖐 五输穴五行属性</h3><div style="font-size:0.78em;padding:10px 14px;color:#888;">阴经：井木→荥火→输土→经金→合水 | 阳经：井金→荥水→输木→经火→合土</div><div style="padding:0 14px 14px;">';
+    allHours.forEach(h=>{
+        const nz=h.nazi;
+        if(!nz) return;
+        html+='<div class="wushu-row"><div style="font-weight:700;color:#2c3e50;margin-bottom:4px;">'+h.shiChenName+' '+nz.meridian+'</div><div class="wushu-pills"><span>井<em class="wx-mini wx-'+nz.well.wuXing+'">'+nz.well.wuXing+'</em>'+nz.well.name+'</span><span>荥<em class="wx-mini wx-'+nz.spring.wuXing+'">'+nz.spring.wuXing+'</em>'+nz.spring.name+'</span><span>输<em class="wx-mini wx-'+nz.stream.wuXing+'">'+nz.stream.wuXing+'</em>'+nz.stream.name+'</span><span>经<em class="wx-mini wx-'+nz.river.wuXing+'">'+nz.river.wuXing+'</em>'+nz.river.name+'</span><span>合<em class="wx-mini wx-'+nz.sea.wuXing+'">'+nz.sea.wuXing+'</em>'+nz.sea.name+'</span></div></div>';
     });
-    html += `</div></div>`;
+    html+='</div></div>';
 
-    // ---- 纳甲法合日互用说明 ----
-    html += `<div class="detail-section">
-        <h3>🔄 纳甲法 · 合日互用穴</h3>
-        <div style="padding:14px;font-size:0.85em;">
-            <p style="margin-bottom:8px;">${NAJIA_HUYONG_INFO[dayGZ.gan] || '天干合化原理'}</p>
-            <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:8px;">
-                <span class="he-gan-item">甲⇌己(土)</span>
-                <span class="he-gan-item">乙⇌庚(金)</span>
-                <span class="he-gan-item">丙⇌辛(水)</span>
-                <span class="he-gan-item">丁⇌壬(木)</span>
-                <span class="he-gan-item">戊⇌癸(火)</span>
-            </div>
-            <p style="margin-top:8px;font-size:0.8em;color:#888;">当本日日干不开某时辰穴位时，可取合日对应时辰的穴位（互用穴表中以<span style="color:#e67e22;">橙色</span>标注）</p>
-        </div>
-    </div>`;
+    html+='<div class="detail-section"><h3>🔄 纳甲法 · 合日互用穴</h3><div style="padding:14px;font-size:0.85em;"><p style="margin-bottom:8px;">'+(NAJIA_HUYONG_INFO[dayGZ.gan]||'天干合化原理')+'</p><div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:8px;"><span class="he-gan-item">甲⇌己(土)</span><span class="he-gan-item">乙⇌庚(金)</span><span class="he-gan-item">丙⇌辛(水)</span><span class="he-gan-item">丁⇌壬(木)</span><span class="he-gan-item">戊⇌癸(火)</span></div><p style="margin-top:8px;font-size:0.8em;color:#888;">当本日日干不开某时辰穴位时，可取合日对应时辰的穴位（互用穴表中以<span style="color:#e67e22;">橙色</span>标注）</p></div></div>';
 
-    document.getElementById('modal-body').innerHTML = html;
+    document.getElementById('modal-body').innerHTML=html;
     document.getElementById('modal-overlay').classList.add('show');
-    document.body.style.overflow = 'hidden';
-
-    // 滚动到当前时辰
-    requestAnimationFrame(() => {
-        const curRow = document.querySelector('.hour-current');
-        if (curRow) curRow.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    document.body.style.overflow='hidden';
+    requestAnimationFrame(()=>{
+        const curRow=document.querySelector('.hour-current');
+        if(curRow) curRow.scrollIntoView({block:'center',behavior:'smooth'});
     });
 }
 
 function closeModal() {
     document.getElementById('modal-overlay').classList.remove('show');
-    document.body.style.overflow = '';
+    document.body.style.overflow='';
 }
 
-</script>
+// Service Worker
+if('serviceWorker' in navigator) {
+    try {
+        const swBlob = new Blob([
+            'var CACHE_NAME="tcm-calendar-v2";' +
+            'var ASSETS=["/","/tcm-calendar.html","/index.html"];' +
+            'self.addEventListener("install",function(e){e.waitUntil(caches.open(CACHE_NAME).then(function(c){return c.addAll(ASSETS)}))});' +
+            'self.addEventListener("fetch",function(e){e.respondWith(caches.match(e.request).then(function(r){return r||fetch(e.request)}))});'
+        ], {type: 'application/javascript'});
+        const swUrl = URL.createObjectURL(swBlob);
+        navigator.serviceWorker.register(swUrl);
+    } catch(e) {}
+}
+    </script>
 </body>
 </html>

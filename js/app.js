@@ -90,9 +90,11 @@ function renderTodaySummary(date) {
 
     const curTerm = termInfo.current;
     const nextTerm = termInfo.next;
+    const lunar = getLunarDate(date);
 
     el.innerHTML = `
         <div class="info-item"><span class="label">公历:</span> ${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日 星期${['日','一','二','三','四','五','六'][date.getDay()]}</div>
+        <div class="info-item"><span class="label">农历:</span> ${lunar ? (lunar.yearGanZhi + '年 ' + lunar.yearAnimal + '年 ' + lunar.monthName + lunar.dayName) : ''}</div>
         <div class="info-item"><span class="label">年干支:</span> ${yGZ.ganzhi}年 <span class="tag ${getWuXingColor(yWx.wuXingIdx)}">${yWx.wuXing}</span> ${getNaYin(yGZ.sexagenaryNum)}</div>
         <div class="info-item"><span class="label">月干支:</span> ${mGZ.ganzhi}月 <span class="tag ${getWuXingColor(mWx.wuXingIdx)}">${mWx.wuXing}</span></div>
         <div class="info-item"><span class="label">日干支:</span> ${dGZ.ganzhi}日 <span class="tag ${getWuXingColor(dWx.wuXingIdx)}">${dWx.wuXing}</span> <span class="${dWx.yinYang==='阳'?'yang-badge':'yin-badge'}">${dWx.yinYang}</span></div>
@@ -155,6 +157,16 @@ function buildDayCell(date, isOther) {
     const dow = date.getDay();
     const isWeekend = dow === 0 || dow === 6;
     const dayNum = date.getDate();
+    const naYinDay = getNaYin(dGZ.sexagenaryNum);
+
+    // 农历
+    const lunar = getLunarDate(date);
+    let lunarHtml = '';
+    if (lunar) {
+        const special = (lunar.day === 1) ? ' lunar-first' : '';
+        const midMonth = (lunar.day === 15) ? ' lunar-fifteen' : '';
+        lunarHtml = `<span class="lunar-date${special}${midMonth}">${lunar.monthName}${lunar.dayName}</span>`;
+    }
 
     // 是否今天
     const now = new Date(); now.setHours(0,0,0,0);
@@ -184,8 +196,10 @@ function buildDayCell(date, isOther) {
         <span class="wuxing-indicator" style="background: var(--${wxc})"></span>
         <span class="solar-date">${dayNum}</span>
         <span class="ganzhi">${dGZ.ganzhi}</span>
+        ${lunarHtml}
         <div class="tag-row">
             <span class="tag ${wxc}">${dWx.wuXing}${dWx.yinYang}</span>
+            ${naYinDay ? `<span class="tag" style="background:#f0f0f0;color:#666;">${naYinDay}</span>` : ''}
             ${termHtml}
         </div>
     </div>`;
@@ -222,9 +236,11 @@ function openDayDetail(dateKey) {
     const isTodayCheck = y === now.getFullYear() && m === now.getMonth() && d === now.getDate();
 
     const weekDays = ['日','一','二','三','四','五','六'];
+    const lunarDateInfo = getLunarDate(date);
 
     document.getElementById('modal-title').textContent =
-        `${y}年${m+1}月${d}日 星期${weekDays[date.getDay()]} ${dayGZ.ganzhi}日`;
+        `${y}年${m+1}月${d}日 星期${weekDays[date.getDay()]} ${dayGZ.ganzhi}日` +
+        (lunarDateInfo ? ` · ${lunarDateInfo.yearAnimal}年${lunarDateInfo.monthName}${lunarDateInfo.dayName}` : '');
 
     let html = '';
 
@@ -246,6 +262,11 @@ function openDayDetail(dateKey) {
                 <div class="card-label">日干支 / 纳音</div>
                 <div class="card-value">${dayGZ.ganzhi} <span class="tag ${getWuXingColor(dWx.wuXingIdx)}">${dWx.wuXing}</span></div>
                 <div style="font-size:0.7em;color:var(--text-light);margin-top:4px;">${naYinDay} | 六十甲子第${dayGZ.sexagenaryNum+1}位</div>
+            </div>
+            <div class="detail-card">
+                <div class="card-label">农历</div>
+                <div class="card-value">${lunarDateInfo ? (lunarDateInfo.yearGanZhi + '年 ' + lunarDateInfo.yearAnimal + '年') : ''}</div>
+                <div style="font-size:0.7em;color:var(--text-light);margin-top:4px;">${lunarDateInfo ? (lunarDateInfo.monthName + lunarDateInfo.dayName) : ''}</div>
             </div>
             <div class="detail-card">
                 <div class="card-label">阴阳五行</div>
@@ -331,13 +352,17 @@ function openDayDetail(dateKey) {
         // 纳甲法格
         let njHtml = '-';
         if (h.najia.mainPoint) {
-            njHtml = `<b>${h.najia.mainPoint.code}</b> ${h.najia.mainPoint.name}
-                <br><small>${h.najia.mainPoint.pointType}</small>`;
+            const pt = h.najia.mainPoint;
+            const wuXing = pt.wuXing || '';
+            njHtml = `<b>${pt.code}</b> ${pt.name}
+                <br><small>${pt.pointType}${wuXing ? '(' + wuXing + ')' : ''}</small>`;
         }
         if (h.najia.huyongPoint) {
             const color = h.najia.hasHuyong ? '#e67e22' : '#888';
-            const label = h.najia.hasHuyong ? '互用穴:' : '合用:';
-            njHtml += `<br><small style="color:${color};">${label} ${h.najia.huyongPoint.code} ${h.najia.huyongPoint.name}</small>`;
+            const label = h.najia.hasHuyong ? '<span class="huyong-mark">夫妻互用</span>' : '合用:';
+            const pt = h.najia.huyongPoint;
+            const wuXing = pt.wuXing || '';
+            njHtml += `<br><small style="color:${color};">${label} ${pt.code} ${pt.name}${wuXing ? '(' + wuXing + ')' : ''}</small>`;
         }
 
         // 纳子法格
@@ -350,7 +375,7 @@ function openDayDetail(dateKey) {
         html += `<tr class="${trCls}">
             <td><strong>${h.shiChenName}</strong></td>
             <td>${h.timeRange}</td>
-            <td style="font-weight:600;">${h.ganzhi}<br><small style="color:#666;font-weight:400;">${h.shiGan}${h.shiGanYinYang}${h.shiGanWuXing}·${h.shiZhi}${h.shiZhiWuXing}</small></td>
+            <td style="font-weight:600;" class="${h.shiZhiYinYang === '阳' ? 'shi-yang' : 'shi-yin'}">${h.ganzhi}<br><small style="color:#666;font-weight:400;">${h.shiGan}${h.shiGanYinYang}${h.shiGanWuXing}·${h.shiZhi}${h.shiZhiWuXing}</small></td>
             <td style="color:${getWuXingColor(h.shiGanWuXing)};font-weight:600;">${h.shiGanWuXing}(${h.shiGanYinYang})</td>
             <td class="meridian-name">${h.meridianCN}<br><small>${h.meridian}</small></td>
             <td class="lg-cell">${lgHtml}</td>
