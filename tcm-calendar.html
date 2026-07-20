@@ -484,12 +484,21 @@ body {
 
 /* ===== 时辰表 ===== */
 .hour-table-wrapper { overflow-x: auto; max-height: 600px; overflow-y: auto; border-radius: 8px; border: 1px solid #dee2e6; }
-.hour-table { width: 100%; border-collapse: collapse; font-size: 0.8em; white-space: nowrap; }
+.hour-table { width: 100%; border-collapse: collapse; font-size: 0.8em; table-layout: fixed; }
 .hour-table thead th {
     background: #2c3e50; color: #ecf0f1; padding: 10px 6px; text-align: center;
     font-weight: 600; position: sticky; top: 0; z-index: 1;
 }
 .hour-table tbody td { padding: 8px 6px; text-align: center; border-bottom: 1px solid #e0e0e0; vertical-align: middle; }
+/* 固定各列宽度，防止错列 */
+.hour-table th:nth-child(1), .hour-table td:nth-child(1) { width: 4%; }
+.hour-table th:nth-child(2), .hour-table td:nth-child(2) { width: 7%; }
+.hour-table th:nth-child(3), .hour-table td:nth-child(3) { width: 9%; }
+.hour-table th:nth-child(4), .hour-table td:nth-child(4) { width: 6%; }
+.hour-table th:nth-child(5), .hour-table td:nth-child(5) { width: 10%; }
+.hour-table th:nth-child(6), .hour-table td:nth-child(6) { width: 22%; }
+.hour-table th:nth-child(7), .hour-table td:nth-child(7) { width: 22%; }
+.hour-table th:nth-child(8), .hour-table td:nth-child(8) { width: 20%; }
 
 .hour-current { background: rgba(76, 175, 80, 0.25) !important; border-left: 4px solid #4caf50 !important; box-shadow: inset 0 0 20px rgba(76, 175, 80, 0.1); }
 .hour-current td { font-weight: 600; }
