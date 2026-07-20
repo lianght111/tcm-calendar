@@ -564,6 +564,8 @@ body {
     border-bottom: 1px solid var(--border-color);
     color: var(--text-secondary);
     vertical-align: middle;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .hour-table tr:hover td {

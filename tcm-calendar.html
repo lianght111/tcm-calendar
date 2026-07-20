@@ -489,7 +489,7 @@ body {
     background: #2c3e50; color: #ecf0f1; padding: 10px 6px; text-align: center;
     font-weight: 600; position: sticky; top: 0; z-index: 1;
 }
-.hour-table tbody td { padding: 8px 6px; text-align: center; border-bottom: 1px solid #e0e0e0; vertical-align: middle; }
+.hour-table tbody td { padding: 8px 6px; text-align: center; border-bottom: 1px solid #e0e0e0; vertical-align: middle; word-break: break-word; overflow-wrap: break-word; }
 /* 固定各列宽度，防止错列 */
 .hour-table th:nth-child(1), .hour-table td:nth-child(1) { width: 4%; }
 .hour-table th:nth-child(2), .hour-table td:nth-child(2) { width: 7%; }
@@ -581,9 +581,10 @@ body {
 .current-shichen td { background: #e8f5e9 !important; font-weight: 600; }
 .current-shichen td:first-child::before { content: '★ '; color: #28a745; }
 /* 互用穴特殊标记 */
-.huyong-mark { background: #e67e22; color: #fff; padding: 1px 4px; border-radius: 3px; font-size: 0.75em; margin-left: 4px; }
-.huyong-real { border: 2px solid #e67e22; background: #fff8f0; padding: 2px 5px; border-radius: 3px; font-weight: 600; }
-.huyong-common { border: 1px dashed #ccc; padding: 2px 5px; border-radius: 3px; }
+.huyong-mark { background: #e67e22; color: #fff; padding: 1px 4px; border-radius: 3px; font-size: 0.75em; margin-right: 4px; white-space: nowrap; }
+.na-huyong { margin-top: 5px; padding: 5px; border-radius: 4px; border-left: 3px solid #e67e22; background: rgba(230,126,34,0.06); line-height: 1.55; }
+.huyong-real { border-left-color: #e67e22; }
+.huyong-common { border-left-color: #95a5a6; }
 /* 五输穴位标记 */
 .wushu-tag { font-size: 0.7em; padding: 1px 4px; border-radius: 3px; margin-left: 2px; background: #f0f0f0; color: #666; }
 /* 纳甲法单元格样式 */
@@ -1696,14 +1697,20 @@ function openDayDetail(dateKey) {
             njHtml='<span class="na-closed">闭穴</span>';
         }
         if(h.najia.huyongPoint) {
-            const color=h.najia.hasHuyong?'#e67e22':'#888';
-            const label=h.najia.hasHuyong?'<span class="huyong-mark">夫妻互用</span>':'合用:';
             const pt=h.najia.huyongPoint;
+            const isHuyong=h.najia.hasHuyong;
+            const huyongClass=isHuyong?'huyong-real':'huyong-common';
+            const huyongLabel=isHuyong?'夫妻互用':'合日参考';
             const wuXing=pt.wuXing||'';
-            const cls=h.najia.hasHuyong?' huyong-real':' huyong-common';
-            njHtml+='<br><small style="color:'+color+';" class="'+cls+'">'+label+' '+pt.code+' '+pt.name;
-            if(wuXing) njHtml+='<span class="wx-mini wx-'+wuXing+'">'+wuXing+'</span>';
-            njHtml+='</small>';
+            njHtml+='<div class="na-huyong '+huyongClass+'">';
+            njHtml+='<span class="huyong-mark">'+huyongLabel+'</span> '+pt.meridian.replace(/^(手|足)/,'');
+            njHtml+='<br><b>'+pt.code+'</b> '+pt.name+' · '+pt.pointType;
+            if(wuXing) njHtml+='<em class="wx-mini wx-'+wuXing+'">'+wuXing+'</em>';
+            if(pt.yuan) {
+                const y=pt.yuan;
+                njHtml+='<br><small class="na-yuan">返本：'+y.name+'('+y.code+')<em class="wx-mini wx-'+y.wuXing+'">'+y.wuXing+'</em></small>';
+            }
+            njHtml+='</div>';
         }
         let nzHtml='-';
         if(h.nazi) {
